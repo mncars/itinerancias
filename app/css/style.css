@@ -1,20 +1,19 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font: 400 14px/18px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font: 400 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 #map {
-  position:absolute;
-  top:0;
-  bottom:0;
-  right:0;
-  left:0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
-
 header {
   position: absolute;
   top: 0.5em;
@@ -23,7 +22,6 @@ header {
   display: block;
   z-index: 1;
 }
-
 h1 {
   text-indent: -9999px;
   background: url("../imgs/logo.png") 0 0 no-repeat;
@@ -31,59 +29,48 @@ h1 {
   height: 65px;
   margin: 0;
 }
-
 h2 {
-  font:400 20px/20px 'PFDinTextPro-Bold', sans-serif;
+  font: 400 20px/20px 'PFDinTextPro-Bold', sans-serif;
   margin: 0 0 5px 0;
   border-bottom: 3px solid #333333;
 }
-
 h3 {
   font: 400 18px/18px 'PFDinTextPro-Bold', sans-serif;
   margin: 15px 0 0 0;
 }
-
 a {
   color: #9a7f4a;
   text-decoration: none;
 }
-
 a:hover {
-  color:#665431;
+  color: #665431;
   text-decoration: underline;
 }
-
 .exposicionThumbnail {
   padding: 10px;
 }
-
 .fecha-lugar {
   margin-bottom: 5px;
-  font: 400 18px/18px 'PFDinTextPro-Thin',sans-serif;
+  font: 400 18px/18px 'PFDinTextPro-Thin', sans-serif;
 }
-
 .label {
   font-weight: bold;
 }
-
 .img-responsive {
   max-width: 100%;
 }
-
-.itinerancia{
+.itinerancia {
   margin-top: 5px;
 }
-
 #cerrar {
   color: #000;
-  float:right;
+  float: right;
   padding-right: 10px;
   line-height: 18px;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
 }
-
 /* Barra de navegación inferior */
 footer {
   position: absolute;
@@ -94,19 +81,16 @@ footer {
   display: block;
   z-index: 1;
 }
-
-.controls{
+.controls {
   padding: 2%;
   background: #333;
   color: #eee;
 }
-
-label{
+label {
   font-weight: 300;
   margin: 0 .4em 0 0;
 }
-
-button{
+button {
   display: inline-block;
   padding: .4em .8em;
   background: #666;
@@ -117,60 +101,49 @@ button{
   border-radius: 4px;
   cursor: pointer;
 }
-
-button.active{
+button.active {
   background: #68b8c4;
 }
-
-button:focus{
+button:focus {
   outline: 0 none;
 }
-
-button + label{
+button + label {
   margin-left: 1em;
 }
-
-.container{
-  padding: 2% 2% 0;
+.container {
   text-align: justify;
   font-size: 0.1px;
   background: #68b8c4;
   -webkit-backface-visibility: hidden;
   height: 160px;
-  width:100%;
+  width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
 }
-
-.container:after{
+.container:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
-
 .container .mix,
-.container .gap{
+.container .gap {
   display: inline-block;
   width: 49%;
 }
-
-.container .mix{
+.container .mix {
   text-align: left;
   background: #03899c;
   margin-bottom: 2%;
   display: none;
 }
-
-.container .mix.y2011{
+.container .mix.y2011 {
   border-top: 2px solid limegreen;
 }
-
-.container .mix.y2012{
+.container .mix.y2012 {
   border-top: 2px solid yellow;
 }
-
-.container .mix:after{
+.container .mix:after {
   content: attr(data-myorder);
   color: white;
   font-size: 16px;
@@ -179,24 +152,20 @@ button + label{
   padding: 4% 6%;
   font-weight: 700;
 }
-
-.container .mix:before{
+.container .mix:before {
   content: '';
   display: inline-block;
   padding-top: 60%;
 }
-
-@media all and (min-width: 420px){
+@media all and (min-width: 420px) {
   .container .mix,
-  .container .gap{
+  .container .gap {
     width: 32%;
   }
 }
-
-@media all and (min-width: 640px){
+@media all and (min-width: 640px) {
   .container .mix,
-  .container .gap{
+  .container .gap {
     width: 23.5%;
   }
 }
-

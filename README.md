@@ -38,5 +38,7 @@ grunt serve
 Grunt está preparado para generar paquetes distribuibles en la carpeta dist de la siguiente manera:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ .bash
-grunt dist
+grunt build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Este

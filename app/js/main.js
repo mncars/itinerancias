@@ -10,10 +10,10 @@
       maxZoom : 15
   };
 
-  var snapper = new Snap({
+ /* var snapper = new Snap({
     element: document.getElementById('content'),
     touchToDrag: false,
-  });
+  });*/
 
   var exposicionesLayers = L.layerGroup();
 
@@ -21,7 +21,7 @@
     minZoom: config.minZoom,
     maxZoom: config.maxZoom,
     zoomControl: false,
-    snapper: snapper,
+    //snapper: snapper,
     exposicionesLayers: exposicionesLayers,
     initZoom: config.initZoom
   });
@@ -38,7 +38,7 @@
         {
           initLatLng: config.initLatLng,
           iconUrl: 'imgs/pin.png',
-          snapper: snapper,
+          //snapper: snapper,
         }
       ).addTo(map);
       exposicionesLayers.addLayer(exposicion);
@@ -73,7 +73,7 @@
     });
 
     $('#cerrar').click(function() {
-      snapper.close();
+      //snapper.close();
     });
   });
 }());
