@@ -1,29 +1,42 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Web con las itinerancias del museo en los últimos años. Basada en leaflet.
 
-### What is this repository for? ###
+### ¿Qué hay en este repositorio? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Configuración de Grunt, Bower y bundler para construir un entorno de desarrollo completo
+* Código del proyecto
 
-### How do I get set up? ###
+### ¿Qué necesito? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Para que el entorno funcione tienes que tener instalado [bundler](http://bundler.io/), [npm](https://www.npmjs.org/)
+y [bower](http://bower.io/) con todas sus dependencias
 
-### Contribution guidelines ###
+### ¿Cómo monto mi entorno? ###
 
-* Writing tests
-* Code review
-* Other guidelines
+Para comenzar a trabajar tienes que hacerte un clone de este proyecto:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~ .bash
+git clone git@github.com:mncars/itinerancias.git
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Who do I talk to? ###
+una vez terminado el clone ejecutar la instalación de bundle, npm y bower:
 
-* Repo owner or admin
-* Other community or team contact
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~ .bash
+bundle install
+npm install
+bower install
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+una vez instalado todo esto, para lanzar el entorno:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~ .bash
+grunt serve
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+### ¿Cómo creo una distribución? ###
+
+Grunt está preparado para generar paquetes distribuibles en la carpeta dist de la siguiente manera:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~ .bash
+grunt dist
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
