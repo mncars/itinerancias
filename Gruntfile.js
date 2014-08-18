@@ -32,6 +32,10 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/bower_components/bootstrap/**/*.less'],
                 tasks: ['less:server']
             },
+            hbs: {
+                files: ['<%= yeoman.app %>/templates/**/*.hbs'],
+                tasks: ['handlebars']
+            },
             js: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
                 tasks: ['newer:jshint:all'],
@@ -93,6 +97,16 @@ module.exports = function (grunt) {
                 }
                 ]
             }
+        },
+        handlebars: {
+                options: {
+                    namespace: "Itinerancias.Templates"
+                },
+                files: {
+                    files: {
+                        "<%= yeoman.app %>/js/templates.js": ["<%= yeoman.app %>/templates/**/*.hbs"]
+                    }
+                }
         },
         // The actual grunt server settings
         connect: {
@@ -310,7 +324,7 @@ module.exports = function (grunt) {
         // Run some tasks in parallel to speed up the build process
         concurrent: {
             server: [
-                'copy:styles'
+                'copy:styles',
             ],
             test: [
                 'copy:styles'
@@ -357,7 +371,7 @@ module.exports = function (grunt) {
         //}
     });
 
-
+    grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
@@ -367,6 +381,7 @@ module.exports = function (grunt) {
             'clean:server',
             'bower-install',
             'concurrent:server',
+            'handlebars',
             'autoprefixer',
             'connect:livereload',
             'watch'
@@ -386,6 +401,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'handlebars',
         'clean:dist',
         'bower-install',
         'useminPrepare',

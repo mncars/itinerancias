@@ -1,19 +1,19 @@
-(function(){
+(function () {
   var config = {
     //https://leanpub.com/leaflet-tips-and-tricks/read#leanpub-auto-tile-servers-that-can-be-used-with-leaflet
-      tileUrl : 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr/{z}/{x}/{y}.png',
-      tileAttrib : '',//'Map tiles &copy; Development Seed and OpenStreetMap ',
-      initLatLng : new L.LatLng(40.408192, -3.694337), // MNCARS
-      mapCenter: new L.LatLng(23.686633, -39.321783), //en mitad del ocenao
-      initZoom : 3,
-      minZoom : 2,
-      maxZoom : 15
+    tileUrl: 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr/{z}/{x}/{y}.png',
+    tileAttrib: '',//'Map tiles &copy; Development Seed and OpenStreetMap ',
+    initLatLng: new L.LatLng(40.408192, -3.694337), // MNCARS
+    mapCenter: new L.LatLng(23.686633, -39.321783), //en mitad del ocenao
+    initZoom: 3,
+    minZoom: 2,
+    maxZoom: 15
   };
 
- /* var snapper = new Snap({
-    element: document.getElementById('content'),
-    touchToDrag: false,
-  });*/
+  /* var snapper = new Snap({
+   element: document.getElementById('content'),
+   touchToDrag: false,
+   });*/
 
   var exposicionesLayers = L.layerGroup();
 
@@ -28,29 +28,33 @@
   new L.Control.Zoom({ position: 'topright' }).addTo(map);
   map.addLayer(new L.TileLayer(config.tileUrl, {attribution: config.tileAttrib}));
   map.setView(config.mapCenter, config.initZoom);
-  $('#Container').mixItUp();
+
 
   render();
 
   function render() {
-    for (var i=0; i < exposiciones.length; ++i ) {
+    for (var i = 0; i < exposiciones.length; ++i) {
       var exposicion = L.createExposicionLayer(exposiciones[i],
-        {
-          initLatLng: config.initLatLng,
-          iconUrl: 'imgs/pin.png',
-          //snapper: snapper,
-        }
+              {
+                initLatLng: config.initLatLng,
+                iconUrl: 'imgs/pin.png'
+                //snapper: snapper,
+              }
       ).addTo(map);
       exposicionesLayers.addLayer(exposicion);
     }
   }
 
-  map.on('click', function(e) {
+  map.on('click', function (e) {
     map.clearAll();
   });
 
-  $(function() {
-    $('#expo2011').click(function() {
+  $(function () {
+    var postTemplate = Itinerancias['Templates']['app/templates/slider.hbs'];
+    var html = postTemplate(exposiciones);
+    $('footer').append(html);
+    $('#Container').mixItUp();
+    $('#expo2011').click(function () {
       map.clearAll();
       render();
       exposicionesLayers.eachLayer(function (layer) {
@@ -58,7 +62,7 @@
       });
     });
 
-    $('#expo2012').click(function() {
+    $('#expo2012').click(function () {
       map.clearAll();
       render();
       exposicionesLayers.eachLayer(function (layer) {
@@ -66,13 +70,13 @@
       });
     });
 
-    $('#expoTodas').click(function() {
+    $('#expoTodas').click(function () {
       map.clearAll();
       render();
 
     });
 
-    $('#cerrar').click(function() {
+    $('#cerrar').click(function () {
       //snapper.close();
     });
   });
