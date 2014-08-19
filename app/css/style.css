@@ -1,3 +1,71 @@
+.thumbnails {
+  margin-bottom: 0;
+}
+.thumbnail {
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+}
+.thumbnail h1,
+.thumbnail h2,
+.thumbnail h3,
+.thumbnail h4,
+.thumbnail h5,
+.thumbnail h6 {
+  text-transform: none;
+}
+.thumbnails > li {
+  margin-bottom: 20px;
+}
+.thumbnails .thumbnails > li {
+  margin-bottom: 0;
+}
+.thumbnail > img {
+  margin-left: 0;
+  margin-right: 0;
+}
+a.thumbnail:hover {
+  border-color: transparent;
+  -webkit-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+}
+.thumbnail .caption {
+  padding: 0;
+}
+@media (min-width: 1281px) {
+  .thumbnails > li {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .thumbnails {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bbbbbb;
+  }
+  .thumbnails > li {
+    width: 100%;
+    margin: 0;
+    padding: 30px 0 15px;
+    float: none;
+    border-top: 1px solid #bbbbbb;
+  }
+  .thumbnails > li:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+.lt-ie8 .thumbnails {
+  margin-left: 0;
+}
+.lt-ie8 .thumbnails > li:first-child,
+.lt-ie8 .thumbnails > .limpiar {
+  margin-left: 0;
+}
 html,
 body {
   margin: 0;
@@ -82,7 +150,7 @@ footer {
   z-index: 1;
 }
 .controls {
-  padding: 2%;
+  padding: 10px 10px;
   background: #333;
   color: #eee;
 }
@@ -110,10 +178,12 @@ button:focus {
 button + label {
   margin-left: 1em;
 }
+/**
+    SLIDER
+**/
 .container {
   text-align: justify;
-  font-size: 0.1px;
-  background: #68b8c4;
+  background: #ffffff;
   -webkit-backface-visibility: hidden;
   height: 160px;
   width: 100%;
@@ -121,50 +191,76 @@ button + label {
   overflow-y: hidden;
   white-space: nowrap;
 }
-.container:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-}
-.container .mix,
-.container .gap {
-  display: inline-block;
-  width: 49%;
-}
-.container .mix {
-  text-align: left;
-  background: #03899c;
-  margin-bottom: 2%;
+.container .slider-item {
+  width: 200px;
+  height: 100%;
   display: none;
+  margin: 1px;
+  position: relative;
 }
-.container .mix.y2011 {
-  border-top: 2px solid limegreen;
+@media all and (min-width: 420px) {
+  .container .slider-item {
+    width: 32%;
+  }
 }
-.container .mix.y2012 {
-  border-top: 2px solid yellow;
+@media all and (min-width: 640px) {
+  .container .slider-item {
+    width: 23.5%;
+  }
 }
-.container .mix:after {
-  color: white;
+@media all and (min-width: 1200px) {
+  .container .slider-item {
+    width: 10%;
+  }
+}
+.container .slider-item :after {
   font-size: 16px;
   display: inline-block;
   vertical-align: top;
   padding: 4% 6%;
   font-weight: 700;
 }
-.container .mix:before {
-  content: '';
+.container .slider-item :before {
   display: inline-block;
   padding-top: 60%;
 }
-@media all and (min-width: 420px) {
-  .container .mix,
-  .container .gap {
-    width: 32%;
-  }
+.container .slider-item :hover {
+  -webkit-filter: brightness(90%);
 }
-@media all and (min-width: 640px) {
-  .container .mix,
-  .container .gap {
-    width: 23.5%;
-  }
+.container .slider-item img {
+  max-width: 100%;
+  max-height: 100%;
 }
+.container .slider-item .caption {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+}
+.container .slider-item .caption .titulo {
+  margin-bottom: 0;
+  word-wrap: break-word;
+  font: 400 16px/16px 'PFDinTextPro-Bold', sans-serif;
+  color: #333333;
+  background-color: #dddddd;
+}
+/*.container .mix.y2011 {
+  border-top: 2px solid limegreen;
+}
+
+.container .mix.y2012 {
+  border-top: 2px solid yellow;
+}
+
+.container .mix:after {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4% 6%;
+  font-weight: 700;
+}
+
+.container .mix:before {
+  display: inline-block;
+  padding-top: 60%;
+}
+*/

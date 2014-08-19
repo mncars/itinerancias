@@ -11,13 +11,17 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.anio) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.anio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\" data-myorder=\""
+    + " thumbnail slider-item\" data-myorder=\""
     + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n    <p class=\"lead\">";
+    + "\">\n    <a class=\"imagen\" href=\"#\">\n        <img src=\"";
+  if (helper = helpers.imagen) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.imagen); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n        <div class=\"caption\">\n            <span class=\"titulo\">";
   if (helper = helpers.titulo) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.titulo); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</p>\n</div>\n";
+    + "</span>\n        </div>\n    </a>\n</div>";
   return buffer;
   }));
 
@@ -36,7 +40,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div id=\"Container\" class=\"container\">\n    ";
+  buffer += "<div id=\"Container\" class=\"container thumbnails\">\n    ";
   stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</div>";
