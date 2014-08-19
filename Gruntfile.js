@@ -194,7 +194,7 @@ module.exports = function (grunt) {
         'bower-install': {
             app: {
                 html: '<%= yeoman.app %>/index.html',
-
+                exclude: ['<%= yeoman.app %>/bower_components/leaflet/dist/leaflet-src.js'],
                 ignorePath: '<%= yeoman.app %>/'
             }
         },
@@ -380,8 +380,8 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'bower-install',
-            'concurrent:server',
             'handlebars',
+            'concurrent:server',
             'autoprefixer',
             'connect:livereload',
             'watch'

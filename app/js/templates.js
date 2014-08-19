@@ -13,11 +13,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(stack1)
     + "\" data-myorder=\""
     + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n    ";
+    + "\">\n    <p class=\"lead\">";
   if (helper = helpers.titulo) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.titulo); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\n</div>\n";
+    + "</p>\n</div>\n";
   return buffer;
   }));
 
