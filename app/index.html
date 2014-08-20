@@ -12,13 +12,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Museo Reina Sofía - Itinerancias</title>
+  <title>Itinerancias | Museo Reina Sofía</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <link rel="icon" type="image/png" href="favicon.ico">
   <!-- build:css styles/vendor.css --> <!-- bower:css -->
  <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
  <!-- endbower -->
   <!-- endbuild -->
+
   <!-- build:css({.tmp,app}) css/main.css -->
   <link rel="stylesheet" href="./css/normalize.min.css">
   <link rel="stylesheet" href="./css/main.css">
@@ -26,7 +27,7 @@
   <link rel="stylesheet" type="text/css"
         href="http://www.museoreinasofia.es/sites/all/themes/mrs_twitter_bootstrap/css/MyFontsWebfontsKit.css"/>
   <!-- endbuild -->
-
+  <script type='text/javascript' src='./markers2.json'></script>
 </head>
 <body>
 
@@ -34,7 +35,6 @@
 <div class="snap-drawers">
   <div id="datosExposicion" class="snap-drawer snap-drawer-right">
     <a href="#datosExposicion" id="cerrar"> × </a>
-
     <div class="exposicionThumbnail"></div>
   </div>
 </div>
@@ -44,16 +44,9 @@
   </header>
   <div id="map"></div>
   <footer>
-    <div class="controls">
-      <label>Filter:</label>
-      <button class="filter" data-filter="all">All</button>
-      <button class="filter" data-filter=".y2011">2011</button>
-      <button class="filter" data-filter=".y2012">2012</button>
-    </div>
 
   </footer>
 </div>
-<script type='text/javascript' src='./markers2.json'></script>
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/jquery.js"></script>
@@ -62,12 +55,15 @@
 <script src="bower_components/leaflet/dist/leaflet.js"></script>
 <script src="bower_components/handlebars/handlebars.js"></script>
 <script src="bower_components/respond/dest/respond.src.js"></script>
+<script src="bower_components/Leaflet.MakiMarkers/Leaflet.MakiMarkers.js"></script>
 <!-- endbower -->
+<script src="bower_components/bouncemarker/bouncemarker.js"></script>
 <script src="bower_components/mixitup/build/jquery.mixitup.min.js"></script>
 <!-- endbuild -->
 <!-- build:js scripts/app.js -->
 <script src="js/templates.js"></script>
 <script src="js/Exposicion.js"></script>
+<script src="js/Slider.js"></script>
 <script src="js/main.js"></script>
 <!-- endbuild -->
 </body>

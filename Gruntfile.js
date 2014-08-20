@@ -100,7 +100,7 @@ module.exports = function (grunt) {
         },
         handlebars: {
                 options: {
-                    namespace: "Itinerancias.Templates"
+                    namespace: "ItineranciasTpls"
                 },
                 files: {
                     files: {

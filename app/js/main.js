@@ -10,10 +10,7 @@
     maxZoom: 15
   };
 
-  /* var snapper = new Snap({
-   element: document.getElementById('content'),
-   touchToDrag: false,
-   });*/
+  snapper = $(".snap-drawer"); //Pasará a ser el lightbox
 
   var exposicionesLayers = L.layerGroup();
 
@@ -21,14 +18,13 @@
     minZoom: config.minZoom,
     maxZoom: config.maxZoom,
     zoomControl: false,
-    //snapper: snapper,
+    snapper: snapper,
     exposicionesLayers: exposicionesLayers,
     initZoom: config.initZoom
   });
   new L.Control.Zoom({ position: 'topright' }).addTo(map);
   map.addLayer(new L.TileLayer(config.tileUrl, {attribution: config.tileAttrib}));
   map.setView(config.mapCenter, config.initZoom);
-
 
   render();
 
@@ -37,47 +33,38 @@
       var exposicion = L.createExposicionLayer(exposiciones[i],
               {
                 initLatLng: config.initLatLng,
-                iconUrl: 'imgs/pin.png'
-                //snapper: snapper,
+                iconUrl: './imgs/pin.png',
+                snapper: snapper
               }
       ).addTo(map);
+      exposiciones[i].leaflet_id = exposicion._leaflet_id;
       exposicionesLayers.addLayer(exposicion);
     }
   }
-
-  map.on('click', function (e) {
+  /*map.on('click', function (e) {
     map.clearAll();
-  });
+  });*/
 
   $(function () {
-    var postTemplate = Itinerancias['Templates']['app/templates/slider.hbs'];
-    var html = postTemplate(exposiciones);
-    $('footer').append(html);
-    $('#Container').mixItUp();
-    $('#expo2011').click(function () {
-      map.clearAll();
-      render();
-      exposicionesLayers.eachLayer(function (layer) {
-        layer.resaltarIconosAnio(2011);
-      });
-    });
-
-    $('#expo2012').click(function () {
-      map.clearAll();
-      render();
-      exposicionesLayers.eachLayer(function (layer) {
-        layer.resaltarIconosAnio(2012);
-      });
-    });
-
-    $('#expoTodas').click(function () {
-      map.clearAll();
-      render();
-
-    });
-
-    $('#cerrar').click(function () {
-      //snapper.close();
-    });
+    Slider.initialize(exposicionesLayers, map);
+    //Activamos slider
+//    var sliderTpl = ItineranciasTpls['app/templates/slider.hbs'];
+//    $('footer').append(sliderTpl(exposiciones));
+//    $('#slider-container').mixItUp();
+//
+//
+//    $('.slider-item').hover(function(){  //HOVER
+//        if(!$('#slider-container').is('.active')) {
+//            layer_id = $(this).data('layer');
+//            exposicionesLayers.getLayer(layer_id).renderItinerancias(true);
+//        }
+//    }, function(){
+//        if(! $(this).is('.active'))
+//            map.clearAll(true);
+//
+//    }).bind('click', function(e){ //CLICK
+//        e.preventDefault();
+//
+//    });
   });
 }());

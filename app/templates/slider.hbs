@@ -1,4 +1,10 @@
-<div id="Container" class="container thumbnails">
+<div class="controls">
+      <label>Filter:</label>
+      <button class="filter" data-filter="all">All</button>
+      <button class="filter" data-filter=".y2011">2011</button>
+      <button class="filter" data-filter=".y2012">2012</button>
+    </div>
+<div id="slider-container" class="slider-container thumbnails">
     {{#each this}}
         {{> slider-item}}
     {{/each}}
