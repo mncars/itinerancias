@@ -1,6 +1,5 @@
 node_modules
 jkl
-dist
 .tmp
 .jekyll
 */.idea

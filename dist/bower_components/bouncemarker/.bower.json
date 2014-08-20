@@ -1,0 +1,13 @@
+{
+  "name": "bouncemarker",
+  "homepage": "https://github.com/maximeh/leaflet.bouncemarker",
+  "_release": "v1.0",
+  "_resolution": {
+    "type": "tag",
+    "tag": "v1.0",
+    "commit": "93cdc788d739b40b6401766c257e583ea15848d1"
+  },
+  "_source": "git@github.com:maximeh/leaflet.bouncemarker.git",
+  "_target": "v1.0",
+  "_originalSource": "git@github.com:maximeh/leaflet.bouncemarker.git"
+}
