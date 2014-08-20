@@ -40,7 +40,6 @@
   L.Marker.include({
 
     _toPoint: function (latlng) {
-
       return this._map.latLngToContainerPoint(latlng);
     },
     _toLatLng: function (point) {
@@ -70,12 +69,12 @@
           start_x = this._drop_point.x,
           distance = this._point.y - start_y;
       var self = this;
+
       this._animate({
         delay: 10,
         duration: duration || 1000, // 1 sec by default
         delta: delta,
         step: function (delta) {
-            console.log(self._map.project);exitssss;
           self._drop_point.y = 
             start_y 
             + (distance * delta) 
