@@ -41,4 +41,4 @@ Grunt está preparado para generar paquetes distribuibles en la carpeta dist de 
 grunt build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Este
+Este comando genera el paquete en la carpeta dist
