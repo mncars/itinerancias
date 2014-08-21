@@ -165,6 +165,23 @@ button + label {
     display: none;
     padding: 1px;
     position: relative;
+    &.active{
+      .caption{
+        padding-bottom: 15px;
+      }
+      .overlay{
+        .reset-filter;
+        .background-rgba(#e7d800,.95);
+      }
+      .titulo{
+        font-family: @boldScout;
+        color: @grayDark;
+      }
+      .fechas{
+        color: @grayDark;
+        display: block;
+      }
+    }
     .imagen {
       position:relative;
       display:block;

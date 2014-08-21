@@ -201,6 +201,21 @@ button + label {
   padding: 1px;
   position: relative;
 }
+.slider-container .slider-item.active .caption {
+  padding-bottom: 15px;
+}
+.slider-container .slider-item.active .overlay {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background: rgba(230, 214, 0, 0.95);
+}
+.slider-container .slider-item.active .titulo {
+  font-family: 'PFDinTextPro-Bold', sans-serif;
+  color: #333333;
+}
+.slider-container .slider-item.active .fechas {
+  color: #333333;
+  display: block;
+}
 .slider-container .slider-item .imagen {
   position: relative;
   display: block;
