@@ -102,8 +102,7 @@ footer {
 
 .controls {
   padding: 10px 10px;
-  background: #333;
-  color: #eee;
+  color: #000;
 }
 
 label {
@@ -123,7 +122,8 @@ button {
 }
 
 button.active {
-  background: #68b8c4;
+  background: #e7d800;
+  color: #000;
 }
 
 button:focus {
@@ -135,13 +135,10 @@ button + label {
 }
 
 
-
-
 /**
     SLIDER
 **/
 .slider-container {
-  //padding: 2% 2% 0;
   text-align: left;
   background-color: @borderLight;
   -webkit-backface-visibility: hidden;
@@ -150,7 +147,6 @@ button + label {
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
-  white-space: nowrap;
 
   .slider-item {
     width: 150px;
@@ -159,17 +155,7 @@ button + label {
     display: none;
     padding: 1px;
     position: relative;
-    .opacity(1);
-    //display: inline-block;
-   /* @media all and (min-width: 420px) {
-        width: 32%;
-    }
-    @media all and (min-width: 640px) {
-       width: 23.5%;
-    }
-    @media all and (min-width: 1200px) {
-       width: 10%;
-    }*/
+    /*.opacity(1);
     .transition(opacity .5s linear);
     :after {
       font-size: 16px;
@@ -183,57 +169,60 @@ button + label {
       padding-top: 60%;
     }
     :hover {
-      .opacity(0.90);
+      .opacity(.9);
       .transition(opacity .5s linear);
     }
     &.active{
-      .opacity(0.70);
+      .opacity(.7);
       .transition(opacity .5s linear);
+    }*/
+    a.imagen {
+      background:@black;
+      position:relative;
+      display:block;
     }
-    img {
+    a.imagen img {
       max-width:100%;
       height:100%;
+      max-height:100%;
+      .opacity(.4);
+    }
+    a.imagen:hover img {
+      .opacity(1);
+      .transition(opacity .5s ease-out);
+
+    }
+    a.imagen:hover div.caption {
+      background:@beige;
+      color:@grayDark;
+      .opacity(.9);
     }
     .caption {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background-color: @borderLight;
-      white-space: normal;
+      width:100%;
+      min-height:50px;
+      display:block;
+      padding:10px;
+      position:absolute;
+      bottom:10px;
+      left:0;
+      background:@grayDark;
+      .opacity(.7);
+      filter:alpha(opacity=80);
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing:border-box;
+      color: @white;
       .titulo {
+        margin-bottom: 5px;
+        font:400 14px/14px @lightScout;
+      }
+      .fechas {
         margin-bottom: 0;
-        padding: 1px;
-	    font:400 14px/14px @boldScout;
-        color: @grayDark;
-
+        font:400 12px/12px @lightScout;
       }
     }
   }
-
 }
-
-/*.container .mix.y2011 {
-  border-top: 2px solid limegreen;
-}
-
-.container .mix.y2012 {
-  border-top: 2px solid yellow;
-}
-
-.container .mix:after {
-  font-size: 16px;
-  display: inline-block;
-  vertical-align: top;
-  padding: 4% 6%;
-  font-weight: 700;
-}
-
-.container .mix:before {
-  display: inline-block;
-  padding-top: 60%;
-}
-*/
-
 //Slider
 
 

@@ -10,7 +10,14 @@ Slider = ({
   initialize: function (layers, map) {
     this.inj_target.append(this.sliderTpl(exposiciones));
     this.container = $('#slider-container');
-    this.container.mixItUp();
+    this.container.mixItUp({
+        animation: {
+          duration: 400,
+          effects: 'fade translateZ(-360px)',
+          easing: 'ease'
+        }
+      }
+    );
     this.slides = $('.slider-item');
     this.map = map;
     this.layers = layers;

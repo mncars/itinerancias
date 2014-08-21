@@ -28,14 +28,15 @@ L.ItineranciaMarker = L.Marker.extend({
     this._exposicionLayer = exposicionLayer;
     this._snapper = snapper;
     L.Marker.prototype.initialize.call(this, latlngs, options);
+    this.bindPopup(this.getPopup());
+  },
+
+  getPopup: function (){
+    var exposicionTpl = ItineranciasTpls['app/templates/exposicion-globo.hbs'];
+    return exposicionTpl({exposicion: this._exposicion, itinerancia: this._itinerancia});
   },
 
   renderExposicion: function () {
-    var exposicionTpl = ItineranciasTpls['app/templates/exposicion-globo.hbs'];
-    var html = exposicionTpl(this._exposicion);
-    console.log(html);
-
-
     /*var htmlExposicion = '<h2>' + this._exposicion.titulo + "</h2>" +
       '<div class="fecha-lugar">' + this._exposicion.fechas + '<br>' +
         this._exposicion.lugar + '</div>' +
