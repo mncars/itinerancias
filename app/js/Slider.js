@@ -15,6 +15,18 @@ Slider = ({
           duration: 400,
           effects: 'fade translateZ(-360px)',
           easing: 'ease'
+        },
+        callbacks: {
+          onMixEnd: function(state){
+            map.clearAll();
+            //con esto ocultamos los markers que no son del año.
+            if (state.activeFilter == '.mix') {
+              $(".leaflet-marker-icon").show();
+              return;
+            }
+            $(".leaflet-marker-icon").hide();
+            $(state.activeFilter + "-marker").show();
+          }
         }
       }
     );
@@ -38,17 +50,15 @@ Slider = ({
       e.preventDefault();
       if (_self.fixed && $(this).is('.active')) {
         _self.clearFixed();
-      }
-      else if(_self.fixed &&!$(this).is('.active') )
-      {
+      } else if(_self.fixed &&!$(this).is('.active')) {
         _self.clearFixed();
         _self.fixed = true;
-        $(this).addClass('active')
+        $(this).addClass('active');
         layer_id = $(this).data('layer');
         _self.layers.getLayer(layer_id).renderItinerancias();
-      }else if(!_self.fixed && !$(this).is('.active') ){
+      } else if(!_self.fixed && !$(this).is('.active') ) {
         _self.fixed = true;
-        $(this).addClass('active')
+        $(this).addClass('active');
         layer_id = $(this).data('layer');
         _self.layers.getLayer(layer_id).renderItinerancias();
       }

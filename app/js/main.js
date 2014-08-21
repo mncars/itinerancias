@@ -4,7 +4,7 @@
     tileUrl: 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr/{z}/{x}/{y}.png',
     tileAttrib: '',//'Map tiles &copy; Development Seed and OpenStreetMap ',
     initLatLng: new L.LatLng(40.408192, -3.694337), // MNCARS
-    mapCenter: new L.LatLng(23.686633, -39.321783), //en mitad del oceano
+    mapCenter: new L.LatLng(10, -28), //en mitad del oceano
     initZoom: 3,
     minZoom: 2,
     maxZoom: 15
@@ -40,6 +40,12 @@
       exposiciones[i].leaflet_id = exposicion._leaflet_id;
       exposicionesLayers.addLayer(exposicion);
     }
+  }
+
+  function renderAnio(anio) {
+    exposicionesLayers.eachLayer(function (layer) {
+        layer.renderAnio(anio);
+    });
   }
 
   map.on('click', function (e) {

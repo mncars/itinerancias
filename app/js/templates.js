@@ -55,7 +55,9 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" target=\"_blank\">"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.lugar)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</a></div>\n    <a href=\"#\">ver más</a>\n</div>\n";
+    + "</a></div>\n    <a href=\"http://www.museoreinasofia.es"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" target=\"_blank\">ver más</a>\n</div>\n";
   return buffer;
   });
 
@@ -74,7 +76,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class=\"controls\">\n      <label>Filtrar:</label>\n      <button class=\"filter\" data-filter=\"all\">Todas</button>\n      <button class=\"filter\" data-filter=\".y2011\">2011</button>\n      <button class=\"filter\" data-filter=\".y2012\">2012</button>\n    </div>\n<div id=\"slider-container\" class=\"slider-container thumbnails\">\n    ";
+  buffer += "<div class=\"controls\">\n      <label>Filtrar:</label>\n      <button class=\"filter\" data-filter=\"all\">Todas</button>\n      <button class=\"filter\" data-filter=\".y2014\">2014</button>\n      <button class=\"filter\" data-filter=\".y2013\">2013</button>\n      <button class=\"filter\" data-filter=\".y2012\">2012</button>\n      <button class=\"filter\" data-filter=\".y2011\">2011</button>\n      <button class=\"filter\" data-filter=\".y2010\">2010</button>\n      <button class=\"filter\" data-filter=\".y2009\">2009</button>\n      <button class=\"filter\" data-filter=\".y2008\">2008</button>\n      <button class=\"filter\" data-filter=\".y2007\">2007</button>\n      <button class=\"filter\" data-filter=\".y2006\">2006</button>\n      <button class=\"filter\" data-filter=\".y2005\">2005</button>\n      <button class=\"filter\" data-filter=\".y2004\">2004</button>\n      <button class=\"filter\" data-filter=\".y2003\">2003</button>\n      <button class=\"filter\" data-filter=\".y2002\">2002</button>\n      <button class=\"filter\" data-filter=\".y2001\">2001</button>\n      <button class=\"filter\" data-filter=\".y2000\">2000</button>\n      <button class=\"filter\" data-filter=\".y1999\">1999</button>\n      <button class=\"filter\" data-filter=\".y1998\">1998</button>\n      <button class=\"filter\" data-filter=\".y1997\">1997</button>\n      <button class=\"filter\" data-filter=\".y1996\">1996</button>\n      <button class=\"filter\" data-filter=\".y1995\">1995</button>\n      <button class=\"filter\" data-filter=\".y1994\">1994</button>\n      <button class=\"filter\" data-filter=\".y1993\">1993</button>\n      <button class=\"filter\" data-filter=\".y1992\">1992</button>\n      <button class=\"filter\" data-filter=\".y1991\">1991</button>\n    </div>\n<div id=\"slider-container\" class=\"slider-container thumbnails\">\n    ";
   stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</div>\n";
