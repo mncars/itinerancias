@@ -182,13 +182,16 @@ button + label {
 **/
 .slider-container {
   text-align: left;
-  background-color: #dddddd;
+  background-color: #fff;
   -webkit-backface-visibility: hidden;
+  padding-top: 4px;
   padding-bottom: 9px;
   max-height: 160px;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
+  -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
 }
 .slider-container .slider-item {
   width: 150px;
@@ -197,74 +200,71 @@ button + label {
   display: none;
   padding: 1px;
   position: relative;
-  /*.opacity(1);
-    .transition(opacity .5s linear);
-    :after {
-      font-size: 16px;
-      display: inline-block;
-      vertical-align: top;
-      padding: 4% 6%;
-      font-weight: 700;
-    }
-    :before {
-      display: inline-block;
-      padding-top: 60%;
-    }
-    :hover {
-      .opacity(.9);
-      .transition(opacity .5s linear);
-    }
-    &.active{
-      .opacity(.7);
-      .transition(opacity .5s linear);
-    }*/
 }
-.slider-container .slider-item a.imagen {
-  background: #000000;
+.slider-container .slider-item .imagen {
   position: relative;
   display: block;
 }
-.slider-container .slider-item a.imagen img {
+.slider-container .slider-item .imagen:hover .caption {
+  padding-bottom: 15px;
+}
+.slider-container .slider-item .imagen:hover .overlay {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background: rgba(230, 214, 0, 0.95);
+}
+.slider-container .slider-item .imagen:hover .titulo {
+  font-family: 'PFDinTextPro-Bold', sans-serif;
+  color: #333333;
+}
+.slider-container .slider-item .imagen:hover .fechas {
+  color: #333333;
+  display: block;
+}
+.slider-container .slider-item .imagen img {
   max-width: 100%;
   height: 100%;
   max-height: 100%;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
-}
-.slider-container .slider-item a.imagen:hover img {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-}
-.slider-container .slider-item a.imagen:hover div.caption {
-  background: #eee5d5;
-  color: #333333;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
 }
 .slider-container .slider-item .caption {
-  width: 100%;
-  min-height: 50px;
-  display: block;
-  padding: 10px;
   position: absolute;
-  bottom: 10px;
   left: 0;
-  background: #333333;
-  opacity: 0.7;
-  filter: alpha(opacity=70);
-  filter: alpha(opacity=80);
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 0 10px 5px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.slider-container .slider-item .titulo {
+  margin-bottom: 5px;
+  font-family: 'PFDinTextPro-Regular', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
   color: #ffffff;
 }
-.slider-container .slider-item .caption .titulo {
-  margin-bottom: 5px;
-  font: 400 14px/14px 'PFDinTextPro-Thin', sans-serif;
-}
-.slider-container .slider-item .caption .fechas {
+.slider-container .slider-item .fechas {
+  display: none;
   margin-bottom: 0;
-  font: 400 12px/12px 'PFDinTextPro-Thin', sans-serif;
+  font-family: 'PFDinTextPro-Regular', sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 14px;
+  color: #ffffff;
+}
+.slider-container .slider-item .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: -webkit-gradient(linear, left 20%, left 100%, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.9)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.9) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#e6000000', GradientType=0);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
