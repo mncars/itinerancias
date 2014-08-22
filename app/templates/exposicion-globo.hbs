@@ -1,6 +1,20 @@
-<div>
-    <div class="titulo">{{exposicion.titulo}}</div>
-    <div class="fechas">{{itinerancia.fechas}}</div>
-    <div class="lugar"><a href="{{itinerancia.url}}" target="_blank">{{itinerancia.lugar}}</a></div>
-    <a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank">ver más</a>
+<h2>{{exposicion.titulo}}</h2>
+
+<div class="fecha-lugar">
+  {{exposicion.fechas}} <br>
+  {{exposicion.lugar}}
 </div>
+<img src="{{exposicion.imagen}}" class="img-responsive">
+<span class="label">Organización:</span>  {{exposicion.organizacion}} <br>
+<span class="label">Comisariado:</span> {{exposicion.comisario}} <br>
+<span class="label">Artistas:</span> loque sea <br>
+
+<h3>Itinerancias</h3>
+{{#each exposicion.itinerancia}}
+  <div class="itinerancia{{#equal nid ../itinerancia.nid }} active{{/equal}}">
+    <a href="{{url}}" target="_blank">{{lugar}}</a>
+    <div class="itinerancia-lugar">{{fechas}}</div>
+  </div>
+{{/each}}
+
+<a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank">ver más</a>

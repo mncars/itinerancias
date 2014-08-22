@@ -24,6 +24,7 @@
   <!-- build:css({.tmp,app}) css/main.css -->
     <link rel="stylesheet" href="./css/normalize.min.css">
     <link rel="stylesheet" href="./css/MyFontsWebfontsKit.css"/>
+    <link rel="stylesheet" href="./bower_components/snapjs/snap.css" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/style.css"/>
   <!-- endbuild -->
@@ -31,15 +32,18 @@
 
 </head>
 <body>
-
+<div class="snap-drawers">
+  <div id="datosExposicion" class="snap-drawer snap-drawer-right">
+    <a href="#datosExposicion" class="snap-close"> × </a>
+    <div class="exposicionThumbnail"></div>
+  </div>
+</div>
 <div id="content" class="snap-content">
   <header id="branding" role="banner" class="clearfix">
     <a href="http://www.museoreinasofia.es"><h1>Museo Reina Sofía</h1></a>
   </header>
   <div id="map"></div>
-  <footer>
-
-  </footer>
+  <footer></footer>
 </div>
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
@@ -49,12 +53,17 @@
 <script src="bower_components/handlebars/handlebars.js"></script>
 <script src="bower_components/respond/dest/respond.src.js"></script>
 <script src="bower_components/Leaflet.MakiMarkers/Leaflet.MakiMarkers.js"></script>
+<script src="bower_components/snapjs/snap.js"></script>
 <!-- endbower -->
 <script src="bower_components/mixitup/build/jquery.mixitup.min.js"></script>
 <!-- endbuild -->
 <!-- build:js scripts/app.js -->
+<script src="js/handlebars-helpers.js"></script>
 <script src="js/templates.js"></script>
-<script src="js/Exposicion.js"></script>
+<script src="js/itinerancia.class.js"></script>
+<script src="js/exposicion.class.js"></script>
+<script src="js/map.class.js"></script>
+
 <script src="js/Slider.js"></script>
 <script src="js/main.js"></script>
 <!-- endbuild -->

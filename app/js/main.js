@@ -10,7 +10,10 @@
     maxZoom: 15
   };
 
-  snapper = $(".snap-drawer"); //Pasará a ser el lightbox
+  var snapper = new Snap({
+    element: document.getElementById('content'),
+    touchToDrag: false,
+  });
 
   var exposicionesLayers = L.layerGroup();
 
@@ -54,5 +57,9 @@
 
   $(function () {
     Slider.initialize(exposicionesLayers, map);
+  });
+
+  $('.snap-close').click(function() {
+    snapper.close();
   });
 }());

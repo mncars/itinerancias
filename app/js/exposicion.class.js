@@ -1,81 +1,3 @@
-L.ItineranciasMap = L.Map.extend({
-  initialize: function (id, options) {
-    this._exposicionesLayers = options.exposicionesLayers;
-    this._snapper = options.snapper;
-    this._initZoom = options.initZoom;
-    L.Map.prototype.initialize.call(this, id, options);
-
-  },
-
-  clearAll: function (noZoom) {
-    //this._snapper.close();
-    this._exposicionesLayers.eachLayer(function (layer) {
-      layer.clearItineranciasLayer();
-    });
-    if(!noZoom)
-        this.setZoom(this._initZoom, {animate: true});
-  }
-});
-
-L.map = function (id, options) {
-  return new L.ItineranciasMap(id, options);
-};
-
-L.ItineranciaMarker = L.Marker.extend({
-  initialize: function (exposicion, itinerancia, exposicionLayer, snapper, latlngs, options) {
-    this._exposicion = exposicion;
-    this._itinerancia = itinerancia;
-    this._exposicionLayer = exposicionLayer;
-    this._snapper = snapper;
-    L.Marker.prototype.initialize.call(this, latlngs, options);
-    this.bindPopup(this.getPopup());
-  },
-
-  getPopup: function (){
-    var exposicionTpl = ItineranciasTpls['app/templates/exposicion-globo.hbs'];
-    return exposicionTpl({exposicion: this._exposicion, itinerancia: this._itinerancia});
-  },
-
-  renderExposicion: function () {
-    /*var htmlExposicion = '<h2>' + this._exposicion.titulo + "</h2>" +
-      '<div class="fecha-lugar">' + this._exposicion.fechas + '<br>' +
-        this._exposicion.lugar + '</div>' +
-      '<img src="'+this._exposicion.imagen+'" class="img-responsive">' +
-      '<span class="label">Comisariado:</span> ' + this._exposicion.comisario + "<br>" +
-      '<span class="label">Organización:</span> ' + this._exposicion.organizacion + "<br>" +
-      '<h3>Itinerancias</h3>';
-
-    for (var j=0; j < this._exposicion.itinerancia.length; ++j ) {
-      itinerancia = this._exposicion.itinerancia[j];
-      htmlExposicion += '<div class="itinerancia"><a href="' + itinerancia.url + '" target="_blank">' + itinerancia.lugar + '</a>' +
-        '<div class="itinerancia-lugar">' + itinerancia.fechas + '</div></div>';
-    }
-*/
-    //$(".exposicionThumbnail").html(htmlExposicion);
-    //this._snapper.open('right');
-  },
-
-  renderItinerancias: function (noZoom) {
-    this._exposicionLayer.renderItinerancias(noZoom);
-    this.renderExposicion();
-    if(!noZoom){
-        this._map.fitBounds(this._exposicionLayer.getBounds(),
-          {
-            animate: true,
-            maxZoom: 6,
-            paddingTopLeft: [20, 20],
-            paddingBottomRight: [20, 240]
-          }
-        );
-    }
-  }
-});
-
-L.itineranciaMarker = function (exposicion, itinerancia, exposicionLayer, snapper, latlngs, options) {
-  return new L.ItineranciaMarker(exposicion, itinerancia, exposicionLayer, snapper, latlngs, options);
-};
-
-
 /**
  * Representa una exposicion y sus itinerancias
  */
@@ -117,7 +39,7 @@ L.ExposicionLayer = L.LayerGroup.extend({
           icon: this._icon
         });
       this._markers.push(marker);
-      marker.on('click', renderItinerancias);
+      marker.on('click', renderItineranciasHandler);
       this.addLayer(marker);
     }
   },
@@ -191,6 +113,7 @@ L.createExposicionLayer = function (exposicion, options) {
   return new L.ExposicionLayer(exposicion, options);
 };
 
-function renderItinerancias(e) {
+function renderItineranciasHandler(e) {
+  console.log(e);
   e.target.renderItinerancias();
 }
