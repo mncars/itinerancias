@@ -40,7 +40,7 @@ Slider = ({
     this.slides.hover(function () {  //HOVER
       if (!_self.fixed) {
         layer_id = $(this).data('layer');
-        _self.map.renderExposicion(layer_id);
+        _self.map.renderExposicion(layer_id, true);
       }
     }, function () {
       if (!_self.fixed)
@@ -54,12 +54,12 @@ Slider = ({
         _self.fixed = true;
         $(this).addClass('active');
         layer_id = $(this).data('layer');
-        _self.map.renderExposicion(layer_id);
+        _self.map.renderExposicion(layer_id, false);
       } else if(!_self.fixed && !$(this).is('.active') ) {
         _self.fixed = true;
         $(this).addClass('active');
         layer_id = $(this).data('layer');
-        _self.map.renderExposicion(layer_id);
+        _self.map.renderExposicion(layer_id, false);
       }
     });
   },

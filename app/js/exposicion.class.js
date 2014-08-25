@@ -74,6 +74,8 @@ L.ExposicionLayer = L.LayerGroup.extend({
         this._map.fitBounds(this.getBounds(),
           {
             animate: true,
+            duration: 1,
+            //easeLinearity: 1,
             maxZoom: 6,
             paddingTopLeft: [270, 0],
             paddingBottomRight: [20, 240]

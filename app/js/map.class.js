@@ -33,8 +33,8 @@ L.ItineranciasMap = L.Map.extend({
     });
   },
 
-  renderExposicion: function (nid) {
-    this._exposicionesLayersHashMap[nid].renderItinerancias(true);
+  renderExposicion: function (nid, noZoom) {
+    this._exposicionesLayersHashMap[nid].renderItinerancias(noZoom);
   },
 
   clearAll: function (noZoom) {

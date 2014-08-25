@@ -40,7 +40,7 @@
   });
 
   $(document).on("verItinerancia", function(e) {
-    map.clearAll();  //TODO: Nozoom?
+    map.clearAll(true);  //TODO: Nozoom?
     e.exposicion_marker.renderItinerancia();
 
     $(".exposicionThumbnail").html(e.exposicion_marker.getPopup());
