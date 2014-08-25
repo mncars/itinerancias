@@ -47,3 +47,34 @@ h1 {
 
 @import 'slider.less';
 @import 'snap.less';
+
+#compartir {
+  position:fixed;
+  left:-320px;
+  .transition(left 0.8s ease);
+  top:200px;
+  background-color:@white;
+  &.open {
+    left: 0;
+    .transition(left 0.8s ease);
+
+  }
+}
+
+#compartir ul.share-buttons {
+  width:380px;
+  margin: 0;
+  display: inline-block;
+}
+
+#compartir ul.share-buttons li {
+  margin: 0 0 5px 0;
+  display: inline-block;
+  float: left;
+}
+#compartir ul.share-buttons li {
+  margin: 0;
+}
+#compartir ul.share-buttons li.facebook {
+  min-width: 120px;
+}

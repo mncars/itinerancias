@@ -290,3 +290,32 @@ button + label {
   background-color: #bbbbbb;
   font-weight: bold;
 }
+#compartir {
+  position: fixed;
+  left: -320px;
+  -webkit-transition: left 0.8s ease;
+  transition: left 0.8s ease;
+  top: 200px;
+  background-color: #ffffff;
+}
+#compartir.open {
+  left: 0;
+  -webkit-transition: left 0.8s ease;
+  transition: left 0.8s ease;
+}
+#compartir ul.share-buttons {
+  width: 380px;
+  margin: 0;
+  display: inline-block;
+}
+#compartir ul.share-buttons li {
+  margin: 0 0 5px 0;
+  display: inline-block;
+  float: left;
+}
+#compartir ul.share-buttons li {
+  margin: 0;
+}
+#compartir ul.share-buttons li.facebook {
+  min-width: 120px;
+}

@@ -85,6 +85,15 @@ function program2(depth0,data) {
   return buffer;
   });
 
+this["ItineranciasTpls"]["app/templates/info.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<h2>Itinerancias</h2>\n\n<p>\nLorem ipsum dolor sit amet, quodsi scriptorem conclusionemque id vim, numquam petentium eu vim. Minim oportere dissentiunt sea ex. Ei volumus verterem mediocrem nec, stet dolores facilisis usu ne, iriure minimum qualisque sit ad. Iriure scaevola usu no. Oratio tacimates per at, est rebum electram sadipscing at. Has dicant appareat temporibus cu, solum detracto ea usu, pri id decore vocent vivendum.</p>\n\n<p>\nNec aliquando dissentiunt ad, ut sea dicam facilisi. Hinc consequat efficiendi id nec, numquam sensibus abhorreant te his, te his congue conceptam. Mea eu errem delicatissimi, tacimates omittantur id mea, autem neglegentur id mei. Harum doming accusamus sea ut, homero platonem ut est, his debitis facilis ponderum ne.\n</p>\n";
+  });
+
 this["ItineranciasTpls"]["app/templates/slider.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); partials = this.merge(partials, Handlebars.partials); data = data || {};

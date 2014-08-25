@@ -16,7 +16,7 @@
   });
 
   $('.snap-close').click(function() {
-  $(".snap-drawer-right").css("z-index", 1 );
+    $(".snap-drawer-right").css("z-index", 1 );
 
     snapper.close();
   });
@@ -27,7 +27,8 @@
     zoomControl: false,
     snapper: snapper,
     initZoom: config.initZoom,
-    initLatLng: config.initLatLng
+    initLatLng: config.initLatLng,
+    riseOnHover: true
   });
   new L.Control.Zoom({ position: 'topright' }).addTo(map);
   map.addLayer(new L.TileLayer(config.tileUrl, {attribution: config.tileAttrib}));
@@ -44,6 +45,23 @@
     e.exposicion_marker.renderItinerancia();
 
     $(".exposicionThumbnail").html(e.exposicion_marker.getPopup());
+    $(".snap-drawer-right").css("z-index", 10 );
+    snapper.open('right');
+  });
+
+  //interacciones de botones de share y + info
+  $('.btn_share').click(function(event) {
+    var panel = $('#compartir');
+    if (panel.hasClass('open')) {
+      panel.removeClass('open');
+    } else {
+      panel.addClass('open');
+    }
+  });
+
+  $('.btn_info').click(function() {
+    var infoTpl = ItineranciasTpls['app/templates/info.hbs'];
+    $(".exposicionThumbnail").html(infoTpl());
     $(".snap-drawer-right").css("z-index", 10 );
     snapper.open('right');
   });

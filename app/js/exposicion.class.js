@@ -1,7 +1,7 @@
 /**
  * Representa una exposicion y sus itinerancias
  */
-L.ExposicionLayer = L.LayerGroup.extend({
+L.ExposicionLayer = L.FeatureGroup.extend({
   options: {
     initLatLng: [],
   },
@@ -11,16 +11,16 @@ L.ExposicionLayer = L.LayerGroup.extend({
     this._initLatLng = options.initLatLng;
     this._markerMuseo = options.markerMuseo;
 
-    this._itineranciasLayer = L.layerGroup();
+    this._itineranciasLayer = L.featureGroup();
     this._markers = [];
     this._colorResaltado = "#e7d800";
     this._icon = L.MakiMarkers.icon({icon: "town-hall", color: "#333", size: "s", className: "itinerancia-marker y" + exposicion.anio + "-marker"});
     this._iconResaltado = L.MakiMarkers.icon({icon: "town-hall", color: this._colorResaltado , size: "m"});
-    L.LayerGroup.prototype.initialize.call(this);
+    L.FeatureGroup.prototype.initialize.call(this);
   },
 
   onAdd: function (map) {
-    L.LayerGroup.prototype.onAdd.call(this, map);
+    L.FeatureGroup.prototype.onAdd.call(this, map);
     this.addLayer(this._markerMuseo);
     this.addLayer(this._itineranciasLayer);
     for (var j=0; j < this._exposicion.itinerancia.length; ++j ) {
@@ -82,6 +82,10 @@ L.ExposicionLayer = L.LayerGroup.extend({
           }
         );
     }
+
+    // @TODO: Esto no funciona
+    this._itineranciasLayer.bringToFront();
+    this.bringToFront();
   },
 
   resaltarIconos: function() {
