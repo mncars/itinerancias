@@ -5,6 +5,7 @@ L.ItineranciasMap = L.Map.extend({
     this._initLatLng = options.initLatLng;
     this._exposicionesLayersHashMap = {};
     this._exposicionesLayers = L.layerGroup();
+    this._mapCenter = options.mapCenter;
 
     this._renderMarkerMuseo();
     this._initializeExposicionesLayers(this._exposicionesLayers, this._exposicionesLayersHashMap);
@@ -41,8 +42,9 @@ L.ItineranciasMap = L.Map.extend({
     this._exposicionesLayers.eachLayer(function (layer) {
       layer.clearItineranciasLayer();
     });
-    if(!noZoom)
-        this.setZoom(this._initZoom, {animate: true});
+    if(!noZoom) {
+      this.setView(this._mapCenter, this._initZoom, {animate: true});
+    }
   },
 
   getExposicionLayers: function() {

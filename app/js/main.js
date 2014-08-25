@@ -28,7 +28,8 @@
     snapper: snapper,
     initZoom: config.initZoom,
     initLatLng: config.initLatLng,
-    riseOnHover: true
+    riseOnHover: true,
+    mapCenter: config.mapCenter
   });
   new L.Control.Zoom({ position: 'topright' }).addTo(map);
   map.addLayer(new L.TileLayer(config.tileUrl, {attribution: config.tileAttrib}));
@@ -60,9 +61,16 @@
   });
 
   $('.btn_info').click(function() {
-    var infoTpl = ItineranciasTpls['app/templates/info.hbs'];
-    $(".exposicionThumbnail").html(infoTpl());
-    $(".snap-drawer-right").css("z-index", 10 );
-    snapper.open('right');
+    console.log(snapper.state());
+    if (snapper.state().state == 'closed') {
+      var infoTpl = ItineranciasTpls['app/templates/info.hbs'];
+      $(".snap-drawer-left").html(infoTpl());
+      $(".snap-drawer-left").css("z-index", 10 );
+      snapper.open('left');
+    } else {
+      $(".snap-drawer-left").css("z-index", 1 );
+      snapper.close();
+    }
+
   });
 }());
