@@ -97,7 +97,6 @@ h1 {
   height: 65px;
   margin: 0;
 }
-/* Barra de navegación inferior */
 footer {
   position: absolute;
   bottom: 0;
@@ -105,7 +104,11 @@ footer {
   left: 0;
   overflow: hidden;
   display: block;
-  z-index: 1;
+  float: left;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  z-index: 3;
 }
 .controls {
   padding: 10px 10px;
@@ -135,9 +138,6 @@ button:focus {
 button + label {
   margin-left: 1em;
 }
-/**
-    SLIDER
-**/
 .slider-container {
   text-align: left;
   background-color: #fff;
@@ -146,8 +146,6 @@ button + label {
   padding-bottom: 9px;
   max-height: 160px;
   width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
   -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
 }
@@ -158,6 +156,7 @@ button + label {
   display: none;
   padding: 1px;
   position: relative;
+  white-space: normal;
 }
 .slider-container .slider-item.active .caption {
   padding-bottom: 15px;
@@ -249,6 +248,9 @@ button + label {
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
+}
+.snap-drawer-right {
+  background-color: #ffffff;
 }
 .exposicionThumbnail {
   padding: 10px;

@@ -11,8 +11,8 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   else { helper = (depth0 && depth0.anio); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + " thumbnail slider-item\" data-layer=\"";
-  if (helper = helpers.leaflet_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.leaflet_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if (helper = helpers.nid) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.nid); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "\" data-myorder=\""
     + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
@@ -70,13 +70,13 @@ function program2(depth0,data) {
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.fechas)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + " <br>\n  "
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.lugar)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n</div>\n<img src=\""
+    + "\n</div>\n\n<img src=\""
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.imagen)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" class=\"img-responsive\">\n<span class=\"label\">Organización:</span>  "
+    + "\" class=\"img-responsive\">\n\n<div class=\"datos-exposicion\">\n  <span class=\"label\">Organización:</span>  "
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.organizacion)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " <br>\n<span class=\"label\">Comisariado:</span> "
+    + " <br>\n  <span class=\"label\">Comisariado:</span> "
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.comisario)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " <br>\n<span class=\"label\">Artistas:</span> loque sea <br>\n\n<h3>Itinerancias</h3>\n";
+    + " <br>\n  <span class=\"label\">Artistas:</span> loque sea <br>\n</div>\n\n<h3>Itinerancias</h3>\n";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.itinerancia), {hash:{},inverse:self.noop,fn:self.programWithDepth(1, program1, data, depth0),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n\n<a href=\"http://www.museoreinasofia.es"

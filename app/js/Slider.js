@@ -2,13 +2,13 @@ Slider = ({
   sliderTpl: ItineranciasTpls['app/templates/slider.hbs'],
   container: {},
   slides: {},
-  layers: {},
   map: {},
   fixed: false,
   inj_target: $('footer'),
 
-  initialize: function (layers, map) {
+  initialize: function (map) {
     this.inj_target.append(this.sliderTpl(exposiciones));
+
     this.container = $('#slider-container');
     this.container.mixItUp({
         animation: {
@@ -17,22 +17,21 @@ Slider = ({
           easing: 'ease'
         },
         callbacks: {
-          onMixEnd: function(state){
+          onMixStart: function(state, futureState){
             map.clearAll();
             //con esto ocultamos los markers que no son del año.
-            if (state.activeFilter == '.mix') {
-              $(".leaflet-marker-icon").show();
+            if (futureState.activeFilter == '.mix') {
+              $(".itinerancia-marker").show();
               return;
             }
-            $(".leaflet-marker-icon").hide();
-            $(state.activeFilter + "-marker").show();
+            $(".itinerancia-marker").hide();
+            $(futureState.activeFilter + "-marker").show();
           }
         }
       }
     );
     this.slides = $('.slider-item');
     this.map = map;
-    this.layers = layers;
     this.bindActions();
   },
 
@@ -41,7 +40,7 @@ Slider = ({
     this.slides.hover(function () {  //HOVER
       if (!_self.fixed) {
         layer_id = $(this).data('layer');
-        _self.layers.getLayer(layer_id).renderItinerancias(true);
+        _self.map.renderExposicion(layer_id);
       }
     }, function () {
       if (!_self.fixed)
@@ -55,12 +54,12 @@ Slider = ({
         _self.fixed = true;
         $(this).addClass('active');
         layer_id = $(this).data('layer');
-        _self.layers.getLayer(layer_id).renderItinerancias();
+        _self.map.renderExposicion(layer_id);
       } else if(!_self.fixed && !$(this).is('.active') ) {
         _self.fixed = true;
         $(this).addClass('active');
         layer_id = $(this).data('layer');
-        _self.layers.getLayer(layer_id).renderItinerancias();
+        _self.map.renderExposicion(layer_id);
       }
     });
   },

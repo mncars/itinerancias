@@ -15,51 +15,36 @@
     touchToDrag: false,
   });
 
-  var exposicionesLayers = L.layerGroup();
+  $('.snap-close').click(function() {
+  $(".snap-drawer-right").css("z-index", 1 );
 
-  var map = L.map('map', {
+    snapper.close();
+  });
+
+  var map = L.mapItinerancias('map', exposiciones, {
     minZoom: config.minZoom,
     maxZoom: config.maxZoom,
     zoomControl: false,
     snapper: snapper,
-    exposicionesLayers: exposicionesLayers,
-    initZoom: config.initZoom
+    initZoom: config.initZoom,
+    initLatLng: config.initLatLng
   });
   new L.Control.Zoom({ position: 'topright' }).addTo(map);
   map.addLayer(new L.TileLayer(config.tileUrl, {attribution: config.tileAttrib}));
   map.setView(config.mapCenter, config.initZoom);
 
-  render();
-
-  function render() {
-    for (var i = 0; i < exposiciones.length; ++i) {
-      var exposicion = L.createExposicionLayer(exposiciones[i],
-              {
-                initLatLng: config.initLatLng,
-                iconUrl: './imgs/pin.png',
-                snapper: snapper
-              }
-      ).addTo(map);
-      exposiciones[i].leaflet_id = exposicion._leaflet_id;
-      exposicionesLayers.addLayer(exposicion);
-    }
-  }
-
-  function renderAnio(anio) {
-    exposicionesLayers.eachLayer(function (layer) {
-        layer.renderAnio(anio);
-    });
-  }
+  Slider.initialize(map);
 
   map.on('click', function (e) {
-    map.clearAll();
+    //map.clearAll();
   });
 
-  $(function () {
-    Slider.initialize(exposicionesLayers, map);
-  });
+  $(document).on("verItinerancia", function(e) {
+    map.clearAll();  //TODO: Nozoom?
+    e.exposicion_marker.renderItinerancia();
 
-  $('.snap-close').click(function() {
-    snapper.close();
+    $(".exposicionThumbnail").html(e.exposicion_marker.getPopup());
+    $(".snap-drawer-right").css("z-index", 10 );
+    snapper.open('right');
   });
 }());
