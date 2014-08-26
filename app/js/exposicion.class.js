@@ -58,7 +58,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
         continue;
       }
 
-      this._itineranciasLayer.addLayer(
+      /*this._itineranciasLayer.addLayer(
         L.polyline(
           [this._initLatLng, L.latLng(itinerancia.lat, itinerancia.lng)],
           {
@@ -66,7 +66,19 @@ L.ExposicionLayer = L.FeatureGroup.extend({
             weight: 5
           }
         )
-      );
+      );*/
+
+      var b = new R.Bezier([this._initLatLng, L.latLng(itinerancia.lat, itinerancia.lng)], {}, function() {
+        /*var p = new R.Pulse(
+            L.latLng(itinerancia.lat, itinerancia.lng),
+            6,
+            {'stroke': this._colorResaltado, 'fill': this._colorResaltado},
+            {'stroke': this._colorResaltado, 'stroke-width': 2});*/
+      });
+
+      this._itineranciasLayer.addLayer(b);
+
+
     }
     this.resaltarIconos();
 

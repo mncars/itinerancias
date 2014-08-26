@@ -10,7 +10,6 @@
     "respond": "~1.4.2",
     "Leaflet.MakiMarkers": "~1.0.1",
     "snapjs": "~1.9.3"
-
   },
   "devDependencies": {}
 }
