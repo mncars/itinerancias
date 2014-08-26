@@ -14,7 +14,11 @@ L.ItineranciasMap = L.Map.extend({
   },
 
   _renderMarkerMuseo: function () {
-    var iconMuseo = L.MakiMarkers.icon({icon: "town-hall", color: "#d14836", size: "m"});
+    //var iconMuseo = L.MakiMarkers.icon({icon: "town-hall", color: "#d14836", size: "m"});
+    var iconMuseo = L.icon({
+        iconUrl: 'imgs/pin-mncars.png',
+        iconSize: [30, 70],
+    });
     this._markerMuseo = L.marker(this._initLatLng, {
           icon: iconMuseo
         });
