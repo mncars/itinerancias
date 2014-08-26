@@ -40,13 +40,13 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     }
   },
 
-  getBounds: function () {
-    var markers = this._markers.slice(0);
+//  getBounds: function () {
+    /*var markers = this._markers.slice(0);
     markers.push(this._markerMuseo);
 
     var group = new L.featureGroup(markers);
-    return group.getBounds();
-  },
+    return group.getBounds();*/
+//  },
 
   renderItinerancias: function(noZoom) {
     this._itineranciasLayer.clearLayers();
@@ -75,9 +75,8 @@ L.ExposicionLayer = L.FeatureGroup.extend({
           {
             animate: true,
             duration: 1,
-            //easeLinearity: 1,
             maxZoom: 6,
-            paddingTopLeft: [270, 0],
+            paddingTopLeft: [270, 20],
             paddingBottomRight: [20, 240]
           }
         );

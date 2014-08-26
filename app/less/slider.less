@@ -10,6 +10,11 @@ footer {
   overflow-x: scroll;
   white-space: nowrap;
   z-index: 3;
+  .transition(bottom 0.8s ease);
+  &.hide {
+    bottom: -225px;
+    .transition(bottom 0.8s ease);
+  }
 }
 
 .controls {

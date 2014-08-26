@@ -109,6 +109,13 @@ footer {
   overflow-x: scroll;
   white-space: nowrap;
   z-index: 3;
+  -webkit-transition: bottom 0.8s ease;
+  transition: bottom 0.8s ease;
+}
+footer.hide {
+  bottom: -225px;
+  -webkit-transition: bottom 0.8s ease;
+  transition: bottom 0.8s ease;
 }
 .controls {
   padding: 10px 10px;

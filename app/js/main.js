@@ -16,8 +16,7 @@
   });
 
   $('.snap-close').click(function() {
-    $(".snap-drawer-right").css("z-index", 1 );
-
+    $('footer').removeClass("hide");
     snapper.close();
   });
 
@@ -44,9 +43,8 @@
   $(document).on("verItinerancia", function(e) {
     map.clearAll(true);  //TODO: Nozoom?
     e.exposicion_marker.renderItinerancia();
-
     $(".exposicionThumbnail").html(e.exposicion_marker.getPopup());
-    $(".snap-drawer-right").css("z-index", 10 );
+    $('footer').addClass("hide");
     snapper.open('right');
   });
 
@@ -61,14 +59,13 @@
   });
 
   $('.btn_info').click(function() {
-    console.log(snapper.state());
     if (snapper.state().state == 'closed') {
       var infoTpl = ItineranciasTpls['app/templates/info.hbs'];
       $(".snap-drawer-left").html(infoTpl());
-      $(".snap-drawer-left").css("z-index", 10 );
+      $('footer').addClass("hide");
       snapper.open('left');
     } else {
-      $(".snap-drawer-left").css("z-index", 1 );
+      $('footer').removeClass("hide");
       snapper.close();
     }
 
