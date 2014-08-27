@@ -14,11 +14,15 @@
 </div>
 
 <h3>Itinerancias</h3>
-{{#each exposicion.itinerancia}}
-  <div class="itinerancia{{#equal nid ../itinerancia.nid }} active{{/equal}}">
-    <a href="{{url}}" target="_blank">{{lugar}}</a>
-    <div class="itinerancia-lugar">{{fechas}}</div>
-  </div>
-{{/each}}
+<div class="itinerancias">
+	{{#each exposicion.itinerancia}}
+	  <div class="itinerancia{{#equal nid ../itinerancia.nid }} active{{/equal}}">
+	  	<div class="itinerancia-nombre">
+	    	<a href="{{url}}" target="_blank">{{lugar}}</a>
+	    </div>
+	    <div class="itinerancia-lugar">{{fechas}}</div>
+	  </div>
+	{{/each}}
+</div>
 
-<a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank">ver más</a>
+<a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank" class="btn btn-default btn-block">ver más</a>

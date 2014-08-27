@@ -39,7 +39,7 @@ button {
 }
 
 button.active {
-  background: #e7d800;
+  background: @brand-primary;
   color: #000;
 }
 
@@ -60,7 +60,6 @@ button + label {
   max-height: 160px;
   width: 100%;
   .box-shadow(0 0 50px 0 rgba(0,0,0,0.3));
-
   .slider-item {
     width: 150px;
     height: 150px;
@@ -76,14 +75,14 @@ button + label {
       }
       .overlay{
         .reset-filter;
-        .background-rgba(#e7d800,.95);
+        .background-rgba(@brand-primary,.95);
       }
       .titulo{
-        font-family: @boldScout;
-        color: @grayDark;
+        font-family: @bold-scout;
+        color: @gray-dark;
       }
       .fechas{
-        color: @grayDark;
+        color: @gray-dark;
         display: block;
       }
     }
@@ -96,14 +95,14 @@ button + label {
         }
         .overlay{
           .reset-filter;
-          .background-rgba(#e7d800,.95);
+          .background-rgba(@brand-primary,.95);
         }
         .titulo{
-          font-family: @boldScout;
-          color: @grayDark;
+          font-family: @bold-scout;
+          color: @gray-dark;
         }
         .fechas{
-          color: @grayDark;
+          color: @gray-dark;
           display: block;
         }
       }
@@ -124,20 +123,20 @@ button + label {
     }
     .titulo {
       margin-bottom: 5px;
-      font-family: @regularScout;
+      font-family: @regular-scout;
       font-size: 14px;
       font-weight: normal;
       line-height: 16px;
-      color: @white;
+      color: #fff;
     }
     .fechas {
       display: none;
       margin-bottom: 0;
-      font-family: @regularScout;
+      font-family: @regular-scout;
       font-weight: normal;
       font-size: 13px;
       line-height: 14px;
-      color: @white;
+      color: #fff;
     }
     .overlay{
       width: 100%;

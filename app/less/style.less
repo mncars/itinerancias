@@ -1,7 +1,10 @@
 @import 'includes/mixins.less';
 @import 'includes/variables.less';
 
+@import 'includes/scaffolding.less';
+@import 'includes/type.less';
 @import 'includes/thumbnails.less';
+@import 'includes/buttons.less';
 
 
 // Mixin para obtener el rgba de un color de fondo
@@ -17,7 +20,6 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font: 400 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #map {
@@ -53,7 +55,7 @@ h1 {
   left:-320px;
   .transition(left 0.8s ease);
   top:200px;
-  background-color:@white;
+  background-color: #fff;
   &.open {
     left: 0;
     .transition(left 0.8s ease);

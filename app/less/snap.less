@@ -1,60 +1,72 @@
 .snap-close{
   color: #000;
-  float:right;
-  padding-right: 10px;
   line-height: 18px;
   font-size: 20px;
   font-weight: bold;
-  text-decoration: none;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  &:hover{
+    text-decoration: none;
+  }
 }
 
-.snap-drawer-right, .snap-drawer-left {
-  background-color: @white;
+.snap-drawers{
+  background-color: #fff;
 }
 
 .exposicionThumbnail {
-  padding: 10px;
-
+  padding: 25px 15px;
   h2 {
-    font:400 20px/20px 'PFDinTextPro-Bold', sans-serif;
-    margin: 0 0 5px 0;
+    margin: 0 0 7px 0;
+    padding-bottom: 5px;
+    font-family: @bold-scout;
+    font-size: 22px;
+    line-height: 1;
     border-bottom: 3px solid #333333;
   }
-
-  h3 {
-    font: 400 18px/18px 'PFDinTextPro-Bold', sans-serif;
-    margin: 15px 0 0 0;
-  }
-
-  a {
-    color: #9a7f4a;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color:#665431;
-    text-decoration: underline;
-  }
-
   .fecha-lugar {
-    margin-bottom: 5px;
-    font: 400 18px/18px 'PFDinTextPro-Thin',sans-serif;
+    margin-bottom: 15px;
+    font-family: @thin-scout;
+    font-size: 17px;
+    line-height: 1.1;
   }
-
-  .label {
-    font-weight: bold;
-  }
-
   .img-responsive {
     max-width: 100%;
+    margin-bottom: 15px;
   }
-
-  .itinerancia {
-    margin-top: 5px;
-    padding: 5px;
-    &.active {
-      background-color: @grayLighter;
-      font-weight: bold;
+  .datos-exposicion{
+    margin-bottom: 30px;
+  }
+  .label {
+    font-family: @bold-scout;
+  }
+  h3 {
+    margin: 0 0 10px 0;
+    font-family: @thin-scout;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .itinerancia{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    &:first-child{
+      border-top: 1px solid #ddd;
     }
+    &:last-child{
+      margin-bottom: 30px;
+    }
+    &.active {
+      background-color: #f0f0f0;
+    }
+  }
+  .itinerancia-nombre{
+    margin-bottom: 3px;
+    font-family: @regular-scout;
+    line-height: 1.2;
+  }
+  .itinerancia-lugar{
+    line-height: 1.3;
+    color: @gray-light;
   }
 }
