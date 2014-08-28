@@ -16,11 +16,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(stack1)
     + "\" data-myorder=\""
     + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n  <a class=\"imagen\" href=\"#\">\n    <img src=\"";
+    + "\">\n  <a class=\"imagen\" href=\"#\">\n  	<div class=\"gradient-image\">\n  		<span class=\"gradient\"></span>\n    	<img src=\"";
   if (helper = helpers.imagen) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.imagen); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\">\n    <div class=\"caption\">\n      <div class=\"titulo\">";
+    + "\">\n    </div>\n    <div class=\"caption\">\n      <div class=\"titulo\">";
   if (helper = helpers.titulo) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.titulo); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)

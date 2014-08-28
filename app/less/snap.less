@@ -1,13 +1,13 @@
 .snap-close{
-  color: #000;
-  line-height: 18px;
-  font-size: 20px;
-  font-weight: bold;
+  display: block;
+  width: 16px;
+  height: 16px;
   position: absolute;
-  top: 7px;
-  right: 7px;
-  &:hover{
-    text-decoration: none;
+  top: 10px;
+  right: 10px;
+  background: url("../imgs/bk.aspa-cerrar.png") 0 0 no-repeat;
+  .hide{
+    display: none;
   }
 }
 
@@ -15,14 +15,20 @@
   background-color: #fff;
 }
 
-.exposicionThumbnail {
-  padding: 25px 15px;
+.snap-drawer{
+  padding: 30px 15px;
   h2 {
-    margin: 0 0 7px 0;
-    padding-bottom: 5px;
+    margin-top: 0;
     font-family: @bold-scout;
     font-size: 22px;
     line-height: 1;
+  }
+}
+
+.exposicionThumbnail {
+  h2 {
+    margin-bottom: 7px;
+    padding-bottom: 5px;
     border-bottom: 3px solid #333333;
   }
   .fecha-lugar {
