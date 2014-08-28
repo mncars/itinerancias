@@ -861,6 +861,15 @@ body {
   display: block;
   z-index: 1;
   background-color: #262626;
+  -webkit-transition: left 0.8s ease;
+  -o-transition: left 0.8s ease;
+  transition: left 0.8s ease;
+}
+#branding.closed {
+  left: -170px;
+  -webkit-transition: left 0.8s ease;
+  -o-transition: left 0.8s ease;
+  transition: left 0.8s ease;
 }
 #branding .logo-menu {
   padding: 20px 20px 0;
@@ -1105,6 +1114,7 @@ button + label {
 }
 .snap-drawer {
   padding: 30px 15px;
+  width: 320px;
 }
 .snap-drawer h2 {
   margin-top: 0;
@@ -1129,6 +1139,9 @@ button + label {
 }
 .exposicionThumbnail .datos-exposicion {
   margin-bottom: 30px;
+}
+.exposicionThumbnail .datos-exposicion .btn-block {
+  margin-top: 10px;
 }
 .exposicionThumbnail .label {
   font-family: 'PFDinTextPro-Bold', sans-serif;

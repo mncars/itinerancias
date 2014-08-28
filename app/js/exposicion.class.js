@@ -78,7 +78,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
             animate: true,
             duration: 1,
             maxZoom: 6,
-            paddingTopLeft: [270, 20],
+            paddingTopLeft: [330, 20],
             paddingBottomRight: [20, 240]
           }
         );

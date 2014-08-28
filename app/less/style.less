@@ -39,6 +39,12 @@ html, body {
   display: block;
   z-index: 1;
   background-color: darken(@gray-dark, 5%);
+  .transition(left 0.8s ease);
+  &.closed {
+    left: -170px;
+    .transition(left 0.8s ease);
+
+  }
   .logo-menu{
     padding: 20px 20px 0;
     background-color: darken(@gray-dark, 5%);
@@ -84,22 +90,22 @@ html, body {
         -webkit-transition: background-color .7s ease,
                             color .7s ease,
                             background-position .5s ease;
-        transition:         background-color .7s ease, 
-                            color .7s ease, 
+        transition:         background-color .7s ease,
+                            color .7s ease,
                             background-position .5s ease;
         &:hover{
           color: @gray-dark;
           background-color: #fff;
           background-position: 134px 12px;
           text-decoration: none;
-        }      
+        }
         &.active{
           color: @gray-dark;
           background-color: #fff;
           background-image: url("../imgs/bk.aspa-cerrar.png");
           background-position: 134px 12px;
         }
-      }  
+      }
     }
   }
 }

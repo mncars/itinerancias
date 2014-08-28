@@ -13,6 +13,9 @@
   var snapper = new Snap({
     element: document.getElementById('content'),
     touchToDrag: false,
+    maxPosition: 320,
+    minPosition: -320,
+    //320
   });
 
   $('.snap-close').click(function() {
@@ -49,7 +52,7 @@
   });
 
   //interacciones de botones de share y + info
-  
+
   $('#menu a').click(function(event) {
     $(this).toggleClass("active");
   });
@@ -73,6 +76,15 @@
       $('footer').removeClass("hide");
       snapper.close();
     }
-
   });
+
+  $('.btn_cerrar_info').click(function() {
+    var panel = $('#branding');
+    if (panel.hasClass('closed')) {
+      panel.removeClass('closed');
+    } else {
+      panel.addClass('closed');
+    }
+  });
+
 }());

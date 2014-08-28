@@ -10,8 +10,11 @@
 <div class="datos-exposicion">
   <span class="label">Organización:</span>  {{exposicion.organizacion}} <br>
   <span class="label">Comisariado:</span> {{exposicion.comisario}} <br>
-  <span class="label">Artistas:</span> loque sea <br>
+
+  <a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank" class="btn btn-default btn-block">+ detalles de la exposición</a>
 </div>
+
+
 
 <h3>Itinerancias</h3>
 <div class="itinerancias">
@@ -25,4 +28,4 @@
 	{{/each}}
 </div>
 
-<a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank" class="btn btn-default btn-block">ver más</a>
+
