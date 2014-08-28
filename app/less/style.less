@@ -30,53 +30,110 @@ html, body {
   left: 0;
 }
 
-header {
+#branding {
+  height: 100%;
   position: absolute;
-  top: 0.5em;
-  left: 0.5em;
+  top: 0;
+  left: 0;
   overflow: hidden;
   display: block;
   z-index: 1;
+  background-color: darken(@gray-dark, 5%);
+  .logo-menu{
+    padding: 20px 20px 0;
+    background-color: darken(@gray-dark, 5%);
+    position: relative;
+    z-index: 3;
+  }
+  h1 {
+    text-indent: -9999px;
+    background: url("../imgs/logo.png") 0 0 no-repeat;
+    width: 130px;
+    height: 65px;
+    margin-bottom: 50px;
+  }
+  h2{
+    margin: 0 0 10px;
+    font-family: @regular-scout;
+    font-size: 24px;
+    font-weight: normal;
+    color: @gray-lighter;
+  }
+  #menu{
+    margin: 0 -20px;
+    li{
+      &:last-child{
+        a{
+          border-bottom: none;
+        }
+      }
+      a{
+        padding: 10px 20px;
+        display: block;
+        border-bottom: 1px solid @gray-darker;
+        color: darken(@gray-lighter, 15%);
+        background-position: -24px 12px;
+        background-repeat: no-repeat;
+        background-color: @gray-dark;
+        &.btn_info{
+          background-image: url("../imgs/bk.flecha-abrir-right.png");
+        }
+        &.btn_share{
+          background-image: url("../imgs/bk.flecha-abrir-bottom.png");
+        }
+        -webkit-transition: background-color .7s ease,
+                            color .7s ease,
+                            background-position .5s ease;
+        transition:         background-color .7s ease, 
+                            color .7s ease, 
+                            background-position .5s ease;
+        &:hover{
+          color: @gray-dark;
+          background-color: #fff;
+          background-position: 134px 12px;
+          text-decoration: none;
+        }      
+        &.active{
+          color: @gray-dark;
+          background-color: #fff;
+          background-image: url("../imgs/bk.aspa-cerrar.png");
+          background-position: 134px 12px;
+        }
+      }  
+    }
+  }
 }
 
-h1 {
-  text-indent: -9999px;
-  background: url("../imgs/logo.png") 0 0 no-repeat;
-  width: 130px;
-  height: 65px;
-  margin: 0;
-}
 
 @import 'slider.less';
 @import 'snap.less';
 
 #compartir {
+  width: 170px;
+  padding: 10px 20px 20px;
   position:fixed;
-  left:-320px;
-  .transition(left 0.8s ease);
-  top:200px;
+  left:0;
+  top:0;
+  z-index: 2;
   background-color: #fff;
+  .transition(top 0.8s ease);
   &.open {
-    left: 0;
-    .transition(left 0.8s ease);
+    top: 272px;
+    .transition(top 0.8s ease);
 
   }
-}
-
-#compartir ul.share-buttons {
-  width:380px;
-  margin: 0;
-  display: inline-block;
-}
-
-#compartir ul.share-buttons li {
-  margin: 0 0 5px 0;
-  display: inline-block;
-  float: left;
-}
-#compartir ul.share-buttons li {
-  margin: 0;
-}
-#compartir ul.share-buttons li.facebook {
-  min-width: 120px;
+  .share-buttons {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    li {
+      margin: 0 0 15px 0;
+      display: inline-block;
+      float: left;
+      height: 20px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
 }

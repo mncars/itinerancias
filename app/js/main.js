@@ -49,6 +49,11 @@
   });
 
   //interacciones de botones de share y + info
+  
+  $('#menu a').click(function(event) {
+    $(this).toggleClass("active");
+  });
+
   $('.btn_share').click(function(event) {
     var panel = $('#compartir');
     if (panel.hasClass('open')) {
