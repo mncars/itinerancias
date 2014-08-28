@@ -40,6 +40,8 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     }
   },
 
+  //https://www.mapbox.com/mapbox.js/example/v1.0.0/arcjs/
+
 //  getBounds: function () {
     /*var markers = this._markers.slice(0);
     markers.push(this._markerMuseo);
