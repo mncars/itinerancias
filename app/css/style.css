@@ -845,6 +845,9 @@ body {
   height: 100%;
   overflow: hidden;
 }
+.hide {
+  display: none;
+}
 #map {
   position: absolute;
   top: 0;
@@ -857,7 +860,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  overflow: hidden;
   display: block;
   z-index: 1;
   background-color: #262626;
@@ -870,6 +872,9 @@ body {
   -webkit-transition: left 0.8s ease;
   -o-transition: left 0.8s ease;
   transition: left 0.8s ease;
+}
+#branding.closed .btn_cerrar_info {
+  background-image: url("../imgs/bk.flecha-abrir-white-right.png");
 }
 #branding .logo-menu {
   padding: 20px 20px 0;
@@ -925,6 +930,26 @@ body {
   background-color: #fff;
   background-image: url("../imgs/bk.aspa-cerrar.png");
   background-position: 134px 12px;
+}
+#branding .btn_cerrar_info {
+  width: 30px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: 151px;
+  right: -30px;
+  background-image: url("../imgs/bk.flecha-abrir-white-left.png");
+  background-position: 6px 12px;
+  background-repeat: no-repeat;
+  background-color: #262626;
+  z-index: 10;
+  -webkit-transition: background-position 0.3s ease;
+  -o-transition: background-position 0.3s ease;
+  transition: background-position 0.3s ease;
+}
+#branding .btn_cerrar_info:hover {
+  background-position: 0 12px;
+  text-decoration: none;
 }
 footer {
   position: absolute;
@@ -1105,9 +1130,6 @@ button + label {
   top: 10px;
   right: 10px;
   background: url("../imgs/bk.aspa-cerrar.png") 0 0 no-repeat;
-}
-.snap-close .hide {
-  display: none;
 }
 .snap-drawers {
   background-color: #fff;
