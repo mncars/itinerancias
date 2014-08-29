@@ -977,6 +977,11 @@ footer.hide {
   -o-transition: bottom 0.8s ease;
   transition: bottom 0.8s ease;
 }
+@media (max-width: 767px) {
+  footer {
+    display: none;
+  }
+}
 .controls {
   padding-top: 13px;
   padding-left: 10px;
@@ -1166,6 +1171,7 @@ button + label {
   margin-top: 10px;
 }
 .exposicionThumbnail .label {
+  font-size: 14.6px;
   font-family: 'PFDinTextPro-Bold', sans-serif;
 }
 .exposicionThumbnail h3 {
@@ -1175,8 +1181,9 @@ button + label {
   line-height: 1;
 }
 .exposicionThumbnail .itinerancia {
-  padding: 10px;
+  padding: 10px 10px 10px 40px;
   border-bottom: 1px solid #ddd;
+  background: url("../imgs/pin.png") 10px 10px no-repeat;
 }
 .exposicionThumbnail .itinerancia:first-child {
   border-top: 1px solid #ddd;
@@ -1189,6 +1196,7 @@ button + label {
 }
 .exposicionThumbnail .itinerancia-nombre {
   margin-bottom: 3px;
+  font-size: 16px;
   font-family: 'PFDinTextPro-Regular', sans-serif;
   line-height: 1.2;
 }
