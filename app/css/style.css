@@ -971,7 +971,7 @@ footer {
   -o-transition: bottom 0.8s ease;
   transition: bottom 0.8s ease;
 }
-footer.hide {
+footer.hide-bottom {
   bottom: -225px;
   -webkit-transition: bottom 0.8s ease;
   -o-transition: bottom 0.8s ease;

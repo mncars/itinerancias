@@ -19,7 +19,7 @@
   });
 
   $('.snap-close').click(function() {
-    $('footer').removeClass("hide");
+    $('footer').removeClass("hide-bottom");
     snapper.close();
   });
 
@@ -47,7 +47,7 @@
     map.clearAll(true);  //TODO: Nozoom?
     e.exposicion_marker.renderItinerancia();
     $(".exposicionThumbnail").html(e.exposicion_marker.getPopup());
-    $('footer').addClass("hide");
+    $('footer').addClass("hide-bottom");
     snapper.open('right');
   });
 
@@ -69,11 +69,11 @@
   $('.btn_info').click(function() {
     if (snapper.state().state == 'closed') {
       var infoTpl = ItineranciasTpls['app/templates/info.hbs'];
+      $('footer').addClass("hide-bottom");
       $(".snap-drawer-left").html(infoTpl());
-      $('footer').addClass("hide");
       snapper.open('left');
     } else {
-      $('footer').removeClass("hide");
+      $('footer').removeClass("hide-bottom");
       snapper.close();
     }
   });
@@ -81,8 +81,11 @@
   $('.btn_cerrar_info').click(function() {
     var panel = $('#branding');
     if (panel.hasClass('closed')) {
+      $('#compartir').show(800);
       panel.removeClass('closed');
     } else {
+      $('#compartir').hide();
+      $('footer').removeClass("hide-bottom");
       panel.addClass('closed');
     }
   });
