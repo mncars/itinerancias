@@ -84,15 +84,15 @@ L.ExposicionLayer = L.FeatureGroup.extend({
         );
     }
 
-    // @TODO: Esto no funciona
-    this._itineranciasLayer.bringToFront();
     this.bringToFront();
+
   },
 
   resaltarIconos: function() {
     for (var i=0; i < this._markers.length; ++i) {
       this._markers[i].setIcon(this._iconResaltado);
         //this._markers[i].bounce({duration: 10, height: 100});
+      this._markers[i].setZIndexOffset(1000);
     }
   },
 
@@ -104,6 +104,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
   clearResaltarIconos: function() {
     for (var i=0; i < this._markers.length; ++i) {
       this._markers[i].setIcon(this._icon);
+      this._markers[i].setZIndexOffset(999);
     }
   },
 });

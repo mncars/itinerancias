@@ -22,6 +22,7 @@ L.ItineranciasMap = L.Map.extend({
     this._markerMuseo = L.marker(this._initLatLng, {
           icon: iconMuseo
         });
+    this._markerMuseo.setZIndexOffset(2000);
   },
 
   _initializeExposicionesLayers: function(layerGroup, exposicionesLayersHashMap) {

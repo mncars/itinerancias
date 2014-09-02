@@ -355,7 +355,7 @@
 			"file": "app/js/main.js",
 			"settings":
 			{
-				"buffer_size": 2450,
+				"buffer_size": 2587,
 				"line_ending": "Unix"
 			}
 		},
@@ -371,7 +371,7 @@
 			"file": "app/less/snap.less",
 			"settings":
 			{
-				"buffer_size": 1385,
+				"buffer_size": 1472,
 				"line_ending": "Unix"
 			}
 		},
@@ -395,7 +395,7 @@
 			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 5041,
+				"buffer_size": 5067,
 				"line_ending": "Unix"
 			}
 		},
@@ -403,7 +403,7 @@
 			"file": "app/less/style.less",
 			"settings":
 			{
-				"buffer_size": 3078,
+				"buffer_size": 3651,
 				"line_ending": "Unix"
 			}
 		},
@@ -411,7 +411,7 @@
 			"file": "app/less/slider.less",
 			"settings":
 			{
-				"buffer_size": 3218,
+				"buffer_size": 3287,
 				"line_ending": "Unix"
 			}
 		}
@@ -675,6 +675,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"compartir",
+			"hide",
 			"transition",
 			"getBounds",
 			"button",
@@ -800,9 +802,7 @@
 			"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
 			"<ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"visibility-dropdown\">",
 			"scrolled",
-			"profi",
-			"profil",
-			"Además, una vez adquirido el módulo podrás completarlo con..."
+			"profi"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -822,7 +822,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -830,15 +830,15 @@
 					"file": "app/js/main.js",
 					"settings":
 					{
-						"buffer_size": 2450,
+						"buffer_size": 2587,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2311,
-								2311
+								2535,
+								2535
 							]
 						],
 						"settings":
@@ -985,7 +985,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1074.0,
+						"translation.y": 806.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1160,15 +1160,15 @@
 					"file": "app/less/snap.less",
 					"settings":
 					{
-						"buffer_size": 1385,
+						"buffer_size": 1472,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								805,
-								805
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1315,7 +1315,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 534.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1653,15 +1653,15 @@
 					"file": "app/index.html",
 					"settings":
 					{
-						"buffer_size": 5041,
+						"buffer_size": 5067,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2097,
-								2105
+								2510,
+								2519
 							]
 						],
 						"settings":
@@ -1808,7 +1808,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 855.0,
+						"translation.y": 566.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1818,15 +1818,15 @@
 					"file": "app/less/style.less",
 					"settings":
 					{
-						"buffer_size": 3078,
+						"buffer_size": 3651,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								753,
-								753
+								3189,
+								3179
 							]
 						],
 						"settings":
@@ -1973,7 +1973,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 438.0,
+						"translation.y": 2181.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1983,15 +1983,15 @@
 					"file": "app/less/slider.less",
 					"settings":
 					{
-						"buffer_size": 3218,
+						"buffer_size": 3287,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								296,
-								296
+								342,
+								331
 							]
 						],
 						"settings":
