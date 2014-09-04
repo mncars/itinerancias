@@ -32,6 +32,16 @@ html, body {
   bottom: 0;
   right: 0;
   left: 0;
+  &:before{
+    content: "";
+    background: url("../imgs/logo.negro.png") 0 0 no-repeat;
+    width: 130px;
+    height: 65px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    z-index: 1;
+  }
 }
 
 #branding {
@@ -40,7 +50,7 @@ html, body {
   top: 0;
   left: 0;
   display: block;
-  z-index: 1;
+  z-index: 2;
   background-color: darken(@gray-dark, 5%);
   .transition(left 0.8s ease);
   &.closed {
