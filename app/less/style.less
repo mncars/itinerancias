@@ -177,5 +177,33 @@ html, body {
 }
 
 .leaflet-popup-content-wrapper{
+  //background-color: #f0f0f0;
+  font-size: 14px;
+  font-family: @regular-scout;
+  line-height: 1.2;
+
   border-radius: 0;
+  a {
+    color: @link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: @link-hover-color;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      .tab-focus();
+    }
+  }
 }
+
+.leaflet-popup-tip {
+  //background: #f0f0f0;
+}
+
+.itinerancia-resaltada-marker{
+  z-index: 2000001 !important;
+}
+

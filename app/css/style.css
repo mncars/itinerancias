@@ -1247,5 +1247,25 @@ button + label {
   margin-bottom: 0;
 }
 .leaflet-popup-content-wrapper {
+  font-size: 14px;
+  font-family: 'PFDinTextPro-Regular', sans-serif;
+  line-height: 1.2;
   border-radius: 0;
+}
+.leaflet-popup-content-wrapper a {
+  color: #9a7f4a;
+  text-decoration: none;
+}
+.leaflet-popup-content-wrapper a:hover,
+.leaflet-popup-content-wrapper a:focus {
+  color: #665431;
+  text-decoration: underline;
+}
+.leaflet-popup-content-wrapper a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.itinerancia-resaltada-marker {
+  z-index: 2000001 !important;
 }

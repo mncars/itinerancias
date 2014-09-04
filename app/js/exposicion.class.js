@@ -14,8 +14,13 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     this._itineranciasLayer = L.featureGroup();
     this._markers = [];
     this._colorResaltado = "#e7d800";
-    this._icon = L.MakiMarkers.icon({icon: "town-hall", color: "#333", size: "s", className: "itinerancia-marker y" + exposicion.anio + "-marker"});
-    this._iconResaltado = L.MakiMarkers.icon({icon: "town-hall", color: this._colorResaltado , size: "m"});
+    this._icon = L.MakiMarkers.icon({icon: "town-hall",
+      color: "#333",
+      size: "s",
+      className: "itinerancia-marker y" + exposicion.anio + "-marker",
+      popupAnchor: [0,-130]
+    });
+    this._iconResaltado = L.MakiMarkers.icon({icon: "town-hall", color: this._colorResaltado , size: "m", className: "itinerancia-resaltada-marker"});
     L.FeatureGroup.prototype.initialize.call(this);
   },
 
@@ -34,7 +39,12 @@ L.ExposicionLayer = L.FeatureGroup.extend({
       var marker = L.itineranciaMarker(this._exposicion, itinerancia, this, [itinerancia.lat, itinerancia.lng], {
           icon: this._icon
         });
-      marker.bindPopup(this._exposicion.itinerancia[j].lugar);
+
+      if (this._exposicion.itinerancia[j].url != null)
+        marker.bindPopup("<a href='"+this._exposicion.itinerancia[j].url+"' target='_blank'>" +
+          this._exposicion.itinerancia[j].lugar + "</a>");
+      else
+        marker.bindPopup(this._exposicion.itinerancia[j].lugar);
       this._markers.push(marker);
       marker.on('click', renderItineranciasHandler);
       this.addLayer(marker);
@@ -66,7 +76,8 @@ L.ExposicionLayer = L.FeatureGroup.extend({
           [this._initLatLng, L.latLng(itinerancia.lat, itinerancia.lng)],
           {
             color: this._colorResaltado ,
-            weight: 5
+            weight: 5,
+            className: "linea-itinerancia"
           }
         )
       );
@@ -93,7 +104,6 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     for (var i=0; i < this._markers.length; ++i) {
       this._markers[i].setIcon(this._iconResaltado);
         //this._markers[i].bounce({duration: 10, height: 100});
-      this._markers[i].setZIndexOffset(1000);
     }
   },
 
@@ -105,7 +115,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
   clearResaltarIconos: function() {
     for (var i=0; i < this._markers.length; ++i) {
       this._markers[i].setIcon(this._icon);
-      this._markers[i].setZIndexOffset(999);
+      this._markers[i].setZIndexOffset(this._markers[i].zindex_inicial);
     }
   },
 });

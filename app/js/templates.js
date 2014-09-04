@@ -35,7 +35,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["ItineranciasTpls"]["app/templates/exposicion-globo.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, self=this, helperMissing=helpers.helperMissing, functionType="function", escapeExpression=this.escapeExpression;
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data,depth1) {
   
@@ -43,15 +43,10 @@ function program1(depth0,data,depth1) {
   buffer += "\n	  <div class=\"itinerancia";
   stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options) : helperMissing.call(depth0, "equal", (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\">\n	  	<div class=\"itinerancia-nombre\">\n	    	<a href=\"";
-  if (helper = helpers.url) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.url); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "\" target=\"_blank\">";
-  if (helper = helpers.lugar) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.lugar); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "</a>\n	    </div>\n	    <div class=\"itinerancia-lugar\">";
+  buffer += "\">\n	  	<div class=\"itinerancia-nombre\">\n        ";
+  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.url)),stack1 == null || stack1 === false ? stack1 : stack1.length), {hash:{},inverse:self.program(6, program6, data),fn:self.program(4, program4, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n	    </div>\n	    <div class=\"itinerancia-lugar\">";
   if (helper = helpers.fechas) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.fechas); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -62,6 +57,32 @@ function program2(depth0,data) {
   
   
   return " active";
+  }
+
+function program4(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n          <a href=\"";
+  if (helper = helpers.url) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.url); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" target=\"_blank\">";
+  if (helper = helpers.lugar) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.lugar); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</a>\n        ";
+  return buffer;
+  }
+
+function program6(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n          ";
+  if (helper = helpers.lugar) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.lugar); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\n        ";
+  return buffer;
   }
 
   buffer += "<h2>"
@@ -78,10 +99,10 @@ function program2(depth0,data) {
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.comisario)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + " <br>\n\n  <a href=\"http://www.museoreinasofia.es"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" target=\"_blank\" class=\"btn btn-default btn-block\">+ detalles de la exposición</a>\n</div>\n\n\n\n<h3>Itinerancias</h3>\n<div class=\"itinerancias\">\n	";
+    + "\" target=\"_blank\" class=\"btn btn-default btn-block\">+ detalles de la exposición</a>\n</div>\n\n<h3>Itinerancias</h3>\n<div class=\"itinerancias\">\n	";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.itinerancia), {hash:{},inverse:self.noop,fn:self.programWithDepth(1, program1, data, depth0),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>\n\n\n";
+  buffer += "\n</div>\n";
   return buffer;
   });
 

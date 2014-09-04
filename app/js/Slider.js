@@ -13,7 +13,7 @@ Slider = ({
     this.container.mixItUp({
         animation: {
           duration: 400,
-          effects: 'fade translateZ(-360px)',
+          effects: 'fade',
           easing: 'ease'
         },
         callbacks: {
