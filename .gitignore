@@ -6,3 +6,4 @@ jkl
 app/bower_components
 /.idea/
 Gemfile.lock
+*sublime*

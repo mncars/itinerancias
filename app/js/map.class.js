@@ -16,12 +16,15 @@ L.ItineranciasMap = L.Map.extend({
   _renderMarkerMuseo: function () {
     //var iconMuseo = L.MakiMarkers.icon({icon: "town-hall", color: "#d14836", size: "m"});
     var iconMuseo = L.icon({
-        iconUrl: 'imgs/pin-mncars.png',
-        iconSize: [30, 70],
+        iconUrl: 'imgs/pin-mncars3.png',
+        iconSize: [20, 50],
+        popupAnchor: [0,-20]
     });
     this._markerMuseo = L.marker(this._initLatLng, {
           icon: iconMuseo
         });
+    this._markerMuseo.bindPopup("Museo Centro de Arte Reina Sofía. Madrid");
+
     this._markerMuseo.setZIndexOffset(2000);
   },
 

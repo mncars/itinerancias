@@ -1246,3 +1246,6 @@ button + label {
 #compartir .share-buttons li:last-child {
   margin-bottom: 0;
 }
+.leaflet-popup-content-wrapper {
+  border-radius: 0;
+}

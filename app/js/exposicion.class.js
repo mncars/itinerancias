@@ -34,6 +34,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
       var marker = L.itineranciaMarker(this._exposicion, itinerancia, this, [itinerancia.lat, itinerancia.lng], {
           icon: this._icon
         });
+      marker.bindPopup(this._exposicion.itinerancia[j].lugar);
       this._markers.push(marker);
       marker.on('click', renderItineranciasHandler);
       this.addLayer(marker);
