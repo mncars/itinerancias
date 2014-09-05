@@ -1269,7 +1269,7 @@ button + label {
 #logo-popup {
   float: left;
   max-width: 85px !important;
-  padding: 5px 5px 0 0;
+  margin: 5px 13px 0 0;
 }
 .itinerancia-resaltada-marker {
   z-index: 2000001 !important;
