@@ -4,7 +4,7 @@
 # TEAM
 
     Aritz Suescun -- Product Owner -- aritz.suescun@biko2.com
-    Monika Lekunberri -- Diseño y maquetación - monika.lekunberri@biko2.com
+    Aritz Oiaga -- Diseño y maquetación - aritz.oiaga@biko2.com
     David Gil   -- Desarrollo -- david.gil@biko2.com
     Juanjo Lopez -- Desarrollo -- juanjo.lopez@biko2.com
 
@@ -12,5 +12,6 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
+    Leaftec, Grunt, Bower
     jQuery, Modernizr
     Jekyll, Github pages
