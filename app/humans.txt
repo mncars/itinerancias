@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Aritz Suescun -- Product Owner -- aritz.suescun@biko2.com
+    Monika Lekunberri -- Diseño y maquetación - monika.lekunberri@biko2.com
+    David Gil   -- Desarrollo -- david.gil@biko2.com
+    Juanjo Lopez -- Desarrollo -- juanjo.lopez@biko2.com
 
-# THANKS
-
-    <name>
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+    Jekyll, Github pages

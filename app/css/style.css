@@ -1266,6 +1266,11 @@ button + label {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+#logo-popup {
+  float: left;
+  max-width: 85px !important;
+  padding: 5px 5px 0 0;
+}
 .itinerancia-resaltada-marker {
   z-index: 2000001 !important;
 }
