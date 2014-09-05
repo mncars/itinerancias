@@ -30,7 +30,7 @@ L.ItineranciasMap = L.Map.extend({
     this._markerMuseo = L.marker(this._initLatLng, {
           icon: iconMuseo
         });
-    this._markerMuseo.bindPopup("<img src='../imgs/logo.negro.png' id='logo-popup'><a href='http://www.museoreinasofia.es' target='_blank'><strong>Museo Nacional Centro de Arte Reina Sofía</strong></a><br> Madrid");
+    this._markerMuseo.bindPopup("<img src='imgs/logo.negro.png' id='logo-popup'><a href='http://www.museoreinasofia.es' target='_blank'><strong>Museo Nacional Centro de Arte Reina Sofía</strong></a><br> Madrid");
 
     this._markerMuseo.setZIndexOffset(1000000);
   },
