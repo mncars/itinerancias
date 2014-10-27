@@ -1,3 +1,8 @@
+<span class="tipo--{{exposicion.tipo}}">
+  {{#equal exposicion.tipo "actividad" }}Actividad{{/equal}}
+  {{#equal exposicion.tipo "exposicion" }}Exposición{{/equal}}
+  {{#equal exposicion.tipo "coleccion_viaja" }}La colección viaja{{/equal}}
+</span>
 <h2>{{exposicion.titulo}}</h2>
 
 <div class="fecha-lugar">
@@ -11,7 +16,11 @@
   <span class="label">Organización:</span>  {{exposicion.organizacion}} <br>
   <span class="label">Comisariado:</span> {{exposicion.comisario}} <br>
 
-  <a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank" class="btn btn-default btn-block">+ detalles de la exposición</a>
+  <a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank" class="btn btn-default btn-block">
+    {{#equal exposicion.tipo "actividad" }}+ detalles de la actividad{{/equal}}
+    {{#equal exposicion.tipo "exposicion" }}+ detalles de la exposición{{/equal}}
+    {{#equal exposicion.tipo "coleccion_viaja" }}+ detalles de la exposición{{/equal}}
+  </a>
 </div>
 
 <h3>Itinerancias</h3>
