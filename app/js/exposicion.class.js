@@ -13,7 +13,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
 
     this._itineranciasLayer = L.featureGroup();
     this._markers = [];
-    this._colorResaltado = "#e7d800";
+    this._colorResaltado = this.getColorResaltado();
     this._icon = L.MakiMarkers.icon({icon: "town-hall",
       color: "#333",
       size: "s",
@@ -22,6 +22,15 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     });
     this._iconResaltado = L.MakiMarkers.icon({icon: "town-hall", color: this._colorResaltado , size: "m", className: "itinerancia-resaltada-marker"});
     L.FeatureGroup.prototype.initialize.call(this);
+  },
+
+  getColorResaltado: function() {
+    if (this._exposicion.tipo == 'actividad')
+      return "#88d2e5";
+    else if (this._exposicion.tipo == 'coleccion_viaja')
+      return "#d24e5b";
+    else
+      return "#e7d800";
   },
 
   onAdd: function (map) {

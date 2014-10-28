@@ -83,9 +83,6 @@ button {
       .caption{
         padding-bottom: 15px;
       }
-      .overlay{
-        .background-rgba(@brand-primary,.95);
-      }
       .titulo{
         font-family: @bold-scout;
         color: @gray-dark;
@@ -99,9 +96,6 @@ button {
       &:hover{
         .caption{
           padding-bottom: 15px;
-        }
-        .overlay{
-          .background-rgba(@brand-primary,.95);
         }
         .titulo{
           font-family: @bold-scout;
@@ -166,6 +160,48 @@ button {
       left: 0;
       z-index: 20;
       .transition(all 0.2s ease);
+    }
+  }
+  .slider-item--exposicion {
+    &.active{
+      .overlay{
+        .background-rgba(@tipo-exposicion,.95);
+      }
+    }
+    .imagen {
+      &:hover{
+        .overlay{
+          .background-rgba(@tipo-exposicion,.95);
+        }
+      }
+    }
+  }
+  .slider-item--coleccion_viaja {
+    &.active{
+      .overlay{
+        .background-rgba(@tipo-coleccion-viaja,.95);
+      }
+    }
+    .imagen {
+      &:hover{
+        .overlay{
+          .background-rgba(@tipo-coleccion-viaja,.95);
+        }
+      }
+    }
+  }
+  .slider-item--actividad {
+    &.active{
+      .overlay{
+        .background-rgba(@tipo-actividad,.95);
+      }
+    }
+    .imagen {
+      &:hover{
+        .overlay{
+          .background-rgba(@tipo-actividad,.95);
+        }
+      }
     }
   }
 }

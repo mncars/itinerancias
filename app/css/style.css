@@ -1050,9 +1050,6 @@ button + label {
 .slider-container .slider-item.active .caption {
   padding-bottom: 15px;
 }
-.slider-container .slider-item.active .overlay {
-  background: rgba(230, 214, 0, 0.95);
-}
 .slider-container .slider-item.active .titulo {
   font-family: 'PFDinTextPro-Bold', sans-serif;
   color: #333333;
@@ -1063,9 +1060,6 @@ button + label {
 }
 .slider-container .slider-item .imagen:hover .caption {
   padding-bottom: 15px;
-}
-.slider-container .slider-item .imagen:hover .overlay {
-  background: rgba(230, 214, 0, 0.95);
 }
 .slider-container .slider-item .imagen:hover .titulo {
   font-family: 'PFDinTextPro-Bold', sans-serif;
@@ -1136,6 +1130,24 @@ button + label {
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+.slider-container .slider-item--exposicion.active .overlay {
+  background: rgba(230, 214, 0, 0.95);
+}
+.slider-container .slider-item--exposicion .imagen:hover .overlay {
+  background: rgba(230, 214, 0, 0.95);
+}
+.slider-container .slider-item--coleccion_viaja.active .overlay {
+  background: rgba(209, 77, 90, 0.95);
+}
+.slider-container .slider-item--coleccion_viaja .imagen:hover .overlay {
+  background: rgba(209, 77, 90, 0.95);
+}
+.slider-container .slider-item--actividad.active .overlay {
+  background: rgba(138, 211, 229, 0.95);
+}
+.slider-container .slider-item--actividad .imagen:hover .overlay {
+  background: rgba(138, 211, 229, 0.95);
 }
 .snap-close {
   display: block;
