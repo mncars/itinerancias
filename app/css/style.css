@@ -14,7 +14,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'PFDinTextPro-Light', sans-serif;
+  font-family: 'PFDinTextPro-Thin', sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -878,7 +878,7 @@ body {
 #toolbar h1 {
   margin: 0;
   color: #fff;
-  font-family: 'PFDinTextPro-Light', sans-serif;
+  font-family: 'PFDinTextPro-Thin', sans-serif;
   font-size: 20px;
   line-height: 44px;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
