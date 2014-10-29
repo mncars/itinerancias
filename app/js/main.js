@@ -92,7 +92,7 @@
     }
   });
 
-  $('.btn_info').click(function() {
+  $('#open-left').click(function() {
     if (snapper.state().state == 'closed') {
       var infoTpl = ItineranciasTpls['app/templates/info.hbs'];
       $('footer').addClass("hide-bottom");
