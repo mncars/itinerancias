@@ -21,9 +21,6 @@
   else if (estilo == 3)
     tileUrl = 'http://api.tiles.mapbox.com/v4/mncars.jdnkpc5f/{z}/{x}/{y}.png256?access_token=pk.eyJ1IjoibW5jYXJzIiwiYSI6Ikd4LVhVVzQifQ.4aiQLhuKLILjMBNLFkDGxA';
 
-
-
-
   var config = {
     //https://leanpub.com/leaflet-tips-and-tricks/read#leanpub-auto-tile-servers-that-can-be-used-with-leaflet
 //    tileUrl: 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr/{z}/{x}/{y}.png',
@@ -31,7 +28,7 @@
     tileAttrib: 'Map tiles &copy; MapBox and OpenStreetMap ',
     initLatLng: new L.LatLng(40.408192, -3.694337), // MNCARS
     mapCenter: new L.LatLng(10, -28), //en mitad del oceano
-    initZoom: 3,
+    initZoom: $(window).width()<800?2:3,
     minZoom: 2,
     maxZoom: 15
   };
@@ -101,6 +98,7 @@
     }
     $(".itinerancia-marker").hide();
     $(this.value + "-marker").show();
+    snapper.close();
   });
 
 }());
