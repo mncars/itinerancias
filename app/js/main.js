@@ -82,8 +82,7 @@
   });
 
   // Abre el panel izquierdo
-
-  $('#open-left').click(function() {
+  $('#open-left').click(function(e) {
     if (snapper.state().state == 'closed') {
       var infoTpl = ItineranciasTpls['app/templates/info.hbs'];
       $('footer').addClass("hide-bottom");
@@ -93,7 +92,6 @@
         minPosition: -265
       });
       snapper.open('left');
-
     } else {
       $('footer').removeClass("hide-bottom");
       snapper.close();
