@@ -39,8 +39,8 @@
   var snapper = new Snap({
     element: document.getElementById('content'),
     touchToDrag: false,
-    maxPosition: 320,
-    minPosition: -320,
+    maxPosition: 265,
+    minPosition: -265,
     //320
   });
 
@@ -74,6 +74,10 @@
     e.exposicion_marker.renderItinerancia();
     $(".exposicionThumbnail").html(e.exposicion_marker.getPopup());
     $('footer').addClass("hide-bottom");
+    snapper.settings({
+      maxPosition: 320,
+      minPosition: -320
+    });
     snapper.open('right');
   });
 
@@ -84,7 +88,12 @@
       var infoTpl = ItineranciasTpls['app/templates/info.hbs'];
       $('footer').addClass("hide-bottom");
       $(".snap-drawer-left").html(infoTpl());
+      snapper.settings({
+        maxPosition: 265,
+        minPosition: -265
+      });
       snapper.open('left');
+
     } else {
       $('footer').removeClass("hide-bottom");
       snapper.close();

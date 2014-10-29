@@ -1111,6 +1111,7 @@ button + label {
   line-height: 1.2;
 }
 .snap-drawer-left {
+  width: 265px;
   padding-top: 40px;
   background-color: #333333;
   color: #888888;
