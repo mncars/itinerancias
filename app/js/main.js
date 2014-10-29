@@ -41,7 +41,6 @@
     touchToDrag: false,
     maxPosition: 265,
     minPosition: -265,
-    //320
   });
 
   $('.snap-close').click(function() {
@@ -63,39 +62,45 @@
   map.addLayer(new L.TileLayer(config.tileUrl, {attribution: config.tileAttrib}));
   map.setView(config.mapCenter, config.initZoom);
 
-  Slider.initialize(map);
-
-  map.on('click', function (e) {
-    //map.clearAll();
-  });
+  if (!$('html').hasClass('lt-ie9')) {
+    Slider.initialize(map);
+  }
 
   $(document).on("verItinerancia", function(e) {
     map.clearAll(true);  //TODO: Nozoom?
     e.exposicion_marker.renderItinerancia();
     $(".exposicionThumbnail").html(e.exposicion_marker.getPopup());
     $('footer').addClass("hide-bottom");
-    snapper.settings({
-      maxPosition: 320,
-      minPosition: -320
-    });
+    snapper.settings.maxPosition = 320;
+    snapper.settings.minPosition = -320;
     snapper.open('right');
   });
 
+  var snapper_left_status = "closed";
   // Abre el panel izquierdo
   $('#open-left').click(function(e) {
-    if (snapper.state().state == 'closed') {
-      var infoTpl = ItineranciasTpls['app/templates/info.hbs'];
+    if (snapper_left_status == 'closed') {
+      snapper_left_status = 'open';
       $('footer').addClass("hide-bottom");
-      $(".snap-drawer-left").html(infoTpl());
-      snapper.settings({
-        maxPosition: 265,
-        minPosition: -265
-      });
+      snapper.settings.maxPosition = 265;
+      snapper.settings.minPosition = -265;
       snapper.open('left');
     } else {
+      snapper_left_status = 'closed';
       $('footer').removeClass("hide-bottom");
       snapper.close();
     }
+  });
+
+  //eventos para el select de años
+  $('select').change(function() {
+    //con esto ocultamos los markers que no son del año.
+    if (this.value == 'all') {
+      $(".itinerancia-marker").show();
+      return;
+    }
+    $(".itinerancia-marker").hide();
+    $(this.value + "-marker").show();
   });
 
 }());
