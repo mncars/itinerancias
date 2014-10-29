@@ -77,20 +77,7 @@
     snapper.open('right');
   });
 
-  //interacciones de botones de share y + info
-
-  $('#menu a').click(function(event) {
-    $(this).toggleClass("active");
-  });
-
-  $('.btn_share').click(function(event) {
-    var panel = $('#compartir');
-    if (panel.hasClass('open')) {
-      panel.removeClass('open');
-    } else {
-      panel.addClass('open');
-    }
-  });
+  // Abre el panel izquierdo
 
   $('#open-left').click(function() {
     if (snapper.state().state == 'closed') {
@@ -101,18 +88,6 @@
     } else {
       $('footer').removeClass("hide-bottom");
       snapper.close();
-    }
-  });
-
-  $('.btn_cerrar_info').click(function() {
-    var panel = $('#branding');
-    if (panel.hasClass('closed')) {
-      $('#compartir').show(800);
-      panel.removeClass('closed');
-    } else {
-      $('#compartir').hide();
-      $('footer').removeClass("hide-bottom");
-      panel.addClass('closed');
     }
   });
 
