@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"get",
+				"getColorResaltado"
+			],
+			[
 				"bgr",
 				"bgr-n	background-repeat: no-repeat;"
 			],
@@ -352,26 +356,18 @@
 	"buffers":
 	[
 		{
-			"file": "app/js/main.js",
+			"file": "app/templates/_slider-item.hbs",
 			"settings":
 			{
-				"buffer_size": 3740,
+				"buffer_size": 426,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/less/snap.less",
+			"file": "app/templates/exposicion-globo.hbs",
 			"settings":
 			{
-				"buffer_size": 1472,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/exposicion.class.js",
-			"settings":
-			{
-				"buffer_size": 3922,
+				"buffer_size": 1412,
 				"line_ending": "Unix"
 			}
 		},
@@ -384,20 +380,35 @@
 			}
 		},
 		{
-			"file": "app/less/style.less",
+			"file": "app/js/exposicion.class.js",
 			"settings":
 			{
-				"buffer_size": 4410,
+				"buffer_size": 4161,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<section id=\"deepbanner-home\" class=\"v2\">\n  <div class=\"row\">\n    <div class=\"col-md-6 col-left\">\n      <div class=\"page-header\">\n        <h1 class=\"h1\">La mayor <span>academia</span> <br>de <span>formación online</span> <br>del <span class=\"highlighted\">sector digital</span></h1>\n      </div>\n      <div class=\"row\">\n\n        \n  <div class=\"statistic col-xs-5\"><a href=\"#\"><span class=\"more\">más de</span> <span class=\"number\">2.700</span> <span class=\"type\">cursos impartidos</span></a></div>\n\n<div class=\"statistic col-xs-7\"><a href=\"#\"><span class=\"more\">más de</span> <span class=\"number\">135.000</span> <span class=\"type\">horas de aprendizaje</span></a></div>\n\n      </div>\n    </div>\n    <div class=\"col-md-6 col-right\">\n      <h2 class=\"h2\">¿Por qué <span>pasarte al sector digital</span>?</h2>\n      <div class=\"embed-container\">\n        <iframe src=\"\n  //player.vimeo.com/video/63386908?title=0&amp;byline=0&amp;portrait=0\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\" allowfullscreen=\"\"></iframe>\n      </div>\n    </div>\n  </div>\n</section>",
+			"file": "app/js/main.js",
 			"settings":
 			{
-				"buffer_size": 1095,
-				"line_ending": "Unix",
-				"name": "<section id=\"deepbanner-home\" class=\"v2\">"
+				"buffer_size": 3740,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/less/slider.less",
+			"settings":
+			{
+				"buffer_size": 3891,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/less/includes/variables.less",
+			"settings":
+			{
+				"buffer_size": 26917,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -497,17 +508,21 @@
 	},
 	"file_history":
 	[
+		"/Users/david/Sites/itinerancias/app/js/main.js",
+		"/Users/david/Sites/itinerancias/app/less/snap.less",
+		"/Users/david/Sites/itinerancias/app/js/exposicion.class.js",
+		"/Users/david/Sites/itinerancias/app/js/map.class.js",
+		"/Users/david/Sites/itinerancias/app/less/style.less",
 		"/Users/david/Sites/itinerancias/app/index.html",
+		"/Users/david/Sites/itinerancias/app/templates/exposicion-globo.hbs",
 		"/Users/david/Sites/itinerancias/app/humans.txt",
 		"/Users/david/Sites/itinerancias/app/js/itinerancia.class.js",
 		"/Users/david/Sites/itinerancias/app/js/Slider.js",
 		"/Users/david/Sites/itinerancias/app/bower_components/Leaflet.MakiMarkers/Leaflet.MakiMarkers.js",
 		"/Users/david/Sites/itinerancias/app/less/includes/scaffolding.less",
-		"/Users/david/Sites/itinerancias/app/templates/exposicion-globo.hbs",
 		"/Users/david/Sites/itinerancias/app/markers2.json",
 		"/Users/david/Sites/itinerancias/app/bower_components/snapjs/snap.js",
 		"/Users/david/Sites/itinerancias/.gitignore",
-		"/Users/david/Sites/itinerancias/app/less/style.less",
 		"/Users/david/Sites/itinerancias/app/less/slider.less",
 		"/Users/david/Sites/formacion.internetacademi.com/js/main.js",
 		"/Users/david/Sites/formacion.internetacademi.com/css/main.less",
@@ -620,11 +635,7 @@
 		"/Users/haritzoyaga/Sites/bootstrap-3.0.0/less/variables.less",
 		"/Users/haritzoyaga/Sites/bootstrap-3.0.0-min/flexbox.html",
 		"/Users/haritzoyaga/Sites/bootstrap-3.0.0-min/flexbox1.html",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/plantillas/v1.listado-modulos-comprados.html",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/node/modulo/node--ejercicio_modulo--teaser.tpl.php",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/node/modulo/field--contenido_modulo.tpl.php",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/node/modulo/field--landing_modulo.tpl.php",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/node/modulo/node--landing_modulo.tpl.php"
+		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/plantillas/v1.listado-modulos-comprados.html"
 	],
 	"find":
 	{
@@ -632,7 +643,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 95.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/david/Sites/itinerancias/app/less",
@@ -809,23 +820,23 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/js/main.js",
+					"file": "app/templates/_slider-item.hbs",
 					"settings":
 					{
-						"buffer_size": 3740,
+						"buffer_size": 426,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								977,
-								977
+								69,
+								69
 							]
 						],
 						"settings":
@@ -967,7 +978,7 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -979,18 +990,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/less/snap.less",
+					"file": "app/templates/exposicion-globo.hbs",
 					"settings":
 					{
-						"buffer_size": 1472,
+						"buffer_size": 1412,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1393,
-								1294
+								32,
+								36
 							]
 						],
 						"settings":
@@ -1137,25 +1148,190 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 710.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/js/exposicion.class.js",
+					"file": "app/js/map.class.js",
 					"settings":
 					{
-						"buffer_size": 3922,
+						"buffer_size": 2402,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								513,
-								513
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 697.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/js/exposicion.class.js",
+					"settings":
+					{
+						"buffer_size": 4161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								958,
+								958
 							]
 						],
 						"settings":
@@ -1308,19 +1484,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/js/map.class.js",
+					"buffer": 4,
+					"file": "app/js/main.js",
 					"settings":
 					{
-						"buffer_size": 2402,
+						"buffer_size": 3740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								818,
-								818
+								1143,
+								1143
 							]
 						],
 						"settings":
@@ -1467,25 +1643,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 203.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/less/style.less",
+					"buffer": 5,
+					"file": "app/less/slider.less",
 					"settings":
 					{
-						"buffer_size": 4410,
+						"buffer_size": 3891,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3989,
-								3989
+								1475,
+								1475
 							]
 						],
 						"settings":
@@ -1632,30 +1808,36 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3433.0,
+						"translation.y": 1411.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
+					"file": "app/less/includes/variables.less",
 					"settings":
 					{
-						"buffer_size": 1095,
+						"buffer_size": 26917,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28,
-								13
+								634,
+								619
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"auto_name": "<section id=\"deepbanner-home\" class=\"v2\">",
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
 							"bh_regions":
 							[
 								"bh_regex",
@@ -1703,9 +1885,90 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
