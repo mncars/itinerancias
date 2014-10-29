@@ -44,19 +44,19 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  return "<img src=\"/imgs/pin-actividad.png\">";
+  return "<img src=\"imgs/pin-actividad.png\">";
   }
 
 function program3(depth0,data) {
   
   
-  return "<img src=\"/imgs/pin-exposicion.png\">";
+  return "<img src=\"imgs/pin-exposicion.png\">";
   }
 
 function program5(depth0,data) {
   
   
-  return "<img src=\"/imgs/pin-coleccion.png\">";
+  return "<img src=\"imgs/pin-coleccion.png\">";
   }
 
 function program7(depth0,data) {
