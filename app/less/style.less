@@ -34,13 +34,18 @@ html, body {
   left: 0;
   &:before{
     content: "";
-    background: url("../imgs/logo.negro.png") 0 0 no-repeat;
+    width: 100px;
+    height: 50px;
+    background: url("../imgs/logo.negro-mini.png") 0 0 no-repeat;
     width: 130px;
     height: 65px;
     position: absolute;
     top: 59px;
     left: 15px;
     z-index: 1;
+    @media (min-width: @screen-sm-min) {
+      background: url("../imgs/logo.negro.png") 0 0 no-repeat;
+    }
   }
 }
 

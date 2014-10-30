@@ -27,14 +27,23 @@
   padding-top: 40px;
   background-color: @gray-dark;
   color: darken(@gray-lighter, 40%);
+}
+
+.site-descripcion {
   font-size: 16px;
-  h2 {
+  .h2 {
     margin-bottom: 20px;
     color: #fff;
-    font-size: 32px;
+    font-size: 24px;
     font-family: @regular-scout;
+    @media (min-width: @screen-sm-min) {
+      font-size: 32px;
+    }
   }
-  h3 {
+}
+
+.compartir {
+  .h4 {
     color: #fff;
   }
 }
