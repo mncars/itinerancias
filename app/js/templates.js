@@ -24,7 +24,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.imagen) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.imagen); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\">\n    </div>\n    <div class=\"caption\">\n      <div class=\"titulo\">";
+    + "\" />\n    </div>\n    <div class=\"caption\">\n      <div class=\"titulo\">";
   if (helper = helpers.titulo) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.titulo); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -44,41 +44,59 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  return "Actividad";
+  return "<img src=\"imgs/pin-actividad.png\">";
   }
 
 function program3(depth0,data) {
   
   
-  return "Exposición";
+  return "<img src=\"imgs/pin-exposicion.png\">";
   }
 
 function program5(depth0,data) {
   
   
-  return "La colección viaja";
+  return "<img src=\"imgs/pin-coleccion.png\">";
   }
 
 function program7(depth0,data) {
   
   
-  return "+ detalles de la actividad";
+  return "Actividad";
   }
 
 function program9(depth0,data) {
   
   
+  return "Exposición";
+  }
+
+function program11(depth0,data) {
+  
+  
+  return "La colección viaja";
+  }
+
+function program13(depth0,data) {
+  
+  
+  return "+ detalles de la actividad";
+  }
+
+function program15(depth0,data) {
+  
+  
   return "+ detalles de la exposición";
   }
 
-function program11(depth0,data,depth1) {
+function program17(depth0,data,depth1) {
   
   var buffer = "", stack1, helper, options;
   buffer += "\n	  <div class=\"itinerancia";
-  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(12, program12, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options) : helperMissing.call(depth0, "equal", (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options));
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(18, program18, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options) : helperMissing.call(depth0, "equal", (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\">\n	  	<div class=\"itinerancia-nombre\">\n        ";
-  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.url)),stack1 == null || stack1 === false ? stack1 : stack1.length), {hash:{},inverse:self.program(16, program16, data),fn:self.program(14, program14, data),data:data});
+  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.url)),stack1 == null || stack1 === false ? stack1 : stack1.length), {hash:{},inverse:self.program(22, program22, data),fn:self.program(20, program20, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n	    </div>\n	    <div class=\"itinerancia-lugar\">";
   if (helper = helpers.fechas) { stack1 = helper.call(depth0, {hash:{},data:data}); }
@@ -87,13 +105,13 @@ function program11(depth0,data,depth1) {
     + "</div>\n	  </div>\n	";
   return buffer;
   }
-function program12(depth0,data) {
+function program18(depth0,data) {
   
   
   return " active";
   }
 
-function program14(depth0,data) {
+function program20(depth0,data) {
   
   var buffer = "", stack1, helper;
   buffer += "\n          <a href=\"";
@@ -108,7 +126,7 @@ function program14(depth0,data) {
   return buffer;
   }
 
-function program16(depth0,data) {
+function program22(depth0,data) {
   
   var buffer = "", stack1, helper;
   buffer += "\n          ";
@@ -119,16 +137,24 @@ function program16(depth0,data) {
   return buffer;
   }
 
-  buffer += "<span class=\"tipo--"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n  ";
   stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n  ";
+  buffer += "\n";
   stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n  ";
+  buffer += "\n";
   stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(5, program5, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n<span class=\"tipo--"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n  ";
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(7, program7, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n  ";
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(9, program9, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options));
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n  ";
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(11, program11, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</span>\n<h2>"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.titulo)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
@@ -145,16 +171,16 @@ function program16(depth0,data) {
     + " <br>\n\n  <a href=\"http://www.museoreinasofia.es"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" target=\"_blank\" class=\"btn btn-default btn-block\">\n    ";
-  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(7, program7, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options));
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(13, program13, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    ";
-  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(9, program9, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options));
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(15, program15, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    ";
-  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(9, program9, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options));
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(15, program15, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n  </a>\n</div>\n\n<h3>Itinerancias</h3>\n<div class=\"itinerancias\">\n	";
-  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.itinerancia), {hash:{},inverse:self.noop,fn:self.programWithDepth(11, program11, data, depth0),data:data});
+  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.itinerancia), {hash:{},inverse:self.noop,fn:self.programWithDepth(17, program17, data, depth0),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</div>\n";
   return buffer;
@@ -166,7 +192,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"site-descripcion\">\n	<h2 class=\"h2\">Las itinerancias del Museo Nacional Centro de Arte <br>Reina Sofía</h2>\n	<p>Lorem ipsum dolor sit amet, quodsi scriptorem conclusionemque id vim, numquam petentium eu vim. Minim oportere dissentiunt sea ex. Ei volumus verterem mediocrem nec, stet dolores facilisis usu ne, iriure minimum qualisque sit ad. Iriure scaevola usu no. Oratio tacimates per at, est rebum electram sadipscing at. Has dicant appareat temporibus cu, solum detracto ea usu, pri id decore vocent vivendum.</p>\n</div>\n<div class=\"compartir\">\n	<h3 class=\"h4\">Compartir</h3>\n	<ul class=\"share-buttons\">\n		<li class=\"facebook\">\n		<div class=\"fb-like\" data-href=\"http://www.madridespop.es/itinerancias/dist/\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"false\" data-share=\"false\"></div>\n		</li>\n		<li class=\"twitter\">\n		<iframe width=\"90px\" scrolling=\"no\" height=\"21px\" frameborder=\"0\"\n		src=\"http://platform.twitter.com/widgets/tweet_button.html?url=http://www.museoreinasofia.es/itinerancias/&amp;via=museoreinasofia&amp;text=Itinerancias&amp;count=horizontal\"\n		role=\"presentation\" allowtransparency=\"true\" class=\"twitter-share-button\"\n		name=\"tweet_frame\" id=\"tweet_frame\"></iframe>\n		</li>\n		<li class=\"googleplus\">\n		<div class=\"g-plusone\" data-size=\"medium\" data-href=\"http://www.museoreinasofia.es/itinerancias/\"></div>\n		<script type=\"text/javascript\">\n		window.___gcfg = {lang: 'es'};\n		(function() {\n		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;\n		po.src = 'https://apis.google.com/js/plusone.js';\n		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);\n		})();\n		</script>\n		</li>\n	</ul>\n</div>\n";
+  return "<div class=\"site-descripcion\">\n	<h2 class=\"h2\">Las itinerancias del Museo Nacional Centro de Arte <br>Reina Sofía</h2>\n	<p>Lorem ipsum dolor sit amet, quodsi scriptorem conclusionemque id vim, numquam petentium eu vim. Minim oportere dissentiunt sea ex. Ei volumus verterem mediocrem nec, stet dolores facilisis usu ne, iriure minimum qualisque sit ad. Iriure scaevola usu no. Oratio tacimates per at, est rebum electram sadipscing at. Has dicant appareat temporibus cu, solum detracto ea usu, pri id decore vocent vivendum.</p>\n</div>\n<div class=\"compartir\">\n	<h3 class=\"h4\">Compartir</h3>\n	<ul class=\"share-buttons\">\n		<li class=\"facebook\">\n		<div class=\"fb-like\" data-href=\"http://www.madridespop.es/itinerancias/dist/\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"false\" data-share=\"false\"></div>\n		</li>\n		<li class=\"twitter\">\n		<iframe width=\"90px\" scrolling=\"no\" height=\"21px\" frameborder=\"0\"\n		src=\"http://platform.twitter.com/widgets/tweet_button.html?url=http://www.museoreinasofia.es/itinerancias/&amp;via=museoreinasofia&amp;text=Itinerancias&amp;count=horizontal\"\n		role=\"presentation\" allowtransparency=\"true\" class=\"twitter-share-button\"\n		name=\"tweet_frame\" id=\"tweet_frame\"></iframe>\n		</li>\n		<li class=\"googleplus\">\n		<div class=\"g-plusone\" data-size=\"medium\" data-href=\"http://www.museoreinasofia.es/itinerancias/\"></div>\n		<script type=\"text/javascript\">\n		window.___gcfg = {lang: 'es'};\n		(function() {\n		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;\n		po.src = 'https://apis.google.com/js/plusone.js';\n		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);\n		})();\n		</script>\n		</li>\n	</ul>\n</div>";
   });
 
 this["ItineranciasTpls"]["app/templates/slider.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

@@ -12,6 +12,7 @@ Slider = ({
     this.container = $('#slider-container');
     this.container.mixItUp({
         animation: {
+          //enable: false,
           duration: 400,
           effects: 'fade',
           easing: 'ease'

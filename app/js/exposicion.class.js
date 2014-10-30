@@ -99,7 +99,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
             animate: true,
             duration: 1,
             maxZoom: 6,
-            paddingTopLeft: [330, 20],
+            paddingTopLeft: [20, 50],
             paddingBottomRight: [20, 240]
           }
         );
@@ -124,7 +124,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
   clearResaltarIconos: function() {
     for (var i=0; i < this._markers.length; ++i) {
       this._markers[i].setIcon(this._icon);
-      this._markers[i].setZIndexOffset(this._markers[i].zindex_inicial);
+      //this._markers[i].setZIndexOffset(this._markers[i].zindex_inicial);
     }
   },
 });
