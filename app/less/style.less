@@ -26,6 +26,17 @@ html, body {
   display: none;
 }
 
+.browsehappy {
+    margin: 0 0;
+    background: @brand-primary;
+    color: #000;
+    padding: 10px 20px 12px;
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+}
+
 #map {
   position: absolute;
   top: 0;
@@ -59,11 +70,16 @@ html, body {
   height: 44px;
   z-index: 9000000000;
 }
+.lt-ie9 {
+  #toolbar {
+    background: @gray-dark;
+  }
+}
 
 #toolbar h1 {
   margin: 0;
   color: #fff;
-  font-family: @light-scout;
+  font-family: @regular-scout;
   font-size: 20px;
   line-height: 44px;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
@@ -90,20 +106,6 @@ html, body {
 
 @import 'slider.less';
 @import 'snap.less';
-
-.site-descripcion {
-  margin-bottom: 30px;
-}
-
-.share-buttons {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  li {
-    margin: 0 0 15px 0;
-    height: 20px;
-  }
-}
 
 .leaflet-popup-content-wrapper{
   //background-color: #f0f0f0;
