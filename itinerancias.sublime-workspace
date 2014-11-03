@@ -356,50 +356,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/templates/_slider-item.hbs",
+			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 426,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/templates/exposicion-globo.hbs",
-			"settings":
-			{
-				"buffer_size": 1412,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/map.class.js",
-			"settings":
-			{
-				"buffer_size": 2402,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/exposicion.class.js",
-			"settings":
-			{
-				"buffer_size": 4161,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/main.js",
-			"settings":
-			{
-				"buffer_size": 3740,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/less/slider.less",
-			"settings":
-			{
-				"buffer_size": 3891,
+				"buffer_size": 6683,
 				"line_ending": "Unix"
 			}
 		},
@@ -407,8 +367,34 @@
 			"file": "app/less/includes/variables.less",
 			"settings":
 			{
-				"buffer_size": 26917,
+				"buffer_size": 26915,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/css/MyFontsWebfontsKit.css",
+			"settings":
+			{
+				"buffer_size": 4943,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "calculadora_tentuplica\ncalculadora_cuenta_remunerada\ncalculadora_comisiones_cuenta_bolsa\ncalculadora_planes_pensiones\ncalculadora_hipoteca\ncalculadora_alquila_acciones\n\n\n_hsq = _hsq || [];\n_hsq.push([\"trackEvent\", \"ID\"]);",
+			"settings":
+			{
+				"buffer_size": 221,
+				"line_ending": "Unix",
+				"name": "calculadora_tentuplica"
+			}
+		},
+		{
+			"contents": "<!--[if lt IE 9]>\n  <script src=\"//d3ozve1wqh111c.cloudfront.net/sites/all/themes/ks_bootstrap/js/vendor/modernizr-2.6.2-respond-1.4.2.min.js\"></script>\n  <link href=\"http://d3ozve1wqh111c.cloudfront.net/respond-proxy.html\" id=\"respond-proxy\" rel=\"respond-proxy\" />\n  <link href=\"/respond.proxy.gif\" id=\"respond-redirect\" rel=\"respond-redirect\" />\n  <script src=\"/respond.proxy.js\"></script>\n  <![endif]-->",
+			"settings":
+			{
+				"buffer_size": 406,
+				"line_ending": "Unix",
+				"name": "<!--[if lt IE 9]>"
 			}
 		}
 	],
@@ -508,22 +494,40 @@
 	},
 	"file_history":
 	[
-		"/Users/david/Sites/itinerancias/app/js/main.js",
-		"/Users/david/Sites/itinerancias/app/less/snap.less",
-		"/Users/david/Sites/itinerancias/app/js/exposicion.class.js",
-		"/Users/david/Sites/itinerancias/app/js/map.class.js",
-		"/Users/david/Sites/itinerancias/app/less/style.less",
-		"/Users/david/Sites/itinerancias/app/index.html",
 		"/Users/david/Sites/itinerancias/app/templates/exposicion-globo.hbs",
+		"/Users/david/Sites/itinerancias/app/less/includes/thumbnails.less",
+		"/Users/david/Sites/itinerancias/app/bower_components/mixitup/docs/configuration-object.md",
+		"/Users/david/Sites/itinerancias/app/templates/slider.hbs",
+		"/Users/david/Sites/itinerancias/app/bower_components/mixitup/README.md",
+		"/Users/david/Sites/itinerancias/app/js/exposicion.class.js",
+		"/Users/david/Sites/itinerancias/app/less/slider.less",
+		"/Users/david/Sites/itinerancias/app/less/snap.less",
+		"/Users/david/Sites/itinerancias/app/less/style.less",
+		"/Users/david/Sites/itinerancias/app/js/Slider.js",
+		"/Users/david/Sites/itinerancias/app/js/main.js",
+		"/Users/david/Sites/itinerancias/app/index.html",
+		"/Users/david/Sites/itinerancias/app/bower_components/mixitup/docs/api-methods.md",
+		"/Users/david/Sites/itinerancias/app/templates/info.hbs",
+		"/Users/david/Sites/itinerancias/app/templates/_slider-item.hbs",
+		"/Users/david/Sites/itinerancias/app/js/Snap.js-2.0.0-rc1/demo/apps/toggles.html",
+		"/Users/david/Sites/itinerancias/app/js/Snap.js-2.0.0-rc1/demo/apps/settings.html",
+		"/Users/david/Downloads/html5-boilerplate-4.3.0/index.html",
+		"/Users/david/Sites/madridespop/app/index.html",
+		"/Users/david/Sites/madridespop/app/_includes/home.html",
+		"/Users/david/Sites/madridespop/app/_includes/header.html",
+		"/Users/david/Sites/madridespop/app/_layouts/default.html",
+		"/Users/david/Sites/itinerancias/app/less/includes/variables.less",
+		"/Users/david/Sites/itinerancias/app/css/MyFontsWebfontsKit.css",
+		"/Users/david/Sites/itinerancias/bower.json",
+		"/Users/david/Sites/itinerancias/app/bower_components/snapjs/README.md",
+		"/Users/david/Sites/itinerancias/app/js/map.class.js",
 		"/Users/david/Sites/itinerancias/app/humans.txt",
 		"/Users/david/Sites/itinerancias/app/js/itinerancia.class.js",
-		"/Users/david/Sites/itinerancias/app/js/Slider.js",
 		"/Users/david/Sites/itinerancias/app/bower_components/Leaflet.MakiMarkers/Leaflet.MakiMarkers.js",
 		"/Users/david/Sites/itinerancias/app/less/includes/scaffolding.less",
 		"/Users/david/Sites/itinerancias/app/markers2.json",
 		"/Users/david/Sites/itinerancias/app/bower_components/snapjs/snap.js",
 		"/Users/david/Sites/itinerancias/.gitignore",
-		"/Users/david/Sites/itinerancias/app/less/slider.less",
 		"/Users/david/Sites/formacion.internetacademi.com/js/main.js",
 		"/Users/david/Sites/formacion.internetacademi.com/css/main.less",
 		"/Users/haritzoyaga/Sites/dontknow/docroot/sites/all/themes/dontknow/css/home.css",
@@ -617,25 +621,7 @@
 		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/less/layouts.less",
 		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/plantillas/v1.comprar-modulo.html",
 		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/includes/titles.inc",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/node/ejercicio_modulo/node--ejercicio_modulo--teaser.tpl.php",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/panels/panels-pane--og-menu-single-menu.tpl.php",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/plantillas/v1.ficha-modulo-eventos-online.html",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/plantillas/v1.ficha-modulo.html",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/css/screen.css",
-		"/Users/haritzoyaga/Sites/kimberly-clark/home.html",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/less/forms.less",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/startup.info",
-		"/Users/haritzoyaga/Sites/startup-mentor/profiles/openatrium/themes/radix/radix.info",
-		"/Users/haritzoyaga/Sites/startup-mentor/profiles/openatrium/themes/radix/assets/stylesheets/radix-style.css",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/layouts/phelan.tpl.php",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/less/wells.less",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/css/less/login.less",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/css/less/related.less",
-		"/Users/haritzoyaga/Downloads/dist/css/bootstrap-theme.css",
-		"/Users/haritzoyaga/Sites/bootstrap-3.0.0/less/variables.less",
-		"/Users/haritzoyaga/Sites/bootstrap-3.0.0-min/flexbox.html",
-		"/Users/haritzoyaga/Sites/bootstrap-3.0.0-min/flexbox1.html",
-		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/plantillas/v1.listado-modulos-comprados.html"
+		"/Users/haritzoyaga/Sites/startup-mentor/sites/all/themes/startup/templates/node/ejercicio_modulo/node--ejercicio_modulo--teaser.tpl.php"
 	],
 	"find":
 	{
@@ -643,9 +629,11 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
+			"/Users/david/Sites/itinerancias/app/js",
+			"<project>",
 			"/Users/david/Sites/itinerancias/app/less",
 			"<project>",
 			"/Users/haritzoyaga/Sites/dontknow,/Users/haritzoyaga/Sites/dontknow/docroot/sites/all/themes/dontknow/css/less",
@@ -673,6 +661,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console",
+			"thumb",
+			"sort",
+			"transition",
+			"anim",
+			"anima",
+			"transition",
+			"hover",
+			"transition",
+			"mix",
+			">\n",
+			"button",
+			"button class=\"filter\" data-filter",
+			"console.log",
+			"light",
+			"Light",
+			"snap",
 			"<a",
 			"_colorResaltado",
 			".exposicionThumbnail .itinerancia-nombre",
@@ -783,24 +788,7 @@
 			"http://lorempixel.com/250/141",
 			"http://lorempixel.com/g/250/141",
 			"250/141",
-			"<div class=\"span6\">\n            <p class=\"objectives\">",
-			"<div class=\"span6\">\n            <a href=\"#\" class=\"btn btn-action pull-right\">\n              <span class=\"action\">Reservar Itinerario</span>",
-			"margin",
-			"check",
-			"descuentos",
-			"topseedlabs",
-			"div class=\"span8\">\n            <p class=\"objectives\"><span>Objetivos:</span> Identificar las necesidades que deseas cubrir, a los potenciales clientes y a tu competencia</p>\n          </div>\n          <div class=\"span4\">\n            <a href=\"#\" class=\"btn btn-action pull-right\">\n              <span class=\"action\">Reservar</span>\n              <span class=\"text\">\n                <span class=\"title\">Itinerario completo</span>\n                <span class=\"subtitle\">con un 20% de descuento</span>\n              </span>\n            </a>\n          </div>",
-			"<span class=\"subtitle\">con un 10% de descuento</span>",
-			"<span class=\"subtitle\">sin compromiso</span>",
-			"btn btn-primary btn-action",
-			"discount",
-			"compromise",
-			"discount",
-			"compromise",
-			"profesionals",
-			"#video-block",
-			"text",
-			"date-module"
+			"<div class=\"span6\">\n            <p class=\"objectives\">"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -808,6 +796,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"option",
 			"granate-claro",
 			"&."
 		],
@@ -820,23 +809,23 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/templates/_slider-item.hbs",
+					"file": "app/index.html",
 					"settings":
 					{
-						"buffer_size": 426,
+						"buffer_size": 6683,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								69,
-								69
+								5441,
+								5183
 							]
 						],
 						"settings":
@@ -978,187 +967,22 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1830.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/templates/exposicion-globo.hbs",
+					"file": "app/less/includes/variables.less",
 					"settings":
 					{
-						"buffer_size": 1412,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								32,
-								36
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/js/map.class.js",
-					"settings":
-					{
-						"buffer_size": 2402,
+						"buffer_size": 26915,
 						"regions":
 						{
 						},
@@ -1308,30 +1132,28 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 697.0,
+						"translation.y": 1023.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/js/exposicion.class.js",
+					"buffer": 2,
+					"file": "app/css/MyFontsWebfontsKit.css",
 					"settings":
 					{
-						"buffer_size": 4161,
+						"buffer_size": 4943,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								958,
-								958
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1473,9 +1295,81 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 409.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 221,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								221,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_name": "calculadora_tentuplica",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1485,29 +1379,23 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/js/main.js",
 					"settings":
 					{
-						"buffer_size": 3740,
+						"buffer_size": 406,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1143,
-								1143
+								222,
+								167
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
+							"auto_name": "<!--[if lt IE 9]>",
 							"bh_regions":
 							[
 								"bh_regex",
@@ -1555,419 +1443,6 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/less/slider.less",
-					"settings":
-					{
-						"buffer_size": 3891,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1475,
-								1475
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1411.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/less/includes/variables.less",
-					"settings":
-					{
-						"buffer_size": 26917,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								634,
-								619
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,

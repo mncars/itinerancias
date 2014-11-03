@@ -15,7 +15,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     this._markers = [];
     this._colorResaltado = this.getColorResaltado();
     this._icon = L.MakiMarkers.icon({icon: "town-hall",
-      color: "#333",
+      color: this.getColorResaltado(),//"#333",
       size: "s",
       className: "itinerancia-marker y" + exposicion.anio + "-marker",
       popupAnchor: [0,-130]

@@ -33,6 +33,7 @@
     maxZoom: 15
   };
 
+  // Configuración relacionada con el snapper
   var snapper = new Snap({
     element: document.getElementById('content'),
     touchToDrag: false,
@@ -40,11 +41,26 @@
     minPosition: -265,
   });
 
-  $('.snap-close').click(function() {
+  snapper.on('close', function(){
     $('footer').removeClass("hide-bottom");
+  });
+
+  $('.snap-close').click(function() {
     snapper.close();
   });
 
+  $('#open-left').click(function(e) {
+    if (snapper.state().state == 'closed') {
+      $('footer').addClass("hide-bottom");
+      snapper.settings.maxPosition = 265;
+      snapper.settings.minPosition = -265;
+      snapper.open('left');
+    } else {
+      snapper.close();
+    }
+  });
+
+  // Mapa
   var map = L.mapItinerancias('map', exposiciones, {
     minZoom: config.minZoom,
     maxZoom: config.maxZoom,
@@ -71,22 +87,6 @@
     snapper.settings.maxPosition = 320;
     snapper.settings.minPosition = -320;
     snapper.open('right');
-  });
-
-  var snapper_left_status = "closed";
-  // Abre el panel izquierdo
-  $('#open-left').click(function(e) {
-    if (snapper_left_status == 'closed') {
-      snapper_left_status = 'open';
-      $('footer').addClass("hide-bottom");
-      snapper.settings.maxPosition = 265;
-      snapper.settings.minPosition = -265;
-      snapper.open('left');
-    } else {
-      snapper_left_status = 'closed';
-      $('footer').removeClass("hide-bottom");
-      snapper.close();
-    }
   });
 
   //eventos para el select de años
