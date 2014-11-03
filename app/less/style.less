@@ -5,6 +5,7 @@
 @import 'includes/type.less';
 @import 'includes/thumbnails.less';
 @import 'includes/buttons.less';
+@import 'includes/forms.less';
 
 
 // Mixin para obtener el rgba de un color de fondo
@@ -90,6 +91,20 @@ html, body {
   height: 44px;
 }
 
+#select-year {
+  width: 120px;
+  height: 28px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  @media (max-width: @screen-xs-max) {
+    display: block;
+  }
+}
+
 #open-left {
   background: url('../imgs/open.png') center center no-repeat @gray-darker;
   display: block;
@@ -144,31 +159,34 @@ html, body {
   z-index: 2000001 !important;
 }
 
-.tipo--exposicion,
-.tipo--actividad,
-.tipo--coleccion_viaja {
-  margin-bottom: 7px;
-  font-family: @regular-scout;
-  font-size: 14px;
-  line-height: 14px;
-  padding: 3px 5px;
-  display: inline-block;
+.tipo {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  position: relative;
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+  img {
+    position: absolute;
+    top: 0;
+    left: -30px;
+  }
 }
 
 .tipo--exposicion {
-  background-color: @brand-primary;
+  border-bottom-color: @brand-primary;
 }
 
 .tipo--actividad {
-  background-color: @tipo-actividad;
+  border-bottom-color: @tipo-actividad;
 }
 
 .tipo--coleccion_viaja {
-  background-color: @tipo-coleccion-viaja;
+  border-bottom-color: @tipo-coleccion-viaja;
 }
 
-.filtro-year {
-  @media (min-width: @screen-xs-max) {
-    display: none;
-  }
+.tipo__texto {
+  font-family: @regular-scout;
+  font-size: 14px;
+  line-height: 14px;
 }

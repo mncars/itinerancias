@@ -1,11 +1,12 @@
-{{#equal exposicion.tipo "actividad" }}<img src="imgs/pin-actividad.png">{{/equal}}
-{{#equal exposicion.tipo "exposicion" }}<img src="imgs/pin-exposicion.png">{{/equal}}
-{{#equal exposicion.tipo "coleccion_viaja" }}<img src="imgs/pin-coleccion.png">{{/equal}}
-<span class="tipo--{{exposicion.tipo}}">
-  {{#equal exposicion.tipo "actividad" }}Actividad{{/equal}}
-  {{#equal exposicion.tipo "exposicion" }}Exposición{{/equal}}
-  {{#equal exposicion.tipo "coleccion_viaja" }}La colección viaja{{/equal}}
-</span>
+<div class="tipo tipo--{{exposicion.tipo}}">
+  {{#equal exposicion.tipo "actividad" }}<img src="imgs/pin-actividad.png">{{/equal}}
+  {{#equal exposicion.tipo "exposicion" }}<img src="imgs/pin-exposicion.png">{{/equal}}
+  {{#equal exposicion.tipo "coleccion_viaja" }}<img src="imgs/pin-coleccion.png">{{/equal}}
+
+  {{#equal exposicion.tipo "actividad" }}<span class="tipo__texto">Actividad</span>{{/equal}}
+  {{#equal exposicion.tipo "exposicion" }}<span class="tipo__texto">Exposición</span>{{/equal}}
+  {{#equal exposicion.tipo "coleccion_viaja" }}<span class="tipo__texto">La colección viaja</span>{{/equal}}
+</div>
 <h2>{{exposicion.titulo}}</h2>
 
 <div class="fecha-lugar">
