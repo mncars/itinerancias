@@ -14,8 +14,10 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     this._itineranciasLayer = L.featureGroup();
     this._markers = [];
     this._colorResaltado = this.getColorResaltado();
+    this._colorExpo = this.getColorIconos();
+
     this._icon = L.MakiMarkers.icon({icon: "town-hall",
-      color: this.getColorResaltado(),//"#333",
+      color: this._colorExpo,
       size: "s",
       className: "itinerancia-marker y" + exposicion.anio + "-marker",
       popupAnchor: [0,-130]
@@ -24,13 +26,17 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     L.FeatureGroup.prototype.initialize.call(this);
   },
 
-  getColorResaltado: function() {
+  getColorIconos: function() {
     if (this._exposicion.tipo == 'actividad')
       return "#88d2e5";
     else if (this._exposicion.tipo == 'coleccion_viaja')
       return "#d24e5b";
     else
       return "#e7d800";
+  },
+
+  getColorResaltado: function() {
+    return "#333";
   },
 
   onAdd: function (map) {
@@ -84,7 +90,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
         L.polyline(
           [this._initLatLng, L.latLng(itinerancia.lat, itinerancia.lng)],
           {
-            color: this._colorResaltado ,
+            color: this._colorExpo ,
             weight: 5,
             className: "linea-itinerancia"
           }

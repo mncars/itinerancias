@@ -22,8 +22,8 @@ L.ItineranciasMap = L.Map.extend({
     });*/
     var iconMuseo =  L.MakiMarkers.icon({
         icon: "town-hall",
-        color: "#e7d800",
-        size: "m",
+        color: "#333",
+        size: "s",
         className: "mncars-marker"
     });
 
