@@ -1456,6 +1456,7 @@ button + label {
   top: 15px;
   right: 15px;
   background: url("../imgs/bk.aspa-cerrar.png") 0 0 no-repeat;
+  z-index: 1;
 }
 .snap-drawers {
   background-color: #fff;
