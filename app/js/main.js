@@ -43,6 +43,7 @@
 
   snapper.on('close', function(){
     $('footer').removeClass("hide-bottom");
+    map.closePopup();
   });
 
   $('.snap-close').click(function() {
@@ -91,6 +92,9 @@
 
   //eventos para el select de años
   $('select').change(function() {
+    map.clearAll();  //TODO: Nozoom?
+    map.closePopup();
+
     //con esto ocultamos los markers que no son del año.
     if (this.value == 'all') {
       $(".itinerancia-marker").show();
