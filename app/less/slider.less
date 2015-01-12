@@ -44,20 +44,35 @@ button {
   font-size: 16px;
   font-weight: 300;
   cursor: pointer;
+
+  &.filter--actividad {
+    background-color: @tipo-actividad;
+    color: #000;
+  }
+  &.filter--exposicion {
+    background-color: @tipo-exposicion;
+    color: #000;
+  }
+  &.filter--coleccion_viaja {
+    background-color: @tipo-coleccion-viaja;
+    color: #000;
+  }
+  
   &:focus {
     outline: 0 none;
   }
   &:hover{
-    background-color: @gray-dark;
+    background: @gray-dark;
     color: #eee;
   }
   &.active {
-    background: @brand-primary;
-    color: #000;
+    background: @gray-dark;
+    color: #eee;
   }
   + label {
     margin-left: 1em;
   }
+  
 }
 
 .slider-container {

@@ -26,6 +26,7 @@ Slider = ({
               return;
             }
             $(".itinerancia-marker").hide();
+            console.log(futureState.activeFilter);
             $(futureState.activeFilter + "-marker").show();
           }
         }

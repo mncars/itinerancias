@@ -1308,16 +1308,28 @@ button {
   font-weight: 300;
   cursor: pointer;
 }
+button.filter--actividad {
+  background-color: #88d2e5;
+  color: #000;
+}
+button.filter--exposicion {
+  background-color: #e7d800;
+  color: #000;
+}
+button.filter--coleccion_viaja {
+  background-color: #e28b94;
+  color: #000;
+}
 button:focus {
   outline: 0 none;
 }
 button:hover {
-  background-color: #333333;
+  background: #333333;
   color: #eee;
 }
 button.active {
-  background: #e7d800;
-  color: #000;
+  background: #333333;
+  color: #eee;
 }
 button + label {
   margin-left: 1em;
