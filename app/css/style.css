@@ -567,8 +567,9 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #e7d800;
-  border-color: #cec000;
+  background-color: #000000;
+  border-color: #333333;
+  font-weight: bolder;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -576,8 +577,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #b4a800;
-  border-color: #908700;
+  background-color: #000000;
+  border-color: #141414;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -599,12 +600,20 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #e7d800;
-  border-color: #cec000;
+  background-color: #000000;
+  border-color: #333333;
 }
 .btn-primary .badge {
-  color: #e7d800;
+  color: #000000;
   background-color: #ffffff;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-color: #1a1a1a;
+  border-color: #525252;
 }
 .btn-success {
   color: #ffffff;
@@ -1158,6 +1167,98 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     text-align: right;
   }
+}
+.white-popup {
+  position: relative;
+  /*background: rgba(0,0,0, 0.2);*/
+  padding: 1px 25px;
+  width: auto;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+.white-popup h2 {
+  font-family: 'PFDinTextPro-Bold', sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .white-popup h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+.white-popup h3 {
+  margin-top: 0;
+  font-size: 30px;
+  line-height: 30px;
+}
+@media (max-width: 767px) {
+  .white-popup h3 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+.white-popup p {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .white-popup p {
+    font-size: 16px;
+  }
+}
+.white-popup img {
+  margin: 12px 0;
+}
+.mfp-bg {
+  /*background: #fff;*/
+}
+.mfp-close-btn-in .mfp-close {
+  color: #fff;
+}
+.mfp-content {
+  vertical-align: inherit;
+}
+@media (max-width: 767px) {
+  .mfp-content {
+    vertical-align: center;
+  }
+}
+/* ====== Zoom effect ====== */
+.mfp-zoom-in {
+  /* start state */
+  /* animate in */
+  /* animate out */
+}
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.6;
+}
+@media (max-width: 767px) {
+  .mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.8;
+  }
+}
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  transform: scale(0.8);
+  opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
 }
 html,
 body {

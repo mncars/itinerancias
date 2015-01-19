@@ -1,0 +1,96 @@
+.white-popup  {
+  position: relative;
+  /*background: rgba(0,0,0, 0.2);*/
+  padding: 1px 25px;
+  width:auto;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  h2 {
+    font-family: @bold-scout;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 0;
+    @media (max-width: @screen-xs-max) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+  h3 {
+    margin-top: 0;
+    font-size: 30px;
+    line-height: 30px;
+    @media (max-width: @screen-xs-max) {
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+  p {
+    font-size: 18px;
+    @media (max-width: @screen-xs-max) {
+      font-size: 16px;
+    }
+  }
+  img {
+    margin: 12px 0;
+  }
+}
+
+.mfp-bg {
+  /*background: #fff;*/
+}
+
+.mfp-close-btn-in .mfp-close {
+  color: #fff;
+}
+
+.mfp-content {
+  vertical-align: inherit;
+  @media (max-width: @screen-xs-max) {
+    vertical-align: center;
+  }
+}
+
+
+
+/* ====== Zoom effect ====== */
+.mfp-zoom-in {
+  
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out; 
+    transform: scale(0.8); 
+  }
+  
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+  
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1); 
+    }
+    &.mfp-bg {
+      opacity: 0.6;
+      @media (max-width: @screen-xs-max) {
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  /* animate out */
+  &.mfp-removing {
+    .mfp-with-anim {
+      transform: scale(0.8); 
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    } 
+  }
+}

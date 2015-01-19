@@ -1,4 +1,24 @@
 (function () {
+
+$('.open-popup-link').magnificPopup({
+  removalDelay: 500, //delay removal by X to allow out-animation
+  mainClass: 'mfp-zoom-in',
+  showCloseBtn: false,
+  type:'inline',
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  }
+}).magnificPopup('open');
+
+$('.btn-popup').click(function() {
+  $.magnificPopup.close();
+});
+
+//$('.pop-up').magnificPopup('open');
+
+
 /**
  * funcion temporal para poder alterar la capa
  * @param  {[type]} name [description]
@@ -13,11 +33,12 @@
 
   var estilo = getParameterByName('estilo');
 
-  var tileUrl = 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr/{z}/{x}/{y}.png';
+  var tileUrl = 'http://api.tiles.mapbox.com/v4/mncars.jdnk71aa/{z}/{x}/{y}.png256?access_token=pk.eyJ1IjoibW5jYXJzIiwiYSI6Ikd4LVhVVzQifQ.4aiQLhuKLILjMBNLFkDGxA';
+
   if (estilo == 1)
     tileUrl = 'http://api.tiles.mapbox.com/v4/mncars.jb6c075e/{z}/{x}/{y}.png256?access_token=pk.eyJ1IjoibW5jYXJzIiwiYSI6Ikd4LVhVVzQifQ.4aiQLhuKLILjMBNLFkDGxA';
   else if (estilo == 2)
-    tileUrl = 'http://api.tiles.mapbox.com/v4/mncars.jdnk71aa/{z}/{x}/{y}.png256?access_token=pk.eyJ1IjoibW5jYXJzIiwiYSI6Ikd4LVhVVzQifQ.4aiQLhuKLILjMBNLFkDGxA';
+    tileUrl = 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr/{z}/{x}/{y}.png';
   else if (estilo == 3)
     tileUrl = 'http://api.tiles.mapbox.com/v4/mncars.jdnkpc5f/{z}/{x}/{y}.png256?access_token=pk.eyJ1IjoibW5jYXJzIiwiYSI6Ikd4LVhVVzQifQ.4aiQLhuKLILjMBNLFkDGxA';
 
