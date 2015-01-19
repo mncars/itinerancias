@@ -1202,6 +1202,7 @@ select[multiple].input-lg {
   }
 }
 .white-popup p {
+  margin: 20px 0;
   font-size: 18px;
 }
 @media (max-width: 767px) {
