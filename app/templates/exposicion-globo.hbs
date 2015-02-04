@@ -18,8 +18,9 @@
 
 <div class="datos-exposicion">
   <span class="label">Organización:</span>  {{exposicion.organizacion}} <br>
-  <span class="label">Comisariado:</span> {{exposicion.comisario}} <br>
-
+  {{#if exposicion.comisario}}
+    <span class="label">Comisariado:</span> {{exposicion.comisario}} <br>
+  {{/if}}
   <a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank" class="btn btn-default btn-block">
     {{#equal exposicion.tipo "actividad" }}+ detalles de la actividad{{/equal}}
     {{#equal exposicion.tipo "exposicion" }}+ detalles de la exposición{{/equal}}

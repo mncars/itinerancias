@@ -79,24 +79,33 @@ function program11(depth0,data) {
 
 function program13(depth0,data) {
   
-  
-  return "+ detalles de la actividad";
+  var buffer = "", stack1;
+  buffer += "\n    <span class=\"label\">Comisariado:</span> "
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.comisario)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + " <br>\n  ";
+  return buffer;
   }
 
 function program15(depth0,data) {
   
   
+  return "+ detalles de la actividad";
+  }
+
+function program17(depth0,data) {
+  
+  
   return "+ detalles de la exposición";
   }
 
-function program17(depth0,data,depth1) {
+function program19(depth0,data,depth1) {
   
   var buffer = "", stack1, helper, options;
   buffer += "\n	  <div class=\"itinerancia";
-  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(18, program18, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options) : helperMissing.call(depth0, "equal", (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options));
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(20, program20, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options) : helperMissing.call(depth0, "equal", (depth0 && depth0.nid), ((stack1 = (depth1 && depth1.itinerancia)),stack1 == null || stack1 === false ? stack1 : stack1.nid), options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\">\n	  	<div class=\"itinerancia-nombre\">\n        ";
-  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.url)),stack1 == null || stack1 === false ? stack1 : stack1.length), {hash:{},inverse:self.program(22, program22, data),fn:self.program(20, program20, data),data:data});
+  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.url)),stack1 == null || stack1 === false ? stack1 : stack1.length), {hash:{},inverse:self.program(24, program24, data),fn:self.program(22, program22, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n	    </div>\n	    <div class=\"itinerancia-lugar\">";
   if (helper = helpers.fechas) { stack1 = helper.call(depth0, {hash:{},data:data}); }
@@ -105,13 +114,13 @@ function program17(depth0,data,depth1) {
     + "</div>\n	  </div>\n	";
   return buffer;
   }
-function program18(depth0,data) {
+function program20(depth0,data) {
   
   
   return " active";
   }
 
-function program20(depth0,data) {
+function program22(depth0,data) {
   
   var buffer = "", stack1, helper;
   buffer += "\n          <a href=\"";
@@ -126,7 +135,7 @@ function program20(depth0,data) {
   return buffer;
   }
 
-function program22(depth0,data) {
+function program24(depth0,data) {
   
   var buffer = "", stack1, helper;
   buffer += "\n          ";
@@ -167,21 +176,22 @@ function program22(depth0,data) {
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.imagen)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" class=\"img-responsive\">\n\n<div class=\"datos-exposicion\">\n  <span class=\"label\">Organización:</span>  "
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.organizacion)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " <br>\n  <span class=\"label\">Comisariado:</span> "
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.comisario)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " <br>\n\n  <a href=\"http://www.museoreinasofia.es"
+    + " <br>\n  ";
+  stack1 = helpers['if'].call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.comisario), {hash:{},inverse:self.noop,fn:self.program(13, program13, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n  <a href=\"http://www.museoreinasofia.es"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" target=\"_blank\" class=\"btn btn-default btn-block\">\n    ";
-  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(13, program13, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options));
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(15, program15, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "actividad", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    ";
-  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(15, program15, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options));
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(17, program17, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "exposicion", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    ";
-  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(15, program15, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options));
+  stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(17, program17, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n  </a>\n</div>\n\n<h3>Itinerancias</h3>\n<div class=\"itinerancias\">\n	";
-  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.itinerancia), {hash:{},inverse:self.noop,fn:self.programWithDepth(17, program17, data, depth0),data:data});
+  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.itinerancia), {hash:{},inverse:self.noop,fn:self.programWithDepth(19, program19, data, depth0),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</div>\n";
   return buffer;
