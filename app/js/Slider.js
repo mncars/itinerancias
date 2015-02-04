@@ -10,6 +10,9 @@ Slider = ({
     this.inj_target.append(this.sliderTpl(exposiciones));
 
     this.container = $('#slider-container');
+
+    //basado en esto: http://codepen.io/patrickkunka/pen/ltgde
+
     this.container.mixItUp({
         animation: {
           //enable: false,
@@ -17,18 +20,35 @@ Slider = ({
           effects: 'fade',
           easing: 'ease'
         },
+        controls: {
+          //toggleFilterButtons: true,
+          enable: false // desactivamos el filtrado automatico
+          //toggleLogic: 'and'
+        },
         callbacks: {
           onMixStart: function(state, futureState){
             map.clearAll();
+            $(".vacio p").hide();
             //con esto ocultamos los markers que no son del año.
             if (futureState.activeFilter == '.mix') {
               $(".itinerancia-marker").show();
               return;
             }
             $(".itinerancia-marker").hide();
-            console.log(futureState.activeFilter);
-            $(futureState.activeFilter + "-marker").show();
-          }
+
+            var filtro = "." + futureState.activeFilter.split(".").join("") + "-marker"; //borro los puntos intermedios
+
+            $(filtro).show();
+            //console.log(filtro);
+            //var filtrosActivos = futureState.activeFilter.split(",");
+            //console.log(filtrosActivos);
+            //$.each(filtrosActivos, function( index, filtro ) {
+            //  $(filtro + "-marker").show();
+            //});
+          }, 
+          onMixFail: function(){
+            $(".vacio p").show(); //alert('No items were found matching the selected filters.');
+          }   
         }
       }
     );

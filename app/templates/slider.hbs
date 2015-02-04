@@ -1,9 +1,13 @@
 <div class="controls">
-      <label>Filtrar:</label>
-      <button class="filter" data-filter="all">Todas</button>
+  <label>Filtrar:</label>
+  <button class="filter active" data-filter="all" id="Reset">Todas</button>
+  <form id="Filters">
+    <fieldset>
       <button class="filter filter--coleccion_viaja" data-filter=".slider-item--coleccion_viaja">Colección</button>
       <button class="filter filter--exposicion" data-filter=".slider-item--exposicion">Exposición</button>
       <button class="filter filter--actividad" data-filter=".slider-item--actividad">Actividad</button>
+    </fieldset>
+    <fieldset>
       <button class="filter" data-filter=".y2015">2015</button>
       <button class="filter" data-filter=".y2014">2014</button>
       <button class="filter" data-filter=".y2013">2013</button>
@@ -29,9 +33,13 @@
       <button class="filter" data-filter=".y1993">1993</button>
       <button class="filter" data-filter=".y1992">1992</button>
       <button class="filter" data-filter=".y1991">1991</button>
-    </div>
-<div id="slider-container" class="slider-container thumbnails">
-    {{#each this}}
-        {{> slider-item}}
-    {{/each}}
+    </fieldset>
+  </form>
 </div>
+<div id="slider-container" class="slider-container thumbnails">
+      {{#each this}}
+          {{> slider-item}}
+      {{/each}}
+      <div class="vacio"><p style="display:none"> No hay resultados para ese filtrado. Modifique su selección.</p></div>
+</div>
+
