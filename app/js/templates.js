@@ -166,7 +166,7 @@ function program24(depth0,data) {
   buffer += "\n  ";
   stack1 = (helper = helpers.equal || (depth0 && depth0.equal),options={hash:{},inverse:self.noop,fn:self.program(11, program11, data),data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options) : helperMissing.call(depth0, "equal", ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.tipo), "coleccion_viaja", options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>\n<!--\n<div class=\"produccion\">Producción propia</div>\n-->\n\n<h2>"
+  buffer += "\n</div>\n\n<div class=\"produccion\">Producción propia</div>\n\n<h2>"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.titulo)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</h2>\n\n<div class=\"fecha-lugar\">\n  "
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.exposicion)),stack1 == null || stack1 === false ? stack1 : stack1.fechas)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
