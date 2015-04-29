@@ -66,7 +66,9 @@ module.exports = function (grunt) {
             }
         },
         less: {
-            options: {
+            options: {                
+                sourceMap: true,
+                sourceMapBasepath: 'less',                
                 paths: '<%= yeoman.app %>/_bower_components'
             },
             dist: {
