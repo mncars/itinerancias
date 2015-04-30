@@ -7,8 +7,8 @@
   {{#equal exposicion.tipo "exposicion" }}<span class="tipo__texto">Exposición</span>{{/equal}}
   {{#equal exposicion.tipo "coleccion_viaja" }}<span class="tipo__texto">Colección</span>{{/equal}}
 </div>
-
-<div class="produccion">Producción propia</div>
+{{#equal exposicion.produccion "propia"}}<div class="produccion">Producción propia</div>{{/equal}}
+{{#equal exposicion.produccion "ajena"}}<div class="produccion">Producción ajena</div>{{/equal}}
 
 <h2>{{exposicion.titulo}}</h2>
 

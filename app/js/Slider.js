@@ -90,5 +90,27 @@ Slider = ({
     this.fixed = false;
     this.container.find('.active').removeClass('active');
     this.map.clearAll(true);
-  }
+  },
+
+
+  /**
+   * Listen in to custom Snap events
+   * @param  {String}   evt The snap event name
+   * @param  {Function} fn  Callback function
+   * @return {Object}       Snap instance
+   */
+  on: function(evt, fn) {
+      this.eventList[evt] = fn;
+      return this;
+  },
+
+  /**
+   * Stops listening to custom Snap events
+   * @param  {String} evt The snap event name
+   */
+  off: function(evt) {
+      if (this.eventList[evt]) {
+          this.eventList[evt] = false;
+      }
+  },
 });

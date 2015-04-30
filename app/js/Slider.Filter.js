@@ -31,22 +31,18 @@ var buttonFilter = {
   bindHandlers: function(){
     var self = this;
     
-    // Handle filter clicks
-    
+    // Handle filter clicks    
     self.$filters.on('click', '.filter', function(e){
-      e.preventDefault();
-      
-      var $button = $(this);
-      
-      // If the button is active, remove the active class, else make active and deactivate others.
-      
+      e.preventDefault();      
+      var $button = $(this);      
+      // If the button is active, remove the active class, else make active and deactivate others.      
       $button.hasClass('active') ?
         $button.removeClass('active') :
-        $button.addClass('active').siblings('.filter').removeClass('active');
-      
+        $button.addClass('active').siblings('.filter').removeClass('active');      
       self.$reset.removeClass("active");
-
+      $(self).trigger('filter', [$button, $button.hasClass('active')]);
       self.parseFilters();
+
     });
     
     // Handle reset click
@@ -54,10 +50,9 @@ var buttonFilter = {
     self.$reset.on('click', function(e){
       self.$reset.addClass("active");
       e.preventDefault();
-      
-      self.$filters.find('.filter').removeClass('active');
-      
-      self.parseFilters();
+      $(self).trigger('reset');
+      self.$filters.find('.filter').removeClass('active');      
+      self.parseFilters();      
     });
   },
   
@@ -96,10 +91,11 @@ var buttonFilter = {
 	  if(self.$container.mixItUp('isLoaded')){
     	self.$container.mixItUp('filter', self.outputString);
 	  }
-  }
+  },
+
 };
   
 // On document ready, initialise our code.
 $(function(){
-  buttonFilter.init();
+  buttonFilter.init();  
 });
