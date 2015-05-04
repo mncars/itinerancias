@@ -1,5 +1,4 @@
 (function () {
-/*
 $('.open-popup-link').magnificPopup({
   removalDelay: 500, //delay removal by X to allow out-animation
   mainClass: 'mfp-zoom-in',
@@ -14,7 +13,7 @@ $('.open-popup-link').magnificPopup({
 
 $('.btn-popup').click(function() {
   $.magnificPopup.close();
-});*/
+});
 
 //$('.pop-up').magnificPopup('open');
 
