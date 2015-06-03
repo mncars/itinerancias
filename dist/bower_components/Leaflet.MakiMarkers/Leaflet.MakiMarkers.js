@@ -38,7 +38,7 @@
     apiUrl: "https://api.tiles.mapbox.com/v3/marker/",
     smallOptions: {
       iconSize: [20, 50],
-      popupAnchor: [0,-20]
+      popupAnchor: [0,-30]
     },
     mediumOptions: {
       iconSize: [30,70],
