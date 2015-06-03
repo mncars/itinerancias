@@ -16,11 +16,18 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     this._colorResaltado = this.getColorResaltado();
     this._colorExpo = this.getColorIconos();
 
+    var className = "itinerancia-marker y" + exposicion.anio + "-marker" +
+                    " slider-item--" + this._exposicion.tipo + "-marker" +
+                    " slider-item--" + this._exposicion.tipo  + "y" + exposicion.anio + "-marker";
+
+    if (exposicion.produccion !== "") {
+      className = className + " slider-item--" + exposicion.produccion + "-marker";
+    }
+
     this._icon = L.MakiMarkers.icon({icon: "town-hall",
       color: this._colorExpo,
       size: "s",
-      className: "itinerancia-marker y" + exposicion.anio + "-marker slider-item--" + 
-          this._exposicion.tipo + "-marker slider-item--" + this._exposicion.tipo  + "y" + exposicion.anio + "-marker",
+      className: className,
       popupAnchor: [0,-130]
     });
     this._iconResaltado = L.MakiMarkers.icon({icon: "town-hall", color: this._colorResaltado , size: "m", className: "itinerancia-resaltada-marker"});
