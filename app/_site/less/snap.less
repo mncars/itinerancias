@@ -1,0 +1,121 @@
+.snap-close{
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: url("../imgs/bk.aspa-cerrar.png") 0 0 no-repeat;
+  z-index: 1;
+}
+
+.snap-drawers{
+  background-color: #fff;
+}
+
+.snap-drawer{
+  padding: 15px;
+  width: 320px;
+  h2 {
+    margin-top: 0;
+    font-family: @bold-scout;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+.snap-drawer-left {
+  width: 265px;
+  padding-top: 30px;
+  background-color: @gray-dark;
+  color: darken(@gray-lighter, 25%);
+}
+
+.site-descripcion {
+  margin-bottom: 30px;
+  font-size: 16px;
+  .h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-family: @bold-scout;
+  }
+}
+
+.filtro-year {
+  margin-bottom: 20px;
+  color: @gray-lighter;
+}
+
+.share-buttons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0 0 15px 0;
+    height: 20px;
+  }
+}
+
+.compartir {
+  .h4 {
+    margin-bottom: 15px;
+    color: @gray-lighter;
+  }
+}
+
+.exposicionThumbnail {
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+  .fecha-lugar {
+    margin-bottom: 15px;
+    font-family: @thin-scout;
+    font-size: 17px;
+    line-height: 1.1;
+  }
+  .img-responsive {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .datos-exposicion{
+    margin-bottom: 30px;
+    .btn-block{
+      margin-top: 10px;
+    }
+  }
+  .label {
+    font-size: 14.6px;
+    font-family: @bold-scout;
+  }
+  h3 {
+    margin: 0 0 10px 0;
+    font-family: @thin-scout;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .itinerancia{
+    padding: 10px 10px 10px 40px;
+    border-bottom: 1px solid #ddd;
+    background: url("../imgs/pin.png") 10px 10px no-repeat;
+    &:first-child{
+      border-top: 1px solid #ddd;
+    }
+    &:last-child{
+      margin-bottom: 30px;
+    }
+    &.active {
+      background-color: #f0f0f0;
+    }
+  }
+  .itinerancia-nombre{
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-family: @regular-scout;
+    line-height: 1.2;
+  }
+  .itinerancia-lugar{
+    line-height: 1.3;
+    color: @gray-light;
+  }
+}

@@ -1,7 +1,7 @@
 # Site settings
 title: Itinerancias
 email: david.gil@biko2.com
-baseurl: "http://www.museoreinasofia.es/itinerancias/"
+#baseurl: "http://www.museoreinasofia.es/itinerancias/"
 
 # Build settings
 markdown: kramdown

@@ -1,0 +1,56 @@
+es:
+  language_change_title: English
+  language_change_url: /en
+  language_change_title_popup: Browse in English
+  titulo_page: Itinerancias | Museo Reina Sofía
+  descripcion: Itinerancias es una recopilación de las exposiciones y actividades que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
+  Itinerancias: Itinerancias
+  descripcion1: Itinerancias es una recopilación de las exposiciones que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
+  descripcion2: Resume también aquellas exposiciones y actividades que organizadas por otras instituciones se han mostrado en el Museo Reina Sofía.
+  descripcion3: También se incluye un apartado para actividades y exposiciones itinerantes organizadas en exclusiva con fondos de la propia Colección del Museo.
+  Compartir: Compartir
+  Cerrar: Cerrar
+  Todas: Todas
+  Actividad: Actividad
+  Coleccion: Colección
+  Exposicion: Exposición
+  Exposicion_Propia: Exposición producción propia
+  Exposicion_Ajena: Exposición producción ajena
+  MuseoMovimiento: El Museo en movimiento
+  MuseoMovimientoEntradilla: Itinerancias es una recopilación de las exposiciones y actividades que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
+  Explorar: Explorar itinerancias
+  Comisariado: Comisariado
+  detalles_actividad: + detalles de la actividad
+  detalles_exposicion: + detalles de la exposición
+  Produccion_propia: Producción propia
+  Produccion_ajena: Producción ajena
+  no_results: No hay resultados para ese filtrado. Modifique su selección.
+
+en:
+  language_change_title: Castellano
+  language_change_title_popup: Explorar en castellano
+  language_change_url: /
+  titulo_page: en-Itinerancias | Museo Reina Sofía
+  descripcion: en-Itinerancias es una recopilación de las exposiciones y actividades que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
+  Itinerancias: en-Itinerancias
+  descripcion1: en-Itinerancias es una recopilación de las exposiciones que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
+  descripcion2: en-Resume también aquellas exposiciones y actividades que organizadas por otras instituciones se han mostrado en el Museo Reina Sofía.
+  descripcion3: en-También se incluye un apartado para actividades y exposiciones itinerantes organizadas en exclusiva con fondos de la propia Colección del Museo.
+  Compartir: en-Compartir
+  Cerrar: en-Cerrar
+  Todas: en-Todas
+  Actividad: en-Actividad
+  Coleccion: en-Colección
+  Exposicion: en-Exposición
+  Exposicion_Propia: en-Exposición producción propia
+  Exposicion_Ajena: en-Exposición producción ajena
+  MuseoMovimiento: en-El Museo en movimiento
+  MuseoMovimientoEntradilla: en-Itinerancias es una recopilación de las exposiciones y actividades que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
+  Explorar: en-Explorar itinerancias
+  Comisariado: xxxxx-Comisariado
+  detalles_actividad: + detalles de la actividad
+  detalles_exposicion: + detalles de la exposición
+  Produccion_propia: Producción propia
+  Produccion_ajena: Producción ajena
+  no_results: No hay resultados para ese filtrado. Modifique su selección.
+
