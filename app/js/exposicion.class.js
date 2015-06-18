@@ -120,7 +120,6 @@ L.ExposicionLayer = L.FeatureGroup.extend({
     }
 
     this.bringToFront();
-
   },
 
   resaltarIconos: function() {

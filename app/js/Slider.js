@@ -76,21 +76,32 @@ Slider = ({
         _self.fixed = true;
         $(this).addClass('active');
         layer_id = $(this).data('layer');
+        _self.mostrarExposicion(layer_id);
         _self.map.renderExposicion(layer_id, false);
       } else if(!_self.fixed && !$(this).is('.active') ) {
         _self.fixed = true;
         $(this).addClass('active');
         layer_id = $(this).data('layer');
+        _self.mostrarExposicion(layer_id);
         _self.map.renderExposicion(layer_id, false);
       }
     });
   },
-
+ 
   clearFixed: function () {
     this.fixed = false;
     this.container.find('.active').removeClass('active');
     this.map.clearAll(true);
   },
+
+  mostrarExposicion: function(layer_id) {
+    markers = this.map.getExposicionMarkers(layer_id);
+    var markerAux = markers[0];
+    $.event.trigger({
+      type: "verItinerancia",
+      exposicion_marker: markerAux
+    });
+  }, 
 
 
   /**

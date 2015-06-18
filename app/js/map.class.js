@@ -53,6 +53,10 @@ L.ItineranciasMap = L.Map.extend({
     this._exposicionesLayersHashMap[nid].renderItinerancias(noZoom);
   },
 
+  getExposicionMarkers: function (nid) {
+    return this._exposicionesLayersHashMap[nid]._markers;
+  },
+
   clearAll: function (noZoom) {
     this._exposicionesLayers.eachLayer(function (layer) {
       layer.clearItineranciasLayer();
