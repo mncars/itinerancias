@@ -4,6 +4,7 @@ jkl
 .jekyll
 */.idea
 app/bower_components
+app/_site
 /.idea/
 Gemfile.lock
 *sublime*
