@@ -1,4 +1,5 @@
 (function () {
+$('.snap-close-extra').hide();
 $('.open-popup-link').magnificPopup({
   removalDelay: 500, //delay removal by X to allow out-animation
   mainClass: 'mfp-zoom-in',
@@ -62,8 +63,13 @@ $('.btn-popup').click(function() {
   });
 
   snapper.on('close', function(){
+    $('.snap-close-extra').hide();
     $('footer').removeClass("hide-bottom");
     map.closePopup();
+  });
+
+  snapper.on('open', function(){
+    $('.snap-close-extra').show();
   });
 
   $('.snap-close').click(function() {
