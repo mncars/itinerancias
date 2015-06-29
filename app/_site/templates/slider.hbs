@@ -1,6 +1,9 @@
 <div class="controls">
   <label>Filtrar:</label>
-  <button class="filter active" data-filter="all" id="Reset">Todas</button>
+  <button class="filter active" data-filter="all" id="Reset">
+    {{#equal lang "es"}}Todas{{/equal}}
+     {{#equal lang "en"}}All{{/equal}}
+  </button>
   <form id="Filters">
     <fieldset>
       <button class="filter filter--coleccion_viaja" data-filter=".slider-item--coleccion_viaja">
