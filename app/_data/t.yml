@@ -30,27 +30,27 @@ en:
   language_change_title: Castellano
   language_change_title_popup: Explorar en castellano
   language_change_url: /
-  titulo_page: en-Itinerancias | Museo Reina Sofía
-  descripcion: en-Itinerancias es una recopilación de las exposiciones y actividades que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
-  Itinerancias: en-Itinerancias
-  descripcion1: en-Itinerancias es una recopilación de las exposiciones que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
-  descripcion2: en-Resume también aquellas exposiciones y actividades que organizadas por otras instituciones se han mostrado en el Museo Reina Sofía.
-  descripcion3: en-También se incluye un apartado para actividades y exposiciones itinerantes organizadas en exclusiva con fondos de la propia Colección del Museo.
-  Compartir: en-Compartir
-  Cerrar: en-Cerrar
-  Todas: en-Todas
-  Actividad: en-Actividad
-  Coleccion: en-Colección
-  Exposicion: en-Exposición
-  Exposicion_Propia: en-Exposición producción propia
-  Exposicion_Ajena: en-Exposición producción ajena
-  MuseoMovimiento: en-El Museo en movimiento
-  MuseoMovimientoEntradilla: en-Itinerancias es una recopilación de las exposiciones y actividades que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
-  Explorar: en-Explorar itinerancias
-  Comisariado: xxxxx-Comisariado
-  detalles_actividad: + detalles de la actividad
-  detalles_exposicion: + detalles de la exposición
-  Produccion_propia: Producción propia
-  Produccion_ajena: Producción ajena
-  no_results: No hay resultados para ese filtrado. Modifique su selección.
+  titulo_page: Touring Exhibitions | Museo Reina Sofía
+  descripcion: Touring Exhibitions is a compilation of exhibitions and activities produced or co-produced by the Museo Reina Sofía and displayed in different places around the world.
+  Itinerancias: Touring Exhibitions
+  descripcion1: Touring Exhibitions is a compilation of exhibitions and activities produced or co-produced by the Museo Reina Sofía and displayed in different places around the world.
+  descripcion2: It also encompasses those exhibitions and activities organised by other institutions and shown in the Museo Reina Sofía.
+  descripcion3: Furthermore, it includes a section for travelling activities and exhibitions organised exclusively with works from the Museo’s own Collection.
+  Compartir: Share
+  Cerrar: Close
+  Todas: All
+  Actividad: Activity
+  Coleccion: Collection
+  Exposicion: Exhibition
+  Exposicion_Propia: Exhibition Produced In-house
+  Exposicion_Ajena: Exhibition Produced Externally
+  MuseoMovimiento: The Museo in Movement
+  MuseoMovimientoEntradilla: Touring Exhibitions is a compilation of exhibitions and activities produced or co-produced by the Museo Reina Sofía and displayed in different places around the world.
+  Explorar: Explore Touring Exhibitions
+  Comisariado: Curatorship
+  detalles_actividad: + activity details
+  detalles_exposicion: + exhibition details
+  Produccion_propia: In-house Production
+  Produccion_ajena: External Production
+  no_results: There are no results for this filter. Please alter your selection.
 

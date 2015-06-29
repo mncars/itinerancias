@@ -2,13 +2,29 @@
   {{#equal exposicion.tipo "actividad" }}<img src="imgs/pin-actividad.png">{{/equal}}
   {{#equal exposicion.tipo "exposicion" }}<img src="imgs/pin-exposicion.png">{{/equal}}
   {{#equal exposicion.tipo "coleccion_viaja" }}<img src="imgs/pin-coleccion.png">{{/equal}}
-
-  {{#equal exposicion.tipo "actividad" }}<span class="tipo__texto">Actividad</span>{{/equal}}
-  {{#equal exposicion.tipo "exposicion" }}<span class="tipo__texto">Exposición</span>{{/equal}}
-  {{#equal exposicion.tipo "coleccion_viaja" }}<span class="tipo__texto">Colección</span>{{/equal}}
+  {{#equal lang "es"}}
+    {{#equal exposicion.tipo "actividad" }}<span class="tipo__texto">Actividad</span>{{/equal}}
+    {{#equal exposicion.tipo "exposicion" }}<span class="tipo__texto">Exposición</span>{{/equal}}
+    {{#equal exposicion.tipo "coleccion_viaja" }}<span class="tipo__texto">Colección</span>{{/equal}}
+  {{/equal}}
+  {{#equal lang "en"}}
+    {{#equal exposicion.tipo "actividad" }}<span class="tipo__texto">Activity</span>{{/equal}}
+    {{#equal exposicion.tipo "exposicion" }}<span class="tipo__texto">Exhibition</span>{{/equal}}
+    {{#equal exposicion.tipo "coleccion_viaja" }}<span class="tipo__texto">Collection</span>{{/equal}}
+  {{/equal}}
 </div>
-{{#equal exposicion.produccion "propia"}}<div class="produccion">Producción propia</div>{{/equal}}
-{{#equal exposicion.produccion "ajena"}}<div class="produccion">Producción ajena</div>{{/equal}}
+{{#equal exposicion.produccion "propia"}}
+    <div class="produccion">
+      {{#equal lang "es"}}Producción propia{{/equal}}
+      {{#equal lang "en"}}In-house Production{{/equal}}
+    </div>
+{{/equal}}
+{{#equal exposicion.produccion "ajena"}}
+    <div class="produccion">
+      {{#equal lang "es"}}Producción ajena{{/equal}}
+      {{#equal lang "en"}}External Production{{/equal}}  
+    </div>
+{{/equal}}
 
 <h2>{{exposicion.titulo}}</h2>
 
@@ -29,26 +45,27 @@
   {{#if exposicion.comisario}}
     <span class="label">
       {{#equal lang "es"}}Comisariado:{{/equal}}
-      {{#equal lang "en"}}Comisariado:{{/equal}}
+      {{#equal lang "en"}}Curatorship:{{/equal}}
     </span> {{exposicion.comisario}} <br>
   {{/if}}
   <a href="http://www.museoreinasofia.es{{exposicion.url}}" target="_blank" class="btn btn-default btn-block">
     {{#equal exposicion.tipo "actividad" }}
       {{#equal lang "es"}}+ detalles de la actividad{{/equal}}
-      {{#equal lang "en"}}+ detalles de la actividad{{/equal}}
+      {{#equal lang "en"}}+ activity details{{/equal}}
     {{/equal}}
     {{#equal exposicion.tipo "exposicion" }}
       {{#equal lang "es"}}+ detalles de la exposición{{/equal}}
-      {{#equal lang "en"}}+ detalles de la exposición{{/equal}}
+      {{#equal lang "en"}}+ exhibition details{{/equal}}
     {{/equal}}
     {{#equal exposicion.tipo "coleccion_viaja" }}
       {{#equal lang "es"}}+ detalles de la exposición{{/equal}}
-      {{#equal lang "en"}}+ detalles de la exposición{{/equal}}
+      {{#equal lang "en"}}+ exhibition details{{/equal}}
     {{/equal}}
   </a>
 </div>
 
-<h3>Itinerancias</h3>
+{{#equal lang "es"}}<h3>Itinerancias</h3>{{/equal}}
+{{#equal lang "en"}}<h3>Touring Exhibitions</h3>{{/equal}}
 <div class="itinerancias">
 	{{#each exposicion.itinerancia}}
 	  <div class="itinerancia{{#equal nid ../itinerancia.nid }} active{{/equal}}">
