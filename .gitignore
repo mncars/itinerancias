@@ -8,3 +8,4 @@ app/_site
 /.idea/
 Gemfile.lock
 *sublime*
+*_site
