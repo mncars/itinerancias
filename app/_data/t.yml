@@ -1,6 +1,6 @@
 es:
   language_change_title: English
-  language_change_url: /english.html
+  language_change_url: /itinerancias/english.html
   language_change_title_popup: Browse in English
   titulo_page: Itinerancias | Museo Reina Sofía
   descripcion: Itinerancias es una recopilación de las exposiciones y actividades que producidas o co-producidas por el Museo Reina Sofía se han mostrado por diferentes lugares del mundo.
@@ -29,7 +29,7 @@ es:
 en:
   language_change_title: Castellano
   language_change_title_popup: Explorar en castellano
-  language_change_url: /
+  language_change_url: /itinerancias/
   titulo_page: Touring Exhibitions | Museo Reina Sofía
   descripcion: Touring Exhibitions is a compilation of exhibitions and activities produced or co-produced by the Museo Reina Sofía and displayed in different places around the world.
   Itinerancias: Touring Exhibitions
