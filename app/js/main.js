@@ -1,5 +1,4 @@
 (function () {
-$('.snap-close-extra').hide();
 $('.open-popup-link').magnificPopup({
   removalDelay: 500, //delay removal by X to allow out-animation
   mainClass: 'mfp-zoom-in',
@@ -59,17 +58,24 @@ $('.btn-popup').click(function() {
     element: document.getElementById('content'),
     touchToDrag: false,
     maxPosition: 265,
-    minPosition: -265,
+    minPosition: -265
   });
-
+  var snapperCloseExtra = $('.snap-close-extra');
+  var snapperCloseExtraWrapper = $('.snap-close-extra-wrapper');
+    snapperCloseExtra.on('click',function closeExtra(){
+       snapper.close();
+    });
   snapper.on('close', function(){
-    $('.snap-close-extra').hide();
+    snapperCloseExtra.removeClass('show');
+    snapperCloseExtraWrapper.removeClass('show');
     $('footer').removeClass("hide-bottom");
     map.closePopup();
   });
 
   snapper.on('open', function(){
-    $('.snap-close-extra').show();
+    snapperCloseExtra.addClass('show');
+    snapperCloseExtraWrapper.addClass('show');
+
   });
 
   $('.snap-close').click(function() {

@@ -103,9 +103,6 @@
 
     </div>
     <div id="map"></div>
-    <a href="#datosExposicion" class="snap-close-extra">
-      <span class="glyphicon glyphicon-menu-right"></span>
-    </a>
   </div>
   <div id="pop-up-info" class="white-popup mfp-with-anim mfp-hide">
     <img src="./imgs/logo.png" alt="Logo Museo Reina Sofía">
@@ -116,7 +113,13 @@
     <p><a href="{{ site.data.t[page.lang].language_change_url }}" class="change--language">{{ site.data.t[page.lang].language_change_title_popup }}</a></p>
   </div>
   <a href="#pop-up-info" class="open-popup-link" data-effect="mfp-zoom-in"></a>
+    <div class="snap-close-extra-wrapper">
+      <a href="#datosExposicion" class="snap-close-extra">
+        <span class="glyphicon glyphicon-menu-up"></span>
+      </a>
+    </div>
   <footer></footer>
+
 
   <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

@@ -58,12 +58,24 @@ $('.btn-popup').click(function() {
     element: document.getElementById('content'),
     touchToDrag: false,
     maxPosition: 265,
-    minPosition: -265,
+    minPosition: -265
   });
-
+  var snapperCloseExtra = $('.snap-close-extra');
+  var snapperCloseExtraWrapper = $('.snap-close-extra-wrapper');
+    snapperCloseExtra.on('click',function closeExtra(){
+       snapper.close();
+    });
   snapper.on('close', function(){
+    snapperCloseExtra.removeClass('show');
+    snapperCloseExtraWrapper.removeClass('show');
     $('footer').removeClass("hide-bottom");
     map.closePopup();
+  });
+
+  snapper.on('open', function(){
+    snapperCloseExtra.addClass('show');
+    snapperCloseExtraWrapper.addClass('show');
+
   });
 
   $('.snap-close').click(function() {

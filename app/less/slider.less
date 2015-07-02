@@ -12,11 +12,13 @@ footer {
   white-space: nowrap;
   z-index: 3;
   background-color: #fff;
+  transform: translateZ(0);
   .box-shadow(0 0 50px 0 rgba(0,0,0,0.3));
-  .transition(bottom 0.8s ease);
+  .transition(0.8s bottom 0.3s ease);
   &.hide-bottom {
-    bottom: -225px;
-    .transition(bottom 0.8s ease);
+    pointer-events: none;
+    bottom: -200px;
+    .transition(0.8s bottom 0.1s ease);
   }
   @media (max-width: @screen-xs-max) {
     display: none;
