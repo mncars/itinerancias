@@ -18,6 +18,9 @@ footer {
   &.hide-bottom {
     pointer-events: none;
     bottom: -200px;
+    @media (max-width: @screen-sm-max) {
+      bottom: -185px;
+    }
     .transition( bottom .8s ease .3s);
   }
   @media (max-width: @screen-xs-max) {

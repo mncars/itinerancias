@@ -69,11 +69,11 @@
         <![endif]-->
         <select id="select-year" class="form-control">
           <option value="all">{{ site.data.t[page.lang].Todas }}</option>
-          <option value=".slider-item--coleccion_viaja">{{ site.data.t[page.lang].Coleccion }}Colección</option>
-          <option value=".slider-item--exposicion">{{ site.data.t[page.lang].Exposicion }}Exposición</option>
-          <option value=".slider-item--propia">{{ site.data.t[page.lang].Exposicion_Propia }}Exposición producción propia</option>
-          <option value=".slider-item--ajena">{{ site.data.t[page.lang].Exposicion_Ajena }}Exposición producción ajena</option>
-          <option value=".slider-item--actividad">{{ site.data.t[page.lang].Actividad }}Actividad</option>
+          <option value=".slider-item--coleccion_viaja">{{ site.data.t[page.lang].Coleccion }}</option>
+          <option value=".slider-item--exposicion">{{ site.data.t[page.lang].Exposicion }}</option>
+          <option value=".slider-item--propia">{{ site.data.t[page.lang].Exposicion_Propia }}</option>
+          <option value=".slider-item--ajena">{{ site.data.t[page.lang].Exposicion_Ajena }}</option>
+          <option value=".slider-item--actividad">{{ site.data.t[page.lang].Actividad }}</option>
           <option value=".y2015">2015</option>
           <option value=".y2014">2014</option>
           <option value=".y2013">2013</option>
@@ -113,11 +113,11 @@
     <p><a href="{{ site.data.t[page.lang].language_change_url }}" class="change--language">{{ site.data.t[page.lang].language_change_title_popup }}</a></p>
   </div>
   <a href="#pop-up-info" class="open-popup-link" data-effect="mfp-zoom-in"></a>
-    <div class="snap-close-extra-wrapper">
-      <a href="#datosExposicion" class="snap-close-extra">
-        <span class="glyphicon glyphicon-menu-up"></span>
-      </a>
-    </div>
+  <div class="snap-close-extra-wrapper hidden-xs">
+    <a href="#datosExposicion" class="snap-close-extra">
+      <span class="glyphicon glyphicon-menu-up"></span>
+    </a>
+  </div>
   <footer></footer>
 
 
@@ -126,7 +126,7 @@
     <script src="/bower_components/jquery/jquery.js"></script>
     <script src="/bower_components/es5-shim/es5-shim.js"></script>
     <script src="/bower_components/leaflet/dist/leaflet.js"></script>
-    <script src="/bower_components/handlebars/handlebars.js"></script>
+    <script src="/bower_components/handlebars/handlebars.runtime.min.js"></script>
     <script src="/bower_components/respond/dest/respond.src.js"></script>
     <script src="/bower_components/Leaflet.MakiMarkers/Leaflet.MakiMarkers.js"></script>
     <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
