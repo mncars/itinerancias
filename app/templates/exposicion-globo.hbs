@@ -13,18 +13,6 @@
     {{#equal exposicion.tipo "coleccion_viaja" }}<span class="tipo__texto">Collection</span>{{/equal}}
   {{/equal}}
 </div>
-{{#equal exposicion.produccion "propia"}}
-    <div class="produccion">
-      {{#equal lang "es"}}Producción propia{{/equal}}
-      {{#equal lang "en"}}In-house Production{{/equal}}
-    </div>
-{{/equal}}
-{{#equal exposicion.produccion "ajena"}}
-    <div class="produccion">
-      {{#equal lang "es"}}Producción ajena{{/equal}}
-      {{#equal lang "en"}}External Production{{/equal}}  
-    </div>
-{{/equal}}
 
 <h2>{{exposicion.titulo}}</h2>
 
