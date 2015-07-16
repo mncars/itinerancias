@@ -101,7 +101,7 @@ this["ItineranciasTpls"]["app/templates/exposicion-globo.hbs"] = Handlebars.temp
 },"38":function(depth0,helpers,partials,data) {
     return "+ exhibition details";
 },"40":function(depth0,helpers,partials,data) {
-    return "<h3>Itinerancias</h3>";
+    return "<h3>Itinerario</h3>";
 },"42":function(depth0,helpers,partials,data) {
     return "<h3>Touring Exhibitions</h3>";
 },"44":function(depth0,helpers,partials,data,blockParams,depths) {
