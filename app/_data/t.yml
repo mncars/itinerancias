@@ -12,8 +12,10 @@ es:
   Cerrar: Cerrar
   Todas: Todas
   Actividad: Actividad
+  Actividades: Actividades
   Coleccion: Colección
   Exposicion: Exposición
+  Exposiciones: Exposiciones
   Exposicion_Propia: Exposición producción propia
   Exposicion_Ajena: Exposición producción ajena
   MuseoMovimiento: El Museo en movimiento
@@ -40,8 +42,10 @@ en:
   Cerrar: Close
   Todas: All
   Actividad: Activity
+  Actividades: Activities
   Coleccion: Collection
   Exposicion: Exhibition
+  Exposiciones: Exhibitions
   Exposicion_Propia: Exhibition Produced In-house
   Exposicion_Ajena: Exhibition Produced Externally
   MuseoMovimiento: The Museo in Movement
