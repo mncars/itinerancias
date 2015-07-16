@@ -83,8 +83,9 @@ L.ExposicionLayer = L.FeatureGroup.extend({
   renderItinerancias: function(noZoom) {
     this._itineranciasLayer.clearLayers();
 
-    for (var j=0; j < this._exposicion.itinerancia.length; ++j ) {
+    for (var j=1; j < this._exposicion.itinerancia.length; ++j ) {
       itinerancia = this._exposicion.itinerancia[j];
+      itineranciaAnterior = this._exposicion.itinerancia[j-1];
       if (this._exposicion.itinerancia[j].lat === null ||
           this._exposicion.itinerancia[j].lng === null) {
         continue;
@@ -92,7 +93,7 @@ L.ExposicionLayer = L.FeatureGroup.extend({
 
       this._itineranciasLayer.addLayer(
         L.polyline(
-          [this._initLatLng, L.latLng(itinerancia.lat, itinerancia.lng)],
+          [L.latLng(itineranciaAnterior.lat, itineranciaAnterior.lng), L.latLng(itinerancia.lat, itinerancia.lng)],
           {
             color: this._colorExpo ,
             weight: 5,
