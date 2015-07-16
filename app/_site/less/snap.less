@@ -134,14 +134,13 @@
   bottom: 20px;
   z-index:-1;
   overflow: hidden;
-  border-bottom: 1px solid transparent;
-  .transition(border-bottom .4s ease-in .5s);
-  .transition(z-index .1s ease-in .9s);
+  border-bottom: 0px solid #666;
+  .transition(~"z-index .1s ease-in .9s, border-bottom .2s ease-in .4s");
   &.show {
     z-index:99999;
     border-bottom: 1px solid #666;
     .box-shadow(inset 0px -14px 12px -16px rgba(0, 0, 0, 0.36));
-    .transition(all .3s linear 1.5s);
+    .transition(border-bottom .3s linear 1.2s);
   }
 
   .snap-close-extra{
