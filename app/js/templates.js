@@ -1,18 +1,12 @@
 this["ItineranciasTpls"] = this["ItineranciasTpls"] || {};
 
-Handlebars.registerPartial("slider-item", Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    var helper;
-
-  return " slider-item--"
-    + this.escapeExpression(((helper = (helper = helpers.produccion || (depth0 != null ? depth0.produccion : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"produccion","hash":{},"data":data}) : helper)));
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+Handlebars.registerPartial("slider-item", Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "<div class=\"mix y"
     + alias3(((helper = (helper = helpers.anio || (depth0 != null ? depth0.anio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"anio","hash":{},"data":data}) : helper)))
     + " thumbnail slider-item slider-item--"
     + alias3(((helper = (helper = helpers.tipo || (depth0 != null ? depth0.tipo : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"tipo","hash":{},"data":data}) : helper)))
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.produccion : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\" data-layer=\""
     + alias3(((helper = (helper = helpers.nid || (depth0 != null ? depth0.nid : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"nid","hash":{},"data":data}) : helper)))
     + "\" data-myorder=\""

@@ -20,10 +20,6 @@ L.ExposicionLayer = L.FeatureGroup.extend({
                     " slider-item--" + this._exposicion.tipo + "-marker" +
                     " slider-item--" + this._exposicion.tipo  + "y" + exposicion.anio + "-marker";
 
-    if (exposicion.produccion !== "") {
-      className = className + " slider-item--" + exposicion.produccion + "-marker";
-    }
-
     this._icon = L.MakiMarkers.icon({icon: "town-hall",
       color: this._colorExpo,
       size: "s",

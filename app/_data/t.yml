@@ -24,8 +24,6 @@ es:
   Comisariado: Comisariado
   detalles_actividad: + detalles de la actividad
   detalles_exposicion: + detalles de la exposición
-  Produccion_propia: Producción propia
-  Produccion_ajena: Producción ajena
   no_results: No hay resultados para ese filtrado. Modifique su selección.
 
 en:
@@ -54,7 +52,5 @@ en:
   Comisariado: Curatorship
   detalles_actividad: + activity details
   detalles_exposicion: + exhibition details
-  Produccion_propia: In-house Production
-  Produccion_ajena: External Production
   no_results: There are no results for this filter. Please alter your selection.
 
