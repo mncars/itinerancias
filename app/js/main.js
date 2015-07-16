@@ -158,41 +158,4 @@ function transitionEndEventName () {
     $(this.value + "-marker").show();
     snapper.close();
   });
-
-
-  /**
-   * Animación de subfiltros
-   */
-  function whichTransitionEvent(){
-    var t,
-        el = document.createElement("fakeelement");
-
-    var transitions = {
-      "transition"      : "transitionend",
-      "OTransition"     : "oTransitionEnd",
-      "MozTransition"   : "transitionend",
-      "WebkitTransition": "webkitTransitionEnd"
-    }
-
-    for (t in transitions){
-      if (el.style[t] !== undefined){
-        return transitions[t];
-      }
-    }
-  }
-
-  //Parametros : evento, boton, si estaba inactivo
-  $buttonFilter = $(buttonFilter);
-  $buttonFilter.on('filter', function(event, button, enabling){
-      if(button.hasClass('filter--exposicion') && enabling){
-        button.siblings('.filter--exposicion-tipo:not(.shown)').addClass('shown');
-      }else{
-        button.siblings('.filter--exposicion-tipo.shown').removeClass('shown');
-      }
-
-  })
-  .on('reset', function(event){
-    $('.filter.shown').removeClass('shown');
-  });
-
 }());
