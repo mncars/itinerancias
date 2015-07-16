@@ -147,8 +147,6 @@ this["ItineranciasTpls"]["app/templates/exposicion-globo.hbs"] = Handlebars.temp
     + "</div>\n\n<h2>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.exposicion : depth0)) != null ? stack1.titulo : stack1), depth0))
     + "</h2>\n\n<div class=\"fecha-lugar\">\n  "
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.exposicion : depth0)) != null ? stack1.fechas : stack1), depth0))
-    + " <br>\n  "
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.exposicion : depth0)) != null ? stack1.lugar : stack1), depth0))
     + "\n</div>\n\n<img src=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.exposicion : depth0)) != null ? stack1.imagen : stack1), depth0))
