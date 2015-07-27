@@ -9,7 +9,6 @@ L.ExposicionLayer = L.FeatureGroup.extend({
   initialize: function (exposicion, options) {
     this._exposicion = exposicion;
     this._initLatLng = options.initLatLng;
-    this._markerMuseo = options.markerMuseo;
 
     this._itineranciasLayer = L.featureGroup();
     this._markers = [];
@@ -45,7 +44,6 @@ L.ExposicionLayer = L.FeatureGroup.extend({
 
   onAdd: function (map) {
     L.FeatureGroup.prototype.onAdd.call(this, map);
-    this.addLayer(this._markerMuseo);
     this.addLayer(this._itineranciasLayer);
     for (var j=0; j < this._exposicion.itinerancia.length; ++j ) {
       if (this._exposicion.itinerancia[j].lat === null ||
@@ -69,16 +67,6 @@ L.ExposicionLayer = L.FeatureGroup.extend({
       this.addLayer(marker);
     }
   },
-
-  //https://www.mapbox.com/mapbox.js/example/v1.0.0/arcjs/
-
-//  getBounds: function () {
-    /*var markers = this._markers.slice(0);
-    markers.push(this._markerMuseo);
-
-    var group = new L.featureGroup(markers);
-    return group.getBounds();*/
-//  },
 
   renderItinerancias: function(noZoom) {
     this._itineranciasLayer.clearLayers();
@@ -122,7 +110,6 @@ L.ExposicionLayer = L.FeatureGroup.extend({
   resaltarIconos: function() {
     for (var i=0; i < this._markers.length; ++i) {
       this._markers[i].setIcon(this._iconResaltado);
-        //this._markers[i].bounce({duration: 10, height: 100});
     }
   },
 
@@ -134,7 +121,6 @@ L.ExposicionLayer = L.FeatureGroup.extend({
   clearResaltarIconos: function() {
     for (var i=0; i < this._markers.length; ++i) {
       this._markers[i].setIcon(this._icon);
-      //this._markers[i].setZIndexOffset(this._markers[i].zindex_inicial);
     }
   },
 });

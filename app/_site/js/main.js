@@ -1,21 +1,40 @@
-(function () {
-$('.open-popup-link').magnificPopup({
-  removalDelay: 500, //delay removal by X to allow out-animation
-  mainClass: 'mfp-zoom-in',
-  showCloseBtn: false,
-  type:'inline',
-  callbacks: {
-    beforeOpen: function() {
-       this.st.mainClass = this.st.el.attr('data-effect');
+function transitionEndEventName () {
+    var i,
+        undefined,
+        el = document.createElement('div'),
+        transitions = {
+            'transition':'transitionend',
+            'OTransition':'otransitionend',  // oTransitionEnd in very old Opera
+            'MozTransition':'transitionend',
+            'WebkitTransition':'webkitTransitionEnd'
+        };
+
+    for (i in transitions) {
+        if (transitions.hasOwnProperty(i) && el.style[i] !== undefined) {
+            return transitions[i];
+        }
     }
-  }
-}).magnificPopup('open');
+    //TODO: throw 'TransitionEnd event is not supported in this browser';
+}
 
-$('.btn-popup').click(function() {
-  $.magnificPopup.close();
-});
+(function () {
+  $('.open-popup-link').magnificPopup({
+    removalDelay: 500, //delay removal by X to allow out-animation
+    mainClass: 'mfp-zoom-in',
+    showCloseBtn: false,
+    type:'inline',
+    callbacks: {
+      beforeOpen: function() {
+         this.st.mainClass = this.st.el.attr('data-effect');
+      }
+    }
+  }).magnificPopup('open');
 
-//$('.pop-up').magnificPopup('open');
+  $('.btn-popup').click(function() {
+    $.magnificPopup.close();
+  });
+
+  //$('.pop-up').magnificPopup('open');
 
 
 /**
@@ -62,9 +81,13 @@ $('.btn-popup').click(function() {
   });
   var snapperCloseExtra = $('.snap-close-extra');
   var snapperCloseExtraWrapper = $('.snap-close-extra-wrapper');
-    snapperCloseExtra.on('click',function closeExtra(){
-       snapper.close();
-    });
+  snapperCloseExtra.on('click',function closeExtra(){
+    //si me adelanto a quitar los class mejor.
+    snapperCloseExtra.removeClass('show');
+    snapperCloseExtraWrapper.removeClass('show');
+    snapper.close();
+  });
+
   snapper.on('close', function(){
     snapperCloseExtra.removeClass('show');
     snapperCloseExtraWrapper.removeClass('show');
@@ -72,11 +95,6 @@ $('.btn-popup').click(function() {
     map.closePopup();
   });
 
-  snapper.on('open', function(){
-    snapperCloseExtra.addClass('show');
-    snapperCloseExtraWrapper.addClass('show');
-
-  });
 
   $('.snap-close').click(function() {
     snapper.close();
@@ -120,6 +138,10 @@ $('.btn-popup').click(function() {
     snapper.settings.maxPosition = 320;
     snapper.settings.minPosition = -320;
     snapper.open('right');
+    setTimeout(function() {
+      snapperCloseExtra.addClass('show');
+      snapperCloseExtraWrapper.addClass('show');
+    }, 500);
   });
 
   //eventos para el select de años
@@ -136,41 +158,4 @@ $('.btn-popup').click(function() {
     $(this.value + "-marker").show();
     snapper.close();
   });
-
-
-  /**
-   * Animación de subfiltros
-   */
-  function whichTransitionEvent(){
-    var t,
-        el = document.createElement("fakeelement");
-
-    var transitions = {
-      "transition"      : "transitionend",
-      "OTransition"     : "oTransitionEnd",
-      "MozTransition"   : "transitionend",
-      "WebkitTransition": "webkitTransitionEnd"
-    }
-
-    for (t in transitions){
-      if (el.style[t] !== undefined){
-        return transitions[t];
-      }
-    }
-  }
-
-  //Parametros : evento, boton, si estaba inactivo
-  $buttonFilter = $(buttonFilter);
-  $buttonFilter.on('filter', function(event, button, enabling){
-      if(button.hasClass('filter--exposicion') && enabling){
-        button.siblings('.filter--exposicion-tipo:not(.shown)').addClass('shown');
-      }else{
-        button.siblings('.filter--exposicion-tipo.shown').removeClass('shown');
-      }
-
-  })
-  .on('reset', function(event){
-    $('.filter.shown').removeClass('shown');
-  });
-
 }());
