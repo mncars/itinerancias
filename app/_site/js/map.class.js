@@ -7,32 +7,9 @@ L.ItineranciasMap = L.Map.extend({
     this._exposicionesLayers = L.layerGroup();
     this._mapCenter = options.mapCenter;
 
-    this._renderMarkerMuseo();
     this._initializeExposicionesLayers(this._exposicionesLayers, this._exposicionesLayersHashMap);
     options.layers = new Array (this._exposicionesLayers);
     L.Map.prototype.initialize.call(this, id, options);
-  },
-
-  _renderMarkerMuseo: function () {
-    //var iconMuseo = L.MakiMarkers.icon({icon: "town-hall", color: "#d14836", size: "m"});
-    /*var iconMuseo = L.icon({
-        iconUrl: 'imgs/pin-mncars3.png',
-        iconSize: [20, 50],
-        popupAnchor: [0,-20]
-    });*/
-    var iconMuseo =  L.MakiMarkers.icon({
-        icon: "town-hall",
-        color: "#333",
-        size: "s",
-        className: "mncars-marker"
-    });
-
-    this._markerMuseo = L.marker(this._initLatLng, {
-          icon: iconMuseo
-        });
-    this._markerMuseo.bindPopup("<img src='imgs/logo.negro.png' id='logo-popup'><a href='http://www.museoreinasofia.es' target='_blank'><strong>Museo Nacional Centro de Arte Reina Sofía</strong></a><br> Madrid");
-
-    this._markerMuseo.setZIndexOffset(1000000);
   },
 
   _initializeExposicionesLayers: function(layerGroup, exposicionesLayersHashMap) {
@@ -41,7 +18,6 @@ L.ItineranciasMap = L.Map.extend({
       var exposicionLayer = L.createExposicionLayer(exposicion,
         {
           initLatLng: _self._initLatLng,
-          markerMuseo: _self._markerMuseo
         }
       );
       layerGroup.addLayer(exposicionLayer);

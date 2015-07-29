@@ -129,7 +129,7 @@ function transitionEndEventName () {
   if (!$('html').hasClass('lt-ie9')) {
     Slider.initialize(map);
   }
-
+ 
   $(document).on("verItinerancia", function(e) {
     map.clearAll(true);  //TODO: Nozoom?
     e.exposicion_marker.renderItinerancia();
