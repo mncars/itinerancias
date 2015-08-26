@@ -195,6 +195,8 @@ this["ItineranciasTpls"]["app/templates/slider.hbs"] = Handlebars.template({"1":
   return ((stack1 = this.invokePartial(partials['slider-item'],depth0,{"name":"slider-item","data":data,"indent":"          ","helpers":helpers,"partials":partials})) != null ? stack1 : "");
 },"19":function(depth0,helpers,partials,data) {
     return "No hay resultados para ese filtrado. Modifique su selección.";
+},"21":function(depth0,helpers,partials,data) {
+    return "No results found please try a different query.";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, alias1=helpers.helperMissing;
 
@@ -219,6 +221,6 @@ this["ItineranciasTpls"]["app/templates/slider.hbs"] = Handlebars.template({"1":
     + "      <div class=\"vacio\">\n        <p style=\"display:none\">\n          "
     + ((stack1 = (helpers.equal || (depth0 && depth0.equal) || alias1).call(depth0,(depth0 != null ? depth0.lang : depth0),"es",{"name":"equal","hash":{},"fn":this.program(19, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n          "
-    + ((stack1 = (helpers.equal || (depth0 && depth0.equal) || alias1).call(depth0,(depth0 != null ? depth0.lang : depth0),"en",{"name":"equal","hash":{},"fn":this.program(19, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = (helpers.equal || (depth0 && depth0.equal) || alias1).call(depth0,(depth0 != null ? depth0.lang : depth0),"en",{"name":"equal","hash":{},"fn":this.program(21, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + " \n        </p>\n      </div>\n</div>\n\n";
 },"usePartial":true,"useData":true});
