@@ -29,7 +29,10 @@ bower install
 
 una vez instalado todo esto, para lanzar el entorno:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ .bash
-grunt serve
+grunt serve  (esto va a lanzar las tareas de compilación)
+
+en la carpeta: "app" hay que lanzar el jekyll:
+jekyll s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -38,7 +41,9 @@ grunt serve
 Grunt está preparado para generar paquetes distribuibles en la carpeta dist de la siguiente manera:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ .bash
-grunt build
+primero generamos el jekyll
+jekyll
+grunt build 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Este comando genera el paquete en la carpeta dist
