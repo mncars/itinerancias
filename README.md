@@ -41,9 +41,9 @@ jekyll s
 Grunt está preparado para generar paquetes distribuibles en la carpeta dist de la siguiente manera:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ .bash
-primero generamos el jekyll
-jekyll
-grunt build 
+primero generamos el jekyll en la carpeta app
+jekyll b
+grunt build (desde el raiz)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Este comando genera el paquete en la carpeta dist
