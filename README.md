@@ -46,4 +46,16 @@ jekyll b
 grunt build (desde el raiz)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Este comando genera el paquete en la carpeta dist
+Este comando genera el paquete en la carpeta dist, que tenemos que comprimir usando:
+
+tar -zcvf itinerancias-fecha.tar.gz dist/*
+
+Se sube por ftp a la carpeta de pre: compartido/itinerancias
+
+y en produccion se ejecuta el deploy.sh que hay en esa carpeta.
+
+
+
+
+
+
