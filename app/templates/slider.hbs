@@ -1,10 +1,10 @@
-<div class="controls">
-  <label>Filtrar:</label>
-  <button class="filter active" data-filter="all" id="Reset">
-    {{#equal lang "es"}}Todas{{/equal}}
-     {{#equal lang "en"}}All{{/equal}}
-  </button>
-  <form id="Filters">
+<form id="Filters">
+  <div class="controls-tipos">
+    <label>Filtrar:</label>
+    <button class="filter active" data-filter="all" id="Reset">
+      {{#equal lang "es"}}Todas{{/equal}}
+       {{#equal lang "en"}}All{{/equal}}
+    </button>
     <fieldset>
       <button class="filter filter--coleccion_viaja" data-filter=".slider-item--coleccion_viaja">
         {{#equal lang "es"}}Colección{{/equal}}
@@ -19,44 +19,47 @@
         {{#equal lang "en"}}Activities{{/equal}} 
       </button>
     </fieldset>
-    <fieldset>
-      <button class="filter" data-filter=".y2015">2015</button>
-      <button class="filter" data-filter=".y2014">2014</button>
-      <button class="filter" data-filter=".y2013">2013</button>
-      <button class="filter" data-filter=".y2012">2012</button>
-      <button class="filter" data-filter=".y2011">2011</button>
-      <button class="filter" data-filter=".y2010">2010</button>
-      <button class="filter" data-filter=".y2009">2009</button>
-      <button class="filter" data-filter=".y2008">2008</button>
-      <button class="filter" data-filter=".y2007">2007</button>
-      <button class="filter" data-filter=".y2006">2006</button>
-      <button class="filter" data-filter=".y2005">2005</button>
-      <button class="filter" data-filter=".y2004">2004</button>
-      <button class="filter" data-filter=".y2003">2003</button>
-      <button class="filter" data-filter=".y2002">2002</button>
-      <button class="filter" data-filter=".y2001">2001</button>
-      <button class="filter" data-filter=".y2000">2000</button>
-      <button class="filter" data-filter=".y1999">1999</button>
-      <button class="filter" data-filter=".y1998">1998</button>
-      <button class="filter" data-filter=".y1997">1997</button>
-      <button class="filter" data-filter=".y1996">1996</button>
-      <button class="filter" data-filter=".y1995">1995</button>
-      <button class="filter" data-filter=".y1994">1994</button>
-      <button class="filter" data-filter=".y1993">1993</button>
-      <button class="filter" data-filter=".y1992">1992</button>
-      <button class="filter" data-filter=".y1991">1991</button>
-    </fieldset>
-  </form>
-</div>
-<div id="slider-container" class="slider-container thumbnails">
-      {{#each exposiciones}}
-          {{> slider-item}}
-      {{/each}}
-      <div class="vacio">
-        <p style="display:none">
-          {{#equal lang "es"}}No hay resultados para ese filtrado. Modifique su selección.{{/equal}}
-          {{#equal lang "en"}}No results found please try a different query.{{/equal}} 
-        </p>
-      </div>
-</div>
-
+  </div>
+  <div class="slider">
+    <div class="controls">
+        <fieldset>
+          <button class="filter" data-filter=".y2015">2015</button>
+          <button class="filter" data-filter=".y2014">2014</button>
+          <button class="filter" data-filter=".y2013">2013</button>
+          <button class="filter" data-filter=".y2012">2012</button>
+          <button class="filter" data-filter=".y2011">2011</button>
+          <button class="filter" data-filter=".y2010">2010</button>
+          <button class="filter" data-filter=".y2009">2009</button>
+          <button class="filter" data-filter=".y2008">2008</button>
+          <button class="filter" data-filter=".y2007">2007</button>
+          <button class="filter" data-filter=".y2006">2006</button>
+          <button class="filter" data-filter=".y2005">2005</button>
+          <button class="filter" data-filter=".y2004">2004</button>
+          <button class="filter" data-filter=".y2003">2003</button>
+          <button class="filter" data-filter=".y2002">2002</button>
+          <button class="filter" data-filter=".y2001">2001</button>
+          <button class="filter" data-filter=".y2000">2000</button>
+          <button class="filter" data-filter=".y1999">1999</button>
+          <button class="filter" data-filter=".y1998">1998</button>
+          <button class="filter" data-filter=".y1997">1997</button>
+          <button class="filter" data-filter=".y1996">1996</button>
+          <button class="filter" data-filter=".y1995">1995</button>
+          <button class="filter" data-filter=".y1994">1994</button>
+          <button class="filter" data-filter=".y1993">1993</button>
+          <button class="filter" data-filter=".y1992">1992</button>
+          <button class="filter" data-filter=".y1991">1991</button>
+        </fieldset>
+    </div>
+    <div id="slider-container" class="slider-container thumbnails">
+          {{#each exposiciones}}
+              {{> slider-item}}
+          {{/each}}
+          <div class="vacio">
+            <p style="display:none">
+              {{#equal lang "es"}}No hay resultados para ese filtrado. Modifique su selección.{{/equal}}
+              {{#equal lang "en"}}No results found please try a different query.{{/equal}} 
+            </p>
+          </div>
+    </div>
+  </div>
+</form>
