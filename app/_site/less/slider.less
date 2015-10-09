@@ -1,29 +1,24 @@
-.controls-tipos{
-  background-color: white;
-  position:absolute;
-  z-index: 4;
-  bottom: 170px;
-  left: 0;
-  padding-left: 10px;   
-}
 
-.slider {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  left: 0;
+footer {
   padding-left: 3px;
   overflow: hidden;
   display: block;
   float: left;
-  overflow-y: hidden;
-  overflow-x: scroll;
+
   white-space: nowrap;
   z-index: 3;
   background-color: #fff;
   transform: translateZ(0);
   .box-shadow(0 0 50px 0 rgba(0,0,0,0.3));
   .transition(bottom .6s ease .7s);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  .slider {
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
   &.hide-bottom {
     pointer-events: none;
     bottom: -200px;
@@ -43,6 +38,15 @@
   padding-left: 410px;
   padding-bottom: 10px;
   color: #000;
+}
+
+.controls-tipos{
+  background-color: white;
+  position:absolute;
+  z-index: 4;
+  bottom: 185px;
+  left: 0;
+  padding-left: 10px;   
 }
 
 form {
