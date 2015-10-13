@@ -46,9 +46,9 @@ jekyll b
 grunt build (desde el raiz)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Este comando genera el paquete en la carpeta dist, que tenemos que comprimir usando:
+Este comando genera el paquete en la carpeta dist, que tenemos que comprimir usando (dentro de la carpeta dist):
 
-tar -zcvf itinerancias-fecha.tar.gz dist/*
+tar -zcvf itinerancias-fecha.tar.gz *
 
 Se sube por ftp a la carpeta de pre: compartido/itinerancias
 
