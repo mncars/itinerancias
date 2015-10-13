@@ -25,7 +25,8 @@ es:
   detalles_actividad: + detalles de la actividad
   detalles_exposicion: + detalles de la exposición
   no_results: No hay resultados para ese filtrado. Modifique su selección.
-
+  site_url: http://www.museoreinasofia.es/itinerancias/
+  language: es-ES
 en:
   language_change_title: Castellano
   language_change_title_popup: Explorar en castellano
@@ -53,4 +54,7 @@ en:
   detalles_actividad: + activity details
   detalles_exposicion: + exhibition details
   no_results: There are no results for this filter. Please alter your selection.
+  site_url: http://www.museoreinasofia.es/itinerancias/english.html
+  language: en-EN
+
 
