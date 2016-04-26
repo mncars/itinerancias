@@ -314,6 +314,10 @@ module.exports = function (grunt) {
                     cwd: '.tmp/imgs',
                     dest: '<%= yeoman.dist %>/imgs',
                     src: ['generated/*']
+                }, {
+                    cwd: '<%= yeoman.app %>/_site',
+                    dest: '<%= yeoman.dist %>',
+                    src:  ['.htaccess']
                 }]
             },
             styles: {
@@ -321,6 +325,13 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/css',
                 dest: '.tmp/css/',
                 src: '{,*/}*.css'
+            }
+            ,
+            htaccess: {
+                expand: true,
+                cwd: '<%= yeoman.app %>',
+                dest: '<%= yeoman.dist %>',
+                src: '.htaccess'
             }
         },
 
@@ -407,7 +418,8 @@ module.exports = function (grunt) {
                 'uglify',
                 'rev',
                 'usemin',
-                'htmlmin'
+                'htmlmin',
+                'copy:htaccess'
             ]);
     });
 
@@ -422,5 +434,4 @@ module.exports = function (grunt) {
         'autoprefixer',
         'connect:test'
     ]);
-
 };

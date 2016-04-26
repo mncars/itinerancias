@@ -42,13 +42,13 @@ Grunt está preparado para generar paquetes distribuibles en la carpeta dist de 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ .bash
 primero generamos el jekyll en la carpeta app
-jekyll b
+jekyll build
 grunt build (desde el raiz)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Este comando genera el paquete en la carpeta dist, que tenemos que comprimir usando (dentro de la carpeta dist):
 
-tar -zcvf itinerancias-fecha.tar.gz *
+tar -zcvf itinerancias-fecha.tar.gz * .htaccess
 
 Se sube por ftp a la carpeta de pre: compartido/itinerancias
 
