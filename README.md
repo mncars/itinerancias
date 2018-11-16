@@ -46,13 +46,11 @@ jekyll build
 grunt build (desde el raiz)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Este comando genera el paquete en la carpeta dist, que tenemos que comprimir usando (dentro de la carpeta dist):
+Este comando genera el paquete en la carpeta dist, que tenemos que subir a interhost a la carpeta:
 
-tar -zcvf itinerancias-fecha.tar.gz * .htaccess
+/home/filer/museoreinasofia.es/itinerancias
 
-Se sube por ftp a la carpeta de pre: compartido/itinerancias
-
-y en produccion se ejecuta el deploy.sh que hay en esa carpeta.
+y borrar luego varnish.
 
 
 
